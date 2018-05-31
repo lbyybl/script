@@ -1,0 +1,58 @@
+#!/bin/bash
+
+# this script is used to resort the matrix according to the eg1 produced by the cworld (x2compartment.pl);
+
+# Boyuan-Li
+# 2018-5-27
+
+function helps
+{
+        echo ""
+        echo -e "Usage: $0 eg1-file-by-cworld correspondirg-bed-file correspondirg-spare-matrix output-spare-file"
+		echo "when your eg1 file is produced according to the per chr, the the bed file is also the correspondirg chr; you can make it\
+		use the raw/_abs.bed produced by the hic-pro; and the spare-matrix is also the correspondirg, you can make use the matrix in hicpro_result/ice"
+   
+
+}
+
+while getopts "h" optionName
+do
+        case "$optionName" in
+                
+                h)
+                        helps
+                        exit 0
+                        ;;
+        esac
+done
+
+#########################################################################################
+# this is used to change the file produce by the  cworld into soted file;$1 is the file 
+# produced by the cworld, the $2 is the bed file in the raw dir produced by hic-pro
+#########################################################################################
+
+cat $1 | cut -f 1-3,6 >> _chrbineg1_
+sed -i '/^#chr.*$/d' _chrbineg1_
+paste <(sort -n -k 4 $2 | uniq) _chrbineg1_ >> _combine_
+sort -n -k8 _combine_ | cut -f 1-4 >> _sorted-eg1_
+
+
+##########################################################################################
+# below is change the sorted file prduct by the cworld according to the eg1; _sorted-eg1_ is the 
+# sorted file, $3 is the spare matrix, $4 is the output-spare file;
+##########################################################################################
+bedname=${2##*/}
+awk '{++cnt;printf "%s \t %i \t %i \t %i \t %i \n",$1,$2,$3,$4,cnt}' _sorted-eg1_  >> _addnewcount_
+cat _addnewcount_ | cut -f 4-5 >> _correspondingnumber_
+echo "#!/bin/bash" >> _numberarray_
+awk '{printf "arr[%i]=%i\n",$1,$2}' _correspondingnumber_ >> _numberarray_
+chmod +x _numberarray_
+
+
+echo "#!/bin/bash" >> _change_bin_number_
+echo "source _numberarray_" >> _change_bin_number_
+awk '{printf "echo -e \"${arr[%i]}\t${arr[%i]}\t%f\"\n",$1,$2,$3}' $3 >> _change_bin_number_
+chmod +x _change_bin_number_
+./_change_bin_number_ >> $4
+cat _addnewcount_ | cut -f 1-3,5 >> ${bedname%.*}_resort.bed # maybe this file is no use;
+rm _addnewcount_ _correspondingnumber_ _numberarray_ _change_bin_number_ _chrbineg1_ _combine_ _sorted-eg1_
