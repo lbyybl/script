@@ -1,0 +1,8 @@
+sample1018_ko1/Kpna2-ko-1-0930_combined_R1.fastq sample1018_ko1/Kpna2-ko-1-0930_combined_R2.fastq
+sample1018_ko2/Kpna2-ko-2-0930_combined_R1.fastq sample1018_ko2/Kpna2-ko-2-0930_combined_R2.fastq
+sample1018_wt1/WT-1-0930_combined_R1.fastq sample1018_wt1/WT-1-0930_combined_R2.fastq
+sample1018_wt2/WT-2-0930_combined_R1.fastq sample1018_wt2/WT-2-0930_combined_R2.fastq
+sample1026_ko/KO-1-9-30-B712_HCKYCCCXY_L6_R1.fastq sample1026_ko/KO-1-9-30-B712_HCKYCCCXY_L6_R2.fastq
+sample1026_wt/WT-1-9-30_HCKYCCCXY_L6_R1.fastq sample1026_wt/WT-1-9-30_HCKYCCCXY_L6_R2.fastq
+sample1124_ko/Kpna2-ko-1-0930_combined_R1.fastq sample1124_ko/Kpna2-ko-1-0930_combined_R2.fastq
+sample1124_wt/WT-2-0930_combined_R1.fastq sample1124_wt/WT-2-0930_combined_R2.fastq
