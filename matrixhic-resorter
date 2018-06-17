@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # this script is used to resort the matrix according to the eg1 produced by the cworld (x2compartment.pl);
-
+# means change the bin number according to the eg1
 # Boyuan-Li
 # 2018-5-27
 
@@ -33,8 +33,9 @@ done
 
 cat $1 | cut -f 1-3,6 >> _chrbineg1_
 sed -i '/^#chr.*$/d' _chrbineg1_
+sed -i -e 's/\tnan\t/\t0.00\t/g' -e 's/\tnan\t/\t0.00\t/g' _chrbineg1_
 paste <(sort -n -k 4 $2 | uniq) _chrbineg1_ >> _combine_
-sort -n -k8 _combine_ | cut -f 1-4 >> _sorted-eg1_
+sort -rg -k8 _combine_ | cut -f 1-4 >> _sorted-eg1_
 
 
 ##########################################################################################
