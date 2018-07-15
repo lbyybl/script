@@ -117,7 +117,7 @@ fi
 #####################################################################################################################################
 # make header for the dense matrix
 
-	awk -v Genomenane="$Genomenane" '{printf "%i|%s|%s:%i-%i\n",$Genome_version,Genomenane,$hicpro_result_bed_file,$hicpro_result_ice_matrix_file,$Output_dire}'  $Input_bedfile >> ${prefix}_header # make header file with the input bed file
+	awk -v Genomenane="$Genomenane" '{printf "%i|%s|%s:%i-%i\n",$4,Genomenane,$1,$2,$3}'  $Input_bedfile >> ${prefix}_header # make header file with the input bed file
 
 	chrname=$(cut -f 1 <(egrep -v "chrM" $Genomesizefile) | xargs | sed 's/ /\\n/g')     # obtain the chr name expect the chrM and chrMT
 	echo -e "$chrname" | parallel -j1 egrep "{}:" ${prefix}_header '>>' ${prefix}_{}_header  # got the header file per chr
@@ -170,8 +170,8 @@ fi
 ## after this step, you will got two files, one is the ${prefix}_no_chrM_resort.bed,another is the sparse matrix that have changed bin number :${prefix}_no_chrM_sparse.matrix
 ## and you can use it to draw heatmap (use python or Hicplotter)
 ##########################################################################################################################################################
-	matrixhic-resorter ${filename%.*}_merge_zSxore.compartments \
-	${prefix}_no_chrM.bed ${prefix}_no_chrM.matrix ${prefix}_no_chrM_sparse.matrix # change the bin number according the eg1
+	#matrixresorter.sh -z ${filename%.*}_merge_zSxore.compartments \
+	#-b ${prefix}_no_chrM.bed -m ${prefix}_no_chrM.matrix -o ${prefix}_no_chrM_sparse.matrix # change the bin number according the eg1
 
 	### remove some file that don't need at all.
 	echo -e "$chrname" | parallel -j10 rm ${filename%.*}_{}_dense.matrix  ${prefix}_{}_header ## remove matrix and header in line 62
