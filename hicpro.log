@@ -1,0 +1,52 @@
+Run HiC-Pro 2.9.0
+--------------------------------------------
+Wed Jun 20 15:31:56 CST 2018
+Bowtie2 alignment step1 ...
+/home/boyuanli/tools/hic-pro/HiC-Pro_2.9.0/scripts/bowtie_wrap.sh -c /DATA/work/lbyybl/wangcl/hic/KPNA2/5_21_test/config_csseq_m
+m10_v3.txt -u >> hicpro.log
+--------------------------------------------
+Wed Jun 20 15:40:38 CST 2018
+Bowtie2 alignment step2 ...
+/home/boyuanli/tools/hic-pro/HiC-Pro_2.9.0/scripts/bowtie_wrap.sh -c /DATA/work/lbyybl/wangcl/hic/KPNA2/5_21_test/config_csseq_m
+m10_v3.txt -l >> hicpro.log
+--------------------------------------------
+Wed Jun 20 15:41:47 CST 2018
+Combine both alignment ...
+/home/boyuanli/tools/hic-pro/HiC-Pro_2.9.0/scripts/bowtie_combine.sh -c /DATA/work/lbyybl/wangcl/hic/KPNA2/5_21_test/config_csse
+q_mm10_v3.txt >> hicpro.log
+[bam_sort_core] merging from 0 files and 12 in-memory blocks...
+[bam_sort_core] merging from 0 files and 12 in-memory blocks...
+[bam_sort_core] merging from 0 files and 12 in-memory blocks...
+[bam_sort_core] merging from 0 files and 12 in-memory blocks...
+--------------------------------------------
+Wed Jun 20 15:42:00 CST 2018
+Bowtie2 mapping statistics for R1 and R2 tags ...
+/home/boyuanli/tools/hic-pro/HiC-Pro_2.9.0/scripts/mapping_stat.sh -c /DATA/work/lbyybl/wangcl/hic/KPNA2/5_21_test/config_csseq_mm10_v3.txt >> hicpro.log
+--------------------------------------------
+Wed Jun 20 15:42:06 CST 2018
+Pairing of R1 and R2 tags ...
+/home/boyuanli/tools/hic-pro/HiC-Pro_2.9.0/scripts/bowtie_pairing.sh -c /DATA/work/lbyybl/wangcl/hic/KPNA2/5_21_test/config_csseq_mm10_v3.txt >> hicpro.log
+--------------------------------------------
+Wed Jun 20 15:43:21 CST 2018
+Assign alignments to restriction fragments ...
+/home/boyuanli/tools/hic-pro/HiC-Pro_2.9.0/scripts/mapped_2hic_fragments.sh -c /DATA/work/lbyybl/wangcl/hic/KPNA2/5_21_test/config_csseq_mm10_v3.txt >> hicpro.log
+--------------------------------------------
+Wed Jun 20 15:49:22 CST 2018
+Merge multiple files from the same sample ...
+/home/boyuanli/tools/hic-pro/HiC-Pro_2.9.0/scripts/merge_valid_interactions.sh -c /DATA/work/lbyybl/wangcl/hic/KPNA2/5_21_test/config_csseq_mm10_v3.txt >> hicpro.log
+--------------------------------------------
+Wed Jun 20 15:49:23 CST 2018
+Merge stat files per sample ...
+/home/boyuanli/tools/hic-pro/HiC-Pro_2.9.0/scripts/merge_stats.sh -c /DATA/work/lbyybl/wangcl/hic/KPNA2/5_21_test/config_csseq_mm10_v3.txt >> hicpro.log
+--------------------------------------------
+Wed Jun 20 15:49:24 CST 2018
+Run quality checks for all samples ...
+/home/boyuanli/tools/hic-pro/HiC-Pro_2.9.0/scripts/make_plots.sh -c /DATA/work/lbyybl/wangcl/hic/KPNA2/5_21_test/config_csseq_mm10_v3.txt -p "all" >> hicpro.log
+--------------------------------------------
+Wed Jun 20 15:49:38 CST 2018
+Generate binned matrix files ...
+/home/boyuanli/tools/hic-pro/HiC-Pro_2.9.0/scripts/build_raw_maps.sh -c /DATA/work/lbyybl/wangcl/hic/KPNA2/5_21_test/config_csseq_mm10_v3.txt
+--------------------------------------------
+Wed Jun 20 15:49:41 CST 2018
+Run ICE Normalization ...
+/home/boyuanli/tools/hic-pro/HiC-Pro_2.9.0/scripts/ice_norm.sh -c /DATA/work/lbyybl/wangcl/hic/KPNA2/5_21_test/config_csseq_mm10_v3.txt >> hicpro.log

@@ -1,0 +1,1 @@
+/home/boyuanli/bashscript/bin/geneinteraction/interaction_fined.sh

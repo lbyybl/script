@@ -92,7 +92,7 @@ fi
 
 #----- trans the sparse matrix into dense
 	#--- get the bed file for every chr
-	echo {{1..19},X,Y} | xargs -n1 | parallel  egrep -w \"chr{}\" ${Input_bedfile} ">>" chr{}_${prefix}.bed
+	echo {1..19} | xargs -n1 | parallel  egrep -w \"chr{}\" ${Input_bedfile} ">>" chr{}_${prefix}.bed
 	#--- trans the sparse to dense 
 	#set +euo pipefail
 	#ln -s ${Input_bedfile} ${Input_bedfile##*/}
@@ -103,9 +103,9 @@ fi
 	
 #--- add header for the dense matrix 
 	#--- make header file
-	echo {{1..19},X,Y} | xargs -n1 | parallel awk -v Genomename="$Genomename" \'{printf \"%i\|%s\|%s\:%i-%i\\n\",\$4,Genomename,\$1,\$2,\$3}\' chr{}_${prefix}.bed ">>" chr{}_${prefix}_header
+	echo {1..19} | xargs -n1 | parallel awk -v Genomename="$Genomename" \'{printf \"%i\|%s\|%s\:%i-%i\\n\",\$4,Genomename,\$1,\$2,\$3}\' chr{}_${prefix}.bed ">>" chr{}_${prefix}_header
 	#--- test whether header's line is equal dense file's line 
-	# for i in {{1..19},X,Y}; \
+	# for i in {1..19}; \
 		# do \
 		# Row_line=$(cat chr${i}_${prefix}_dense.matrix | wc -l)
 		# Header_line=$(cat chr${i}_${prefix}_header | wc -l)
@@ -114,28 +114,31 @@ fi
 		# fi
 	# done	
 	#--- add header
-	echo {{1..19},X,Y} | xargs -n1 | parallel -j10 perl -I $cworldscript_dir/../../lib/ $cworldscript_dir/addMatrixHeaders.pl -i ${prefix}_chr{}_dense.matrix --xhf chr{}_${prefix}_header --yhf chr{}_${prefix}_header
+	echo {1..19} | xargs -n1 | parallel -j10 perl -I $cworldscript_dir/../../lib/ $cworldscript_dir/addMatrixHeaders.pl -i ${prefix}_chr{}_dense.matrix --xhf chr{}_${prefix}_header --yhf chr{}_${prefix}_header
 
 	
 #--- call compartment with cworld
 	#--- change 0.0 into nan
-	for i in {{1..19},X,Y}; \
+	for i in {1..19}; \
 		do \
 		sed -e '/^##/d' -e 's/\t0.0\t/\tnan\t/g' -e 's/\t0.0\t/\tnan\t/g' -e 's/\t0.0$/\tnan/g' <(less ${prefix}_chr${i}_dense.addedHeaders.matrix.gz) \
 		>> chr${i}_${prefix}_dense.addedHeaders.matrix ; \
 	done
 	# calculate the eg1 for header matrix
-	echo {{1..19},X,Y} | xargs -n1 | parallel -j10 perl -I $cworldscript_dir/../../lib/ $cworldscript_dir/matrix2insulation.pl -i \
+	echo {1..19} | xargs -n1 | parallel -j10 perl -I $cworldscript_dir/../../lib/ $cworldscript_dir/matrix2insulation.pl -i \
 	chr{}_${prefix}_dense.addedHeaders.matrix --is 100000 --im sum 
+
+	echo {1..19} | xargs -n1 | parallel -j10 perl -I $cworldscript_dir/../../lib/ $cworldscript_dir/insulation2tads.pl -i chr{}_${prefix}_dense.addedHeaders*.insulation -b chr{}_${prefix}_dense.addedHeaders*.insulation.boundaries
+	#echo {1..19} | xargs -n1 | parallel -j10 perl -I $cworldscript_dir/../../lib/ $cworldscript_dir/insulation2tads.pl -i chr{}_${prefix}_dense.addedHeaders--is1000001--nt0--ids1000001--ss1--imsum.insulation -b chr{}_${prefix}_dense.addedHeaders--is1000001--nt0--ids1000001--ss1--imsum.insulation.boundaries
 
 #--- rm useless files
 	rm -f *.{gz,boundaries.bed,log,pdf,boundaries,bedGraph,png,addedHeaders.matrix}
 	rm -f *_dense.matrix
 	rm -f chr*.bed
-	echo {{1..19},X,Y} | xargs -n1 | parallel -j10 rm ${prefix}_chr{}_dense.matrix  chr{}_${prefix}_header ## remove matrix and header in line 121
+	echo {1..19} | xargs -n1 | parallel -j10 rm ${prefix}_chr{}_dense.matrix  chr{}_${prefix}_header ## remove matrix and header in line 121
 
-	echo {{1..19},X,Y} | xargs -n1 | parallel -j10 rm ${prefix}_chr{}_dense.addedHeaders.matrix # rm the matrix in line 132
+	echo {1..19} | xargs -n1 | parallel -j10 rm ${prefix}_chr{}_dense.addedHeaders.matrix # rm the matrix in line 132
 #--- rm file unless
-	echo {{1..19},X,Y} | xargs -n1 | parallel rm chr{}_${prefix}.bed # chr{}_${prefix}_${Juicer_type}.matrix chr{}_${prefix}.${Juicer_type} # line 105 108 113
+	echo {1..19} | xargs -n1 | parallel rm chr{}_${prefix}.bed # chr{}_${prefix}_${Juicer_type}.matrix chr{}_${prefix}.${Juicer_type} # line 105 108 113
 
 

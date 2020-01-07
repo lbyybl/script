@@ -1,0 +1,823 @@
+Loading required package: DiffBind
+Loading required package: GenomicRanges
+Loading required package: stats4
+Loading required package: BiocGenerics
+Loading required package: parallel
+
+Attaching package: ‘BiocGenerics’
+
+The following objects are masked from ‘package:parallel’:
+
+    clusterApply, clusterApplyLB, clusterCall, clusterEvalQ,
+    clusterExport, clusterMap, parApply, parCapply, parLapply,
+    parLapplyLB, parRapply, parSapply, parSapplyLB
+
+The following objects are masked from ‘package:stats’:
+
+    IQR, mad, sd, var, xtabs
+
+The following objects are masked from ‘package:base’:
+
+    anyDuplicated, append, as.data.frame, basename, cbind, colMeans,
+    colnames, colSums, dirname, do.call, duplicated, eval, evalq,
+    Filter, Find, get, grep, grepl, intersect, is.unsorted, lapply,
+    lengths, Map, mapply, match, mget, order, paste, pmax, pmax.int,
+    pmin, pmin.int, Position, rank, rbind, Reduce, rowMeans, rownames,
+    rowSums, sapply, setdiff, sort, table, tapply, union, unique,
+    unsplit, which, which.max, which.min
+
+Loading required package: S4Vectors
+
+Attaching package: ‘S4Vectors’
+
+The following object is masked from ‘package:base’:
+
+    expand.grid
+
+Loading required package: IRanges
+Loading required package: GenomeInfoDb
+Loading required package: SummarizedExperiment
+Loading required package: Biobase
+Welcome to Bioconductor
+
+    Vignettes contain introductory material; view with
+    'browseVignettes()'. To cite Bioconductor, see
+    'citation("Biobase")', and for packages 'citation("pkgname")'.
+
+Loading required package: DelayedArray
+Loading required package: matrixStats
+
+Attaching package: ‘matrixStats’
+
+The following objects are masked from ‘package:Biobase’:
+
+    anyMissing, rowMedians
+
+Loading required package: BiocParallel
+
+Attaching package: ‘DelayedArray’
+
+The following objects are masked from ‘package:matrixStats’:
+
+    colMaxs, colMins, colRanges, rowMaxs, rowMins, rowRanges
+
+The following objects are masked from ‘package:base’:
+
+    aperm, apply
+
+
+
+Attaching package: ‘data.table’
+
+The following object is masked from ‘package:SummarizedExperiment’:
+
+    shift
+
+The following object is masked from ‘package:GenomicRanges’:
+
+    shift
+
+The following object is masked from ‘package:IRanges’:
+
+    shift
+
+The following objects are masked from ‘package:S4Vectors’:
+
+    first, second
+
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:data.table’:
+
+    between, first, last
+
+The following object is masked from ‘package:matrixStats’:
+
+    count
+
+The following object is masked from ‘package:Biobase’:
+
+    combine
+
+The following objects are masked from ‘package:GenomicRanges’:
+
+    intersect, setdiff, union
+
+The following object is masked from ‘package:GenomeInfoDb’:
+
+    intersect
+
+The following objects are masked from ‘package:IRanges’:
+
+    collapse, desc, intersect, setdiff, slice, union
+
+The following objects are masked from ‘package:S4Vectors’:
+
+    first, intersect, rename, setdiff, setequal, union
+
+The following objects are masked from ‘package:BiocGenerics’:
+
+    combine, intersect, setdiff, union
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+R2doxrep1 mES pol2 dox  1 narrow
+R2doxrep2 mES pol2 dox  2 narrow
+R205rep1 mES pol2 0.5  1 narrow
+R205rep2 mES pol2 0.5  2 narrow
+converting counts to integer mode
+gene-wise dispersion estimates
+mean-dispersion relationship
+final dispersion estimates
+Warning message:
+fragmentSize ignored when bUseSummarizeOverlaps is TRUE in dba.count 
+R205rep1 mES pol2 0.5  1 narrow
+R205rep2 mES pol2 0.5  2 narrow
+R21hrep1 mES pol2 1  1 narrow
+R21hrep2 mES pol2 1  2 narrow
+converting counts to integer mode
+gene-wise dispersion estimates
+mean-dispersion relationship
+final dispersion estimates
+Warning message:
+fragmentSize ignored when bUseSummarizeOverlaps is TRUE in dba.count 
+overlap/jj.bed will be remove, because it's null!
+Registered S3 method overwritten by 'enrichplot':
+  method               from
+  fortify.enrichResult DOSE
+ChIPseeker v1.18.0  For help: https://guangchuangyu.github.io/ChIPseeker
+
+If you use ChIPseeker in published research, please cite:
+Guangchuang Yu, Li-Gen Wang, Qing-Yu He. ChIPseeker: an R/Bioconductor package for ChIP peak annotation, comparison and visualization. Bioinformatics 2015, 31(14):2382-2383
+Loading required package: GenomicFeatures
+Loading required package: AnnotationDbi
+
+Attaching package: ‘AnnotationDbi’
+
+The following object is masked from ‘package:dplyr’:
+
+    select
+
+clusterProfiler v3.10.1  For help: https://guangchuangyu.github.io/software/clusterProfiler
+
+If you use clusterProfiler in published research, please cite:
+Guangchuang Yu, Li-Gen Wang, Yanyan Han, Qing-Yu He. clusterProfiler: an R package for comparing biological themes among gene clusters. OMICS: A Journal of Integrative Biology. 2012, 16(5):284-287.
+
+Attaching package: ‘clusterProfiler’
+
+The following object is masked from ‘package:DelayedArray’:
+
+    simplify
+
+ReactomePA v1.28.0  For help: https://guangchuangyu.github.io/ReactomePA
+
+If you use ReactomePA in published research, please cite:
+Guangchuang Yu, Qing-Yu He. ReactomePA: an R/Bioconductor package for reactome pathway analysis and visualization. Molecular BioSystems 2016, 12(2):477-479
+>> loading peak file...				 2019-11-16 10:10:00 PM 
+>> preparing features information...		 2019-11-16 10:10:00 PM 
+>> identifying nearest features...		 2019-11-16 10:10:00 PM 
+>> calculating distance from peak to TSS...	 2019-11-16 10:10:00 PM 
+>> assigning genomic annotation...		 2019-11-16 10:10:00 PM 
+>> adding gene annotation...			 2019-11-16 10:10:12 PM 
+Loading required package: org.Mm.eg.db
+
+'select()' returned 1:many mapping between keys and columns
+>> assigning chromosome lengths			 2019-11-16 10:10:12 PM 
+>> done...					 2019-11-16 10:10:12 PM 
+>> loading peak file...				 2019-11-16 10:10:24 PM 
+>> preparing features information...		 2019-11-16 10:10:24 PM 
+>> identifying nearest features...		 2019-11-16 10:10:24 PM 
+>> calculating distance from peak to TSS...	 2019-11-16 10:10:24 PM 
+>> assigning genomic annotation...		 2019-11-16 10:10:24 PM 
+>> adding gene annotation...			 2019-11-16 10:10:26 PM 
+'select()' returned 1:many mapping between keys and columns
+>> assigning chromosome lengths			 2019-11-16 10:10:26 PM 
+>> done...					 2019-11-16 10:10:26 PM 
+>> loading peak file...				 2019-11-16 10:10:37 PM 
+>> preparing features information...		 2019-11-16 10:10:37 PM 
+>> identifying nearest features...		 2019-11-16 10:10:37 PM 
+>> calculating distance from peak to TSS...	 2019-11-16 10:10:37 PM 
+>> assigning genomic annotation...		 2019-11-16 10:10:37 PM 
+>> adding gene annotation...			 2019-11-16 10:10:39 PM 
+'select()' returned 1:1 mapping between keys and columns
+>> assigning chromosome lengths			 2019-11-16 10:10:39 PM 
+>> done...					 2019-11-16 10:10:39 PM 
+>> loading peak file...				 2019-11-16 10:10:50 PM 
+>> preparing features information...		 2019-11-16 10:10:50 PM 
+>> identifying nearest features...		 2019-11-16 10:10:50 PM 
+>> calculating distance from peak to TSS...	 2019-11-16 10:10:50 PM 
+>> assigning genomic annotation...		 2019-11-16 10:10:50 PM 
+>> adding gene annotation...			 2019-11-16 10:10:52 PM 
+'select()' returned 1:many mapping between keys and columns
+>> assigning chromosome lengths			 2019-11-16 10:10:52 PM 
+>> done...					 2019-11-16 10:10:52 PM 
+>> loading peak file...				 2019-11-16 10:11:04 PM 
+>> preparing features information...		 2019-11-16 10:11:04 PM 
+>> identifying nearest features...		 2019-11-16 10:11:04 PM 
+>> calculating distance from peak to TSS...	 2019-11-16 10:11:05 PM 
+>> assigning genomic annotation...		 2019-11-16 10:11:05 PM 
+>> adding gene annotation...			 2019-11-16 10:11:06 PM 
+'select()' returned 1:many mapping between keys and columns
+>> assigning chromosome lengths			 2019-11-16 10:11:06 PM 
+>> done...					 2019-11-16 10:11:06 PM 
+>> loading peak file...				 2019-11-16 10:11:19 PM 
+>> preparing features information...		 2019-11-16 10:11:19 PM 
+>> identifying nearest features...		 2019-11-16 10:11:19 PM 
+>> calculating distance from peak to TSS...	 2019-11-16 10:11:20 PM 
+>> assigning genomic annotation...		 2019-11-16 10:11:20 PM 
+>> adding gene annotation...			 2019-11-16 10:11:21 PM 
+'select()' returned 1:1 mapping between keys and columns
+>> assigning chromosome lengths			 2019-11-16 10:11:21 PM 
+>> done...					 2019-11-16 10:11:21 PM 
+>> loading peak file...				 2019-11-16 10:11:32 PM 
+>> preparing features information...		 2019-11-16 10:11:32 PM 
+>> identifying nearest features...		 2019-11-16 10:11:32 PM 
+>> calculating distance from peak to TSS...	 2019-11-16 10:11:32 PM 
+>> assigning genomic annotation...		 2019-11-16 10:11:32 PM 
+>> adding gene annotation...			 2019-11-16 10:11:33 PM 
+'select()' returned 1:1 mapping between keys and columns
+>> assigning chromosome lengths			 2019-11-16 10:11:33 PM 
+>> done...					 2019-11-16 10:11:33 PM 
+>> loading peak file...				 2019-11-16 10:11:45 PM 
+>> preparing features information...		 2019-11-16 10:11:45 PM 
+>> identifying nearest features...		 2019-11-16 10:11:45 PM 
+>> calculating distance from peak to TSS...	 2019-11-16 10:11:45 PM 
+>> assigning genomic annotation...		 2019-11-16 10:11:45 PM 
+>> adding gene annotation...			 2019-11-16 10:11:46 PM 
+'select()' returned 1:many mapping between keys and columns
+>> assigning chromosome lengths			 2019-11-16 10:11:46 PM 
+>> done...					 2019-11-16 10:11:46 PM 
+Loading required package: DiffBind
+Loading required package: GenomicRanges
+Loading required package: stats4
+Loading required package: BiocGenerics
+Loading required package: parallel
+
+Attaching package: ‘BiocGenerics’
+
+The following objects are masked from ‘package:parallel’:
+
+    clusterApply, clusterApplyLB, clusterCall, clusterEvalQ,
+    clusterExport, clusterMap, parApply, parCapply, parLapply,
+    parLapplyLB, parRapply, parSapply, parSapplyLB
+
+The following objects are masked from ‘package:stats’:
+
+    IQR, mad, sd, var, xtabs
+
+The following objects are masked from ‘package:base’:
+
+    anyDuplicated, append, as.data.frame, basename, cbind, colMeans,
+    colnames, colSums, dirname, do.call, duplicated, eval, evalq,
+    Filter, Find, get, grep, grepl, intersect, is.unsorted, lapply,
+    lengths, Map, mapply, match, mget, order, paste, pmax, pmax.int,
+    pmin, pmin.int, Position, rank, rbind, Reduce, rowMeans, rownames,
+    rowSums, sapply, setdiff, sort, table, tapply, union, unique,
+    unsplit, which, which.max, which.min
+
+Loading required package: S4Vectors
+
+Attaching package: ‘S4Vectors’
+
+The following object is masked from ‘package:base’:
+
+    expand.grid
+
+Loading required package: IRanges
+Loading required package: GenomeInfoDb
+usage: plotHeatmap [--matrixFile MATRIXFILE] --outFileName OUTFILENAME
+                   [--outFileSortedRegions FILE] [--outFileNameMatrix FILE]
+                   [--interpolationMethod STR] [--dpi DPI] [--kmeans KMEANS]
+                   [--hclust HCLUST] [--help] [--version]
+                   [--plotType {lines,fill,se,std}]
+                   [--sortRegions {descend,ascend,no,keep}]
+                   [--sortUsing {mean,median,max,min,sum,region_length}]
+                   [--sortUsingSamples SORTUSINGSAMPLES [SORTUSINGSAMPLES ...]]
+                   [--averageTypeSummaryPlot {mean,median,min,max,std,sum}]
+                   [--missingDataColor MISSINGDATACOLOR]
+                   [--colorMap COLORMAP [COLORMAP ...]] [--alpha ALPHA]
+                   [--colorList COLORLIST [COLORLIST ...]]
+                   [--colorNumber COLORNUMBER] [--zMin ZMIN [ZMIN ...]]
+                   [--zMax ZMAX [ZMAX ...]] [--heatmapHeight HEATMAPHEIGHT]
+                   [--heatmapWidth HEATMAPWIDTH]
+                   [--whatToShow {plot, heatmap and colorbar,plot and heatmap,heatmap only,heatmap and colorbar}]
+                   [--boxAroundHeatmaps BOXAROUNDHEATMAPS]
+                   [--xAxisLabel XAXISLABEL] [--startLabel STARTLABEL]
+                   [--endLabel ENDLABEL] [--refPointLabel REFPOINTLABEL]
+                   [--labelRotation LABEL_ROTATION]
+                   [--regionsLabel REGIONSLABEL [REGIONSLABEL ...]]
+                   [--samplesLabel SAMPLESLABEL [SAMPLESLABEL ...]]
+                   [--plotTitle PLOTTITLE] [--yAxisLabel YAXISLABEL]
+                   [--yMin YMIN [YMIN ...]] [--yMax YMAX [YMAX ...]]
+                   [--legendLocation {best,upper-right,upper-left,upper-center,lower-left,lower-right,lower-center,center,center-left,center-right,none}]
+                   [--perGroup] [--plotFileFormat] [--verbose]
+plotHeatmap: error: argument --matrixFile/-m: can't open 'heatmap/distribution_complex.gz': [Errno 2] No such file or directory: 'heatmap/distribution_complex.gz'
+Loading required package: SummarizedExperiment
+Loading required package: Biobase
+Welcome to Bioconductor
+
+    Vignettes contain introductory material; view with
+    'browseVignettes()'. To cite Bioconductor, see
+    'citation("Biobase")', and for packages 'citation("pkgname")'.
+
+Loading required package: DelayedArray
+Loading required package: matrixStats
+
+Attaching package: ‘matrixStats’
+
+The following objects are masked from ‘package:Biobase’:
+
+    anyMissing, rowMedians
+
+Loading required package: BiocParallel
+
+Attaching package: ‘DelayedArray’
+
+The following objects are masked from ‘package:matrixStats’:
+
+    colMaxs, colMins, colRanges, rowMaxs, rowMins, rowRanges
+
+The following objects are masked from ‘package:base’:
+
+    aperm, apply
+
+
+
+Attaching package: ‘data.table’
+
+The following object is masked from ‘package:SummarizedExperiment’:
+
+    shift
+
+The following object is masked from ‘package:GenomicRanges’:
+
+    shift
+
+The following object is masked from ‘package:IRanges’:
+
+    shift
+
+The following objects are masked from ‘package:S4Vectors’:
+
+    first, second
+
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:data.table’:
+
+    between, first, last
+
+The following object is masked from ‘package:matrixStats’:
+
+    count
+
+The following object is masked from ‘package:Biobase’:
+
+    combine
+
+The following objects are masked from ‘package:GenomicRanges’:
+
+    intersect, setdiff, union
+
+The following object is masked from ‘package:GenomeInfoDb’:
+
+    intersect
+
+The following objects are masked from ‘package:IRanges’:
+
+    collapse, desc, intersect, setdiff, slice, union
+
+The following objects are masked from ‘package:S4Vectors’:
+
+    first, intersect, rename, setdiff, setequal, union
+
+The following objects are masked from ‘package:BiocGenerics’:
+
+    combine, intersect, setdiff, union
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+R2doxrep1 mES SMC1 dox  1 narrow
+R2doxrep2 mES SMC1 dox  2 narrow
+R205rep1 mES SMC1 0.5  1 narrow
+R205rep2 mES SMC1 0.5  2 narrow
+One of the groups defined in the bed file is too small.
+Groups that are too small can't be plotted. 
+converting counts to integer mode
+gene-wise dispersion estimates
+mean-dispersion relationship
+final dispersion estimates
+Warning message:
+fragmentSize ignored when bUseSummarizeOverlaps is TRUE in dba.count 
+R205rep1 mES SMC1 0.5  1 narrow
+R205rep2 mES SMC1 0.5  2 narrow
+R21hrep1 mES SMC1 1  1 narrow
+R21hrep2 mES SMC1 1  2 narrow
+converting counts to integer mode
+gene-wise dispersion estimates
+mean-dispersion relationship
+final dispersion estimates
+Warning message:
+fragmentSize ignored when bUseSummarizeOverlaps is TRUE in dba.count 
+overlap/jj.bed will be remove, because it's null!
+overlap/jz.bed will be remove, because it's null!
+overlap/pz.bed will be remove, because it's null!
+overlap/zz.bed will be remove, because it's null!
+Registered S3 method overwritten by 'enrichplot':
+  method               from
+  fortify.enrichResult DOSE
+ChIPseeker v1.18.0  For help: https://guangchuangyu.github.io/ChIPseeker
+
+If you use ChIPseeker in published research, please cite:
+Guangchuang Yu, Li-Gen Wang, Qing-Yu He. ChIPseeker: an R/Bioconductor package for ChIP peak annotation, comparison and visualization. Bioinformatics 2015, 31(14):2382-2383
+Loading required package: GenomicFeatures
+Loading required package: AnnotationDbi
+
+Attaching package: ‘AnnotationDbi’
+
+The following object is masked from ‘package:dplyr’:
+
+    select
+
+clusterProfiler v3.10.1  For help: https://guangchuangyu.github.io/software/clusterProfiler
+
+If you use clusterProfiler in published research, please cite:
+Guangchuang Yu, Li-Gen Wang, Yanyan Han, Qing-Yu He. clusterProfiler: an R package for comparing biological themes among gene clusters. OMICS: A Journal of Integrative Biology. 2012, 16(5):284-287.
+
+Attaching package: ‘clusterProfiler’
+
+The following object is masked from ‘package:DelayedArray’:
+
+    simplify
+
+ReactomePA v1.28.0  For help: https://guangchuangyu.github.io/ReactomePA
+
+If you use ReactomePA in published research, please cite:
+Guangchuang Yu, Qing-Yu He. ReactomePA: an R/Bioconductor package for reactome pathway analysis and visualization. Molecular BioSystems 2016, 12(2):477-479
+>> loading peak file...				 2019-11-16 10:24:40 PM 
+>> preparing features information...		 2019-11-16 10:24:40 PM 
+>> identifying nearest features...		 2019-11-16 10:24:41 PM 
+>> calculating distance from peak to TSS...	 2019-11-16 10:24:41 PM 
+>> assigning genomic annotation...		 2019-11-16 10:24:41 PM 
+>> adding gene annotation...			 2019-11-16 10:24:52 PM 
+Loading required package: org.Mm.eg.db
+
+'select()' returned 1:1 mapping between keys and columns
+>> assigning chromosome lengths			 2019-11-16 10:24:53 PM 
+>> done...					 2019-11-16 10:24:53 PM 
+>> loading peak file...				 2019-11-16 10:25:05 PM 
+>> preparing features information...		 2019-11-16 10:25:05 PM 
+>> identifying nearest features...		 2019-11-16 10:25:05 PM 
+>> calculating distance from peak to TSS...	 2019-11-16 10:25:06 PM 
+>> assigning genomic annotation...		 2019-11-16 10:25:06 PM 
+>> adding gene annotation...			 2019-11-16 10:25:07 PM 
+'select()' returned 1:1 mapping between keys and columns
+>> assigning chromosome lengths			 2019-11-16 10:25:07 PM 
+>> done...					 2019-11-16 10:25:07 PM 
+>> loading peak file...				 2019-11-16 10:25:19 PM 
+>> preparing features information...		 2019-11-16 10:25:19 PM 
+>> identifying nearest features...		 2019-11-16 10:25:19 PM 
+>> calculating distance from peak to TSS...	 2019-11-16 10:25:19 PM 
+>> assigning genomic annotation...		 2019-11-16 10:25:19 PM 
+>> adding gene annotation...			 2019-11-16 10:25:20 PM 
+'select()' returned 1:many mapping between keys and columns
+>> assigning chromosome lengths			 2019-11-16 10:25:20 PM 
+>> done...					 2019-11-16 10:25:21 PM 
+>> loading peak file...				 2019-11-16 10:25:34 PM 
+>> preparing features information...		 2019-11-16 10:25:34 PM 
+>> identifying nearest features...		 2019-11-16 10:25:34 PM 
+>> calculating distance from peak to TSS...	 2019-11-16 10:25:34 PM 
+>> assigning genomic annotation...		 2019-11-16 10:25:34 PM 
+>> adding gene annotation...			 2019-11-16 10:25:36 PM 
+'select()' returned 1:many mapping between keys and columns
+>> assigning chromosome lengths			 2019-11-16 10:25:36 PM 
+>> done...					 2019-11-16 10:25:36 PM 
+>> loading peak file...				 2019-11-16 10:25:47 PM 
+>> preparing features information...		 2019-11-16 10:25:47 PM 
+>> identifying nearest features...		 2019-11-16 10:25:47 PM 
+>> calculating distance from peak to TSS...	 2019-11-16 10:25:47 PM 
+>> assigning genomic annotation...		 2019-11-16 10:25:47 PM 
+>> adding gene annotation...			 2019-11-16 10:25:50 PM 
+'select()' returned 1:many mapping between keys and columns
+>> assigning chromosome lengths			 2019-11-16 10:25:50 PM 
+>> done...					 2019-11-16 10:25:50 PM 
+Loading required package: DiffBind
+Loading required package: GenomicRanges
+Loading required package: stats4
+Loading required package: BiocGenerics
+Loading required package: parallel
+
+Attaching package: ‘BiocGenerics’
+
+The following objects are masked from ‘package:parallel’:
+
+    clusterApply, clusterApplyLB, clusterCall, clusterEvalQ,
+    clusterExport, clusterMap, parApply, parCapply, parLapply,
+    parLapplyLB, parRapply, parSapply, parSapplyLB
+
+The following objects are masked from ‘package:stats’:
+
+    IQR, mad, sd, var, xtabs
+
+The following objects are masked from ‘package:base’:
+
+    anyDuplicated, append, as.data.frame, basename, cbind, colMeans,
+    colnames, colSums, dirname, do.call, duplicated, eval, evalq,
+    Filter, Find, get, grep, grepl, intersect, is.unsorted, lapply,
+    lengths, Map, mapply, match, mget, order, paste, pmax, pmax.int,
+    pmin, pmin.int, Position, rank, rbind, Reduce, rowMeans, rownames,
+    rowSums, sapply, setdiff, sort, table, tapply, union, unique,
+    unsplit, which, which.max, which.min
+
+Loading required package: S4Vectors
+
+Attaching package: ‘S4Vectors’
+
+The following object is masked from ‘package:base’:
+
+    expand.grid
+
+Loading required package: IRanges
+usage: plotHeatmap [--matrixFile MATRIXFILE] --outFileName OUTFILENAME
+                   [--outFileSortedRegions FILE] [--outFileNameMatrix FILE]
+                   [--interpolationMethod STR] [--dpi DPI] [--kmeans KMEANS]
+                   [--hclust HCLUST] [--help] [--version]
+                   [--plotType {lines,fill,se,std}]
+                   [--sortRegions {descend,ascend,no,keep}]
+                   [--sortUsing {mean,median,max,min,sum,region_length}]
+                   [--sortUsingSamples SORTUSINGSAMPLES [SORTUSINGSAMPLES ...]]
+                   [--averageTypeSummaryPlot {mean,median,min,max,std,sum}]
+                   [--missingDataColor MISSINGDATACOLOR]
+                   [--colorMap COLORMAP [COLORMAP ...]] [--alpha ALPHA]
+                   [--colorList COLORLIST [COLORLIST ...]]
+                   [--colorNumber COLORNUMBER] [--zMin ZMIN [ZMIN ...]]
+                   [--zMax ZMAX [ZMAX ...]] [--heatmapHeight HEATMAPHEIGHT]
+                   [--heatmapWidth HEATMAPWIDTH]
+                   [--whatToShow {plot, heatmap and colorbar,plot and heatmap,heatmap only,heatmap and colorbar}]
+                   [--boxAroundHeatmaps BOXAROUNDHEATMAPS]
+                   [--xAxisLabel XAXISLABEL] [--startLabel STARTLABEL]
+                   [--endLabel ENDLABEL] [--refPointLabel REFPOINTLABEL]
+                   [--labelRotation LABEL_ROTATION]
+                   [--regionsLabel REGIONSLABEL [REGIONSLABEL ...]]
+                   [--samplesLabel SAMPLESLABEL [SAMPLESLABEL ...]]
+                   [--plotTitle PLOTTITLE] [--yAxisLabel YAXISLABEL]
+                   [--yMin YMIN [YMIN ...]] [--yMax YMAX [YMAX ...]]
+                   [--legendLocation {best,upper-right,upper-left,upper-center,lower-left,lower-right,lower-center,center,center-left,center-right,none}]
+                   [--perGroup] [--plotFileFormat] [--verbose]
+plotHeatmap: error: argument --matrixFile/-m: can't open 'heatmap/distribution_complex.gz': [Errno 2] No such file or directory: 'heatmap/distribution_complex.gz'
+Loading required package: GenomeInfoDb
+Loading required package: SummarizedExperiment
+Loading required package: Biobase
+Welcome to Bioconductor
+
+    Vignettes contain introductory material; view with
+    'browseVignettes()'. To cite Bioconductor, see
+    'citation("Biobase")', and for packages 'citation("pkgname")'.
+
+Loading required package: DelayedArray
+Loading required package: matrixStats
+
+Attaching package: ‘matrixStats’
+
+The following objects are masked from ‘package:Biobase’:
+
+    anyMissing, rowMedians
+
+Loading required package: BiocParallel
+
+Attaching package: ‘DelayedArray’
+
+The following objects are masked from ‘package:matrixStats’:
+
+    colMaxs, colMins, colRanges, rowMaxs, rowMins, rowRanges
+
+The following objects are masked from ‘package:base’:
+
+    aperm, apply
+
+
+
+Attaching package: ‘data.table’
+
+The following object is masked from ‘package:SummarizedExperiment’:
+
+    shift
+
+The following object is masked from ‘package:GenomicRanges’:
+
+    shift
+
+The following object is masked from ‘package:IRanges’:
+
+    shift
+
+The following objects are masked from ‘package:S4Vectors’:
+
+    first, second
+
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:data.table’:
+
+    between, first, last
+
+The following object is masked from ‘package:matrixStats’:
+
+    count
+
+The following object is masked from ‘package:Biobase’:
+
+    combine
+
+The following objects are masked from ‘package:GenomicRanges’:
+
+    intersect, setdiff, union
+
+The following object is masked from ‘package:GenomeInfoDb’:
+
+    intersect
+
+The following objects are masked from ‘package:IRanges’:
+
+    collapse, desc, intersect, setdiff, slice, union
+
+The following objects are masked from ‘package:S4Vectors’:
+
+    first, intersect, rename, setdiff, setequal, union
+
+The following objects are masked from ‘package:BiocGenerics’:
+
+    combine, intersect, setdiff, union
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+R2doxrep1 mES CTCF dox  1 narrow
+R2doxrep2 mES CTCF dox  2 narrow
+R205rep1 mES CTCF 0.5  1 narrow
+R205rep2 mES CTCF 0.5  2 narrow
+converting counts to integer mode
+gene-wise dispersion estimates
+mean-dispersion relationship
+final dispersion estimates
+Warning message:
+fragmentSize ignored when bUseSummarizeOverlaps is TRUE in dba.count 
+R205rep1 mES CTCF 0.5  1 narrow
+R205rep2 mES CTCF 0.5  2 narrow
+R21hrep1 mES CTCF 1  1 narrow
+R21hrep2 mES CTCF 1  2 narrow
+One of the groups defined in the bed file is too small.
+Groups that are too small can't be plotted. 
+converting counts to integer mode
+gene-wise dispersion estimates
+mean-dispersion relationship
+final dispersion estimates
+Warning message:
+fragmentSize ignored when bUseSummarizeOverlaps is TRUE in dba.count 
+overlap/jj.bed will be remove, because it's null!
+overlap/zz.bed will be remove, because it's null!
+Registered S3 method overwritten by 'enrichplot':
+  method               from
+  fortify.enrichResult DOSE
+ChIPseeker v1.18.0  For help: https://guangchuangyu.github.io/ChIPseeker
+
+If you use ChIPseeker in published research, please cite:
+Guangchuang Yu, Li-Gen Wang, Qing-Yu He. ChIPseeker: an R/Bioconductor package for ChIP peak annotation, comparison and visualization. Bioinformatics 2015, 31(14):2382-2383
+Loading required package: GenomicFeatures
+Loading required package: AnnotationDbi
+
+Attaching package: ‘AnnotationDbi’
+
+The following object is masked from ‘package:dplyr’:
+
+    select
+
+clusterProfiler v3.10.1  For help: https://guangchuangyu.github.io/software/clusterProfiler
+
+If you use clusterProfiler in published research, please cite:
+Guangchuang Yu, Li-Gen Wang, Yanyan Han, Qing-Yu He. clusterProfiler: an R package for comparing biological themes among gene clusters. OMICS: A Journal of Integrative Biology. 2012, 16(5):284-287.
+
+Attaching package: ‘clusterProfiler’
+
+The following object is masked from ‘package:DelayedArray’:
+
+    simplify
+
+ReactomePA v1.28.0  For help: https://guangchuangyu.github.io/ReactomePA
+
+If you use ReactomePA in published research, please cite:
+Guangchuang Yu, Qing-Yu He. ReactomePA: an R/Bioconductor package for reactome pathway analysis and visualization. Molecular BioSystems 2016, 12(2):477-479
+>> loading peak file...				 2019-11-16 10:36:14 PM 
+>> preparing features information...		 2019-11-16 10:36:14 PM 
+>> identifying nearest features...		 2019-11-16 10:36:15 PM 
+>> calculating distance from peak to TSS...	 2019-11-16 10:36:15 PM 
+>> assigning genomic annotation...		 2019-11-16 10:36:15 PM 
+>> adding gene annotation...			 2019-11-16 10:36:26 PM 
+Loading required package: org.Mm.eg.db
+
+'select()' returned 1:many mapping between keys and columns
+>> assigning chromosome lengths			 2019-11-16 10:36:26 PM 
+>> done...					 2019-11-16 10:36:26 PM 
+>> loading peak file...				 2019-11-16 10:36:38 PM 
+>> preparing features information...		 2019-11-16 10:36:38 PM 
+>> identifying nearest features...		 2019-11-16 10:36:38 PM 
+>> calculating distance from peak to TSS...	 2019-11-16 10:36:38 PM 
+>> assigning genomic annotation...		 2019-11-16 10:36:38 PM 
+>> adding gene annotation...			 2019-11-16 10:36:39 PM 
+'select()' returned 1:many mapping between keys and columns
+>> assigning chromosome lengths			 2019-11-16 10:36:39 PM 
+>> done...					 2019-11-16 10:36:39 PM 
+>> loading peak file...				 2019-11-16 10:36:50 PM 
+>> preparing features information...		 2019-11-16 10:36:50 PM 
+>> identifying nearest features...		 2019-11-16 10:36:50 PM 
+>> calculating distance from peak to TSS...	 2019-11-16 10:36:50 PM 
+>> assigning genomic annotation...		 2019-11-16 10:36:50 PM 
+>> adding gene annotation...			 2019-11-16 10:36:51 PM 
+'select()' returned 1:many mapping between keys and columns
+>> assigning chromosome lengths			 2019-11-16 10:36:51 PM 
+>> done...					 2019-11-16 10:36:51 PM 
+>> loading peak file...				 2019-11-16 10:37:03 PM 
+>> preparing features information...		 2019-11-16 10:37:04 PM 
+>> identifying nearest features...		 2019-11-16 10:37:04 PM 
+>> calculating distance from peak to TSS...	 2019-11-16 10:37:05 PM 
+>> assigning genomic annotation...		 2019-11-16 10:37:05 PM 
+>> adding gene annotation...			 2019-11-16 10:37:06 PM 
+'select()' returned 1:many mapping between keys and columns
+>> assigning chromosome lengths			 2019-11-16 10:37:06 PM 
+>> done...					 2019-11-16 10:37:06 PM 
+>> loading peak file...				 2019-11-16 10:37:21 PM 
+>> preparing features information...		 2019-11-16 10:37:21 PM 
+>> identifying nearest features...		 2019-11-16 10:37:21 PM 
+>> calculating distance from peak to TSS...	 2019-11-16 10:37:21 PM 
+>> assigning genomic annotation...		 2019-11-16 10:37:21 PM 
+>> adding gene annotation...			 2019-11-16 10:37:22 PM 
+'select()' returned 1:many mapping between keys and columns
+>> assigning chromosome lengths			 2019-11-16 10:37:22 PM 
+>> done...					 2019-11-16 10:37:22 PM 
+>> loading peak file...				 2019-11-16 10:37:34 PM 
+>> preparing features information...		 2019-11-16 10:37:34 PM 
+>> identifying nearest features...		 2019-11-16 10:37:34 PM 
+>> calculating distance from peak to TSS...	 2019-11-16 10:37:34 PM 
+>> assigning genomic annotation...		 2019-11-16 10:37:34 PM 
+>> adding gene annotation...			 2019-11-16 10:37:36 PM 
+'select()' returned 1:1 mapping between keys and columns
+>> assigning chromosome lengths			 2019-11-16 10:37:36 PM 
+>> done...					 2019-11-16 10:37:36 PM 
+>> loading peak file...				 2019-11-16 10:37:47 PM 
+>> preparing features information...		 2019-11-16 10:37:47 PM 
+>> identifying nearest features...		 2019-11-16 10:37:47 PM 
+>> calculating distance from peak to TSS...	 2019-11-16 10:37:47 PM 
+>> assigning genomic annotation...		 2019-11-16 10:37:47 PM 
+>> adding gene annotation...			 2019-11-16 10:37:48 PM 
+'select()' returned 1:many mapping between keys and columns
+>> assigning chromosome lengths			 2019-11-16 10:37:48 PM 
+>> done...					 2019-11-16 10:37:48 PM 
+usage: plotHeatmap [--matrixFile MATRIXFILE] --outFileName OUTFILENAME
+                   [--outFileSortedRegions FILE] [--outFileNameMatrix FILE]
+                   [--interpolationMethod STR] [--dpi DPI] [--kmeans KMEANS]
+                   [--hclust HCLUST] [--help] [--version]
+                   [--plotType {lines,fill,se,std}]
+                   [--sortRegions {descend,ascend,no,keep}]
+                   [--sortUsing {mean,median,max,min,sum,region_length}]
+                   [--sortUsingSamples SORTUSINGSAMPLES [SORTUSINGSAMPLES ...]]
+                   [--averageTypeSummaryPlot {mean,median,min,max,std,sum}]
+                   [--missingDataColor MISSINGDATACOLOR]
+                   [--colorMap COLORMAP [COLORMAP ...]] [--alpha ALPHA]
+                   [--colorList COLORLIST [COLORLIST ...]]
+                   [--colorNumber COLORNUMBER] [--zMin ZMIN [ZMIN ...]]
+                   [--zMax ZMAX [ZMAX ...]] [--heatmapHeight HEATMAPHEIGHT]
+                   [--heatmapWidth HEATMAPWIDTH]
+                   [--whatToShow {plot, heatmap and colorbar,plot and heatmap,heatmap only,heatmap and colorbar}]
+                   [--boxAroundHeatmaps BOXAROUNDHEATMAPS]
+                   [--xAxisLabel XAXISLABEL] [--startLabel STARTLABEL]
+                   [--endLabel ENDLABEL] [--refPointLabel REFPOINTLABEL]
+                   [--labelRotation LABEL_ROTATION]
+                   [--regionsLabel REGIONSLABEL [REGIONSLABEL ...]]
+                   [--samplesLabel SAMPLESLABEL [SAMPLESLABEL ...]]
+                   [--plotTitle PLOTTITLE] [--yAxisLabel YAXISLABEL]
+                   [--yMin YMIN [YMIN ...]] [--yMax YMAX [YMAX ...]]
+                   [--legendLocation {best,upper-right,upper-left,upper-center,lower-left,lower-right,lower-center,center,center-left,center-right,none}]
+                   [--perGroup] [--plotFileFormat] [--verbose]
+plotHeatmap: error: argument --matrixFile/-m: can't open 'heatmap/distribution_complex.gz': [Errno 2] No such file or directory: 'heatmap/distribution_complex.gz'
+One of the groups defined in the bed file is too small.
+Groups that are too small can't be plotted. 

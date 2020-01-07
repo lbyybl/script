@@ -148,18 +148,18 @@ def bash(yourscript, author, first_par, second_par, third_par,fourth_par,fifth_p
     for i in range(len(short_list)):
         if short_list[i]:
             help_long=help_long+"-"+short_list[i]+' ' + '<' + long_list[i]+'> '
-            help_function=help_function+"\t"+'echo " -' + short_list[i] + ' ' + type_list[i] + "\t" + "[required] \""+"\n\t" + 'echo \"\"'+"\n"
+            help_function=help_function+"\t"+'echo " -' + short_list[i] + "\t" + "%(type)-13s"%{"type":type_list[i]} + "\t" + "[required] \""+"\n\t" + 'echo \"\"'+"\n"
             getopt_short=getopt_short+short_list[i]+':'
             case_long=case_long+"\t\t"+short_list[i]+') '+long_list[i]+'="$OPTARG";;'+"\n"
         else:            
             break
         
-    getopt_short="while getopts \""+getopt_short+"\" optionName\ndo"+"\n\tcase $optionName in"
+    getopt_short="while getopts \""+getopt_short+"h\" optionName\ndo"+"\n\tcase $optionName in"
     case_long=case_long+"\t\t"+'h)'+"\n"+"\t\t\thelps\n"+"\t\t\texit 0\n"+"\t\t\t;;\n"+"\tesac\ndone\n\n"    
     print(help_long+'"',file=script)
     print("\techo \"\"",file=script)    
     print(help_function,end='',file=script)
-    print("\t"+"echo \" -h\t\thelp\"",file=script)
+    print("\t"+"echo \" -h\t\t\thelp\"",file=script)
     print('\techo ""',file=script)
     print('\techo ""',file=script)
     print('}',file=script)
@@ -210,7 +210,7 @@ def get_par(b,list_l,list_s,list_type):
     return(list_l,list_s,list_type)
 
 def file_judge(var):
-    echo_file="if [[ $"+var+" = \"\" ]]; then\n\t"+"echo \"the $"+var+" file is needed \"\n\texit 1\nelif [[ ! -f $"+var+" ]]; then\n\t echo \"$"+var+":   is not found\"\n\texit 2\nfi\n\n"
+    echo_file="if [[ $"+var+" = \"\" ]]; then\n\t"+"echo \"the $"+var+" file is needed \"\n\texit 1\nelif [[ ! -f $"+var+" ]]; then\n\techo \"$"+var+":   is not found\"\n\texit 2\nfi\n\n"
     return(echo_file)
 def string_judge(var):
     echo_string="if [[ $"+var+" = \"\" ]]; then\n\t"+"echo \" the $"+var+" string is needed \"\n\texit 1\nfi\n\n"

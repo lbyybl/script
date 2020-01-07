@@ -4,7 +4,7 @@
 
 # Thu Nov  8 22:36:41 CST 2018
 
-# it's used to merge all step to a pipele, so that you can got the different diff region with the .hic file and genome region and resolution
+# it's used to merge all step to a pipeline, so that you can got the different diff region with the .hic file and genome region and resolution
 
 set -euo pipefail
 function helps

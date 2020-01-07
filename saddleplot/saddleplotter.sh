@@ -106,8 +106,8 @@ mkdir -p ${Pwd_path}/_zscore/${Resolution}/  ${Pwd_path}/_ploter/${Resolution}/
 	echo {{1..19},x,y} | xargs -n1 | parallel java -jar /DATA/work/lbyybl/tools/juicer_fml/juicer_tools.1.8.9_jcuda.0.8.jar dump oe KR $Hic_file_by_juicer {} {} BP $Resolution ${Pwd_path}/_ploter/${Resolution}/chr{}.oe
 #--- resort the matrix
 	cd ${Pwd_path}/_ploter/${Resolution}/
-	echo chr{{1..19},x,y} | xargs -n1 | parallel Rscript /home/boyuanli/bashscript/bin/sort_matrix_compartment.R -c ${Pwd_path}/_zscore/${Resolution}/{}_${Hicfilename}_dense.addedHeaders.zScore.compartments -m {}.oe -o {}.oe.resort -r $Resolution
+	echo chr{1..19} | xargs -n1 | parallel Rscript /home/boyuanli/bashscript/bin/sort_matrix_compartment.R -c ${Pwd_path}/_zscore/${Resolution}/{}_*_dense.addedHeaders.zScore.compartments -m {}.oe -o {}.oe.resort -r $Resolution
 #--- draw saddleplot
-	Rscript draw_saddleplot.r -i .oe.resort -o ${Pwd_path}/$Output_filename
+	Rscript /home/boyuanli/bashscript/bin/saddleplot/draw_saddleplot.r -p ./ -o ${Pwd_path}/$Output_filename
 #--- rm dir
-	rm -rf ${Pwd_path}/_zscore/${Resolution}/ ${Pwd_path}/_ploter/${Resolution}/	
+	#rm -rf ${Pwd_path}/_zscore/${Resolution}/ ${Pwd_path}/_ploter/${Resolution}/	

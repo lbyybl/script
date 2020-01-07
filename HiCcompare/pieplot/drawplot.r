@@ -30,8 +30,8 @@ pol2 <- "/DATA/work/lbyybl/ypjiang/extract_matrix/Hiccompare/pol2/Gene_nongenein
 pol2bed <- fread(pol2)
 pol3 <- "/DATA/work/lbyybl/ypjiang/extract_matrix/Hiccompare/pol3/Gene_nongeneinteraction.bed"
 pol3bed <- fread(pol3)
-kpnawvspol2 <- "/DATA/work/lbyybl/ypjiang/extract_matrix/Hiccompare/kpna2vspol2/Gene_nongeneinteraction.bed"
-kpnawvspol2bed <- fread(kpnawvspol2)
+pol1vspol2 <- "/DATA/work/lbyybl/ypjiang/extract_matrix/Hiccompare/pol1vspol2/Gene_nongeneinteraction.bed"
+pol1vspol2bed <- fread(pol1vspol2)
 
 #--- 将三列式数据转成一列
 transformat <- function(data, sample_name){
@@ -48,8 +48,8 @@ pol2_trans <- transformat(pol2bed,"pol2") #2604
 pol3_trans <- transformat(pol3bed,"pol3") #3078
 CTCF_trans <- transformat(ctcfbed,"CTCF") #2751
 YY1_trans <- transformat(yy1bed,"YY1") # 2311
-kpnawvspol2_trans <- transformat(kpnawvspol2bed,"kpnawvspol2") # 2008
-total_data <- rbind(pol1_trans,pol2_trans,pol3_trans,CTCF_trans,YY1_trans,kpnawvspol2_trans)
+pol1vspol2_trans <- transformat(pol1vspol2bed,"pol1vspol2") # 2008
+total_data <- rbind(pol1_trans,pol2_trans,pol3_trans,CTCF_trans,YY1_trans,pol1vspol2_trans)
 #--- 画bar plot
 drawbarplot <- function(data){
   blank_theme <- theme_minimal()+
@@ -92,8 +92,8 @@ savefile2("total_data")
   pol3_pietrans <- trans_pie_formt(pol3bed,"pol3")
   CTCF_pietrans <- trans_pie_formt(ctcfbed,"CTCF")
   YY1_pietrans <- trans_pie_formt(yy1bed,"YY1")
-  kpnawvspol2bed_pietrans <- trans_pie_formt(kpnawvspol2bed,"kpnawvspol2")
-  total_pie_data <- rbind(pol1_pietrans,pol2_pietrans,pol3_pietrans,CTCF_pietrans,YY1_pietrans,kpnawvspol2bed_pietrans)  
+  pol1vspol2bed_pietrans <- trans_pie_formt(pol1vspol2bed,"pol1vspol2")
+  total_pie_data <- rbind(pol1_pietrans,pol2_pietrans,pol3_pietrans,CTCF_pietrans,YY1_pietrans,pol1vspol2bed_pietrans)  
 #--- draw plot
   #ggplot(pol1_pietrans,aes(x="",y=value,fill=class)) + geom_bar(width = 1) + coord_polar("y")
   
@@ -112,7 +112,7 @@ savefile2("total_data")
       )  
     pie + scale_fill_brewer(palette="Dark2") + blank_theme +
       theme(axis.text.x=element_blank()) +
-      geom_text(aes(y = value*4/5,label = percent(value/sum(value))), size=5)
+      geom_text(aes(y = (value)*5/5,label = percent(value/sum(value))), size=5)
   }
   savefile <- function(name){
     ggsave(paste0(name,".jpeg"), width = 5,height = 5,dpi = 1000)
@@ -128,7 +128,7 @@ savefile2("total_data")
   savefile("CTCF")
   drawpieplot(YY1_pietrans)
   savefile("YY1")
-  drawpieplot(kpnawvspol2bed_pietrans)
+  drawpieplot(pol1vspol2bed_pietrans)
   savefile("kpnawvspol2bed")
 #  drawpieplot(pol1_pietrans)
 

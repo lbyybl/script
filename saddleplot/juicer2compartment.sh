@@ -108,7 +108,7 @@ fi
 	# echo {1..19} | xargs -n1 | parallel java -jar ${java_dir}/juicer_tools.1.8.9_jcuda.0.8.jar dump ${Juicer_type} \
 	# KR ${Input_hicfile} {} {} BP $Resolution chr{}_${prefix}.${Juicer_type}
 	#--- dense
-	echo {{1..19},x,y} | xargs -n1 | parallel java -jar ${java_dir}/juicer_tools.1.8.9_jcuda.0.8.jar dump ${Juicer_type} \
+	echo {1..19} | xargs -n1 | parallel java -jar ${java_dir}/juicer_tools.1.8.9_jcuda.0.8.jar dump ${Juicer_type} \
 	KR ${Input_hicfile} {} {} BP $Resolution chr{}_${prefix}_${Juicer_type}_dense.matrix -d 
 	#-- change the bin number
 	# echo {1..19} | xargs -n1 | parallel awk -v res="${Resolution}" \'{printf \"%i \\t %i \\t %f \\n\",\$1/res+1,\$2/res+1,\$3}\' chr{}_${prefix}.${Juicer_type} '>>' chr{}_${prefix}_${Juicer_type}.matrix
@@ -116,7 +116,7 @@ fi
 	
 #----- trans the sparse matrix into dense
 	#--- get the bed file for every chr
-	echo {{1..19},x,y} | xargs -n1 | parallel  egrep -w \"chr{}\" ${Input_bedfile} ">>" chr{}_${prefix}.bed
+	echo {1..19} | xargs -n1 | parallel  egrep -w \"chr{}\" ${Input_bedfile} ">>" chr{}_${prefix}.bed
 	#--- trans the sparse to dense 
 	#set +euo pipefail
 	# echo {1..19} | xargs -n1 | parallel $hicpro_dir/utils/sparseToDense.py -b chr{}_${prefix}.bed chr{}_${prefix}_${Juicer_type}.matrix 
@@ -125,35 +125,36 @@ fi
 	
 #--- add header for the dense matrix 
 	#--- make header file
-	echo {{1..19},x,y} | xargs -n1 | parallel awk -v Genomename="$Genomename" \'{printf \"%i\|%s\|%s\:%i-%i\\n\",\$4,Genomename,\$1,\$2,\$3}\' chr{}_${prefix}.bed ">>" chr{}_${prefix}_header
+	echo {1..19} | xargs -n1 | parallel awk -v Genomename="$Genomename" \'{printf \"%i\|%s\|%s\:%i-%i\\n\",\$4,Genomename,\$1,\$2,\$3}\' chr{}_${prefix}.bed ">>" chr{}_${prefix}_header
 	#--- test whether header's line is equal dense file's line 
-	for i in {{1..19},x,y}; \
+	for i in {1..19}; \
 		do \
 		Row_line=$(cat chr${i}_${prefix}_${Juicer_type}_dense.matrix | wc -l)
 		Header_line=$(cat chr${i}_${prefix}_header | wc -l)
 		if [[ ${Row_line} != ${Header_line} ]]; then
-			sed -i '$d' chr${i}_${prefix}_header
+			st_line=$(echo ${Row_line}+1 | bc -l)
+			sed -i "${st_line},$ d" chr${i}_${prefix}_header
 		fi
 	done	
 	#--- add header
-	echo {{1..19},x,y} | xargs -n1 | parallel -j10 perl -I $cworldscript_dir/../../lib/ $cworldscript_dir/addMatrixHeaders.pl -i chr{}_${prefix}_${Juicer_type}_dense.matrix --xhf chr{}_${prefix}_header --yhf chr{}_${prefix}_header
+	echo {1..19} | xargs -n1 | parallel -j10 perl -I $cworldscript_dir/../../lib/ $cworldscript_dir/addMatrixHeaders.pl -i chr{}_${prefix}_${Juicer_type}_dense.matrix --xhf chr{}_${prefix}_header --yhf chr{}_${prefix}_header
 
 	
 #--- call compartment with cworld
 	#--- change 0.0 into nan
-	for i in {{1..19},x,y}; \
+	for i in {1..19}; \
 		do \
 		sed -e '/^##/d' -e 's/\t0.0\t/\tnan\t/g' -e 's/\t0.0\t/\tnan\t/g' -e 's/\t0.0$/\tnan/g' <(less chr${i}_${prefix}_${Juicer_type}_dense.addedHeaders.matrix.gz) \
 		>> chr${i}_${prefix}_${Juicer_type}_dense.addedHeaders.matrix ; \
 	done
 	# calculate the eg1 for header matrix
-	echo {{1..19},x,y} | xargs -n1 | parallel -j10 perl -I $cworldscript_dir/../../lib/ $cworldscript_dir/matrix2compartment.pl -i \
+	echo {1..19} | xargs -n1 | parallel -j10 perl -I $cworldscript_dir/../../lib/ $cworldscript_dir/matrix2compartment.pl -i \
 	chr{}_${prefix}_${Juicer_type}_dense.addedHeaders.matrix
 
 #--- rm useless files
-	echo {{1..19},x,y} | xargs -n1 | parallel -j10 rm chr{}_${prefix}_${Juicer_type}_dense.matrix  chr{}_${prefix}_header ## remove matrix and header in line 121
+	echo {1..19} | xargs -n1 | parallel -j10 rm chr{}_${prefix}_${Juicer_type}_dense.matrix  chr{}_${prefix}_header ## remove matrix and header in line 121
 
-	echo {{1..19},x,y} | xargs -n1 | parallel -j10 rm chr{}_${prefix}_${Juicer_type}_dense.addedHeaders.matrix # rm the matrix in line 132
+	echo {1..19} | xargs -n1 | parallel -j10 rm chr{}_${prefix}_${Juicer_type}_dense.addedHeaders.matrix # rm the matrix in line 132
 #--- rm file unless
-	echo {{1..19},x,y} | xargs -n1 | parallel rm chr{}_${prefix}.bed # chr{}_${prefix}_${Juicer_type}.matrix chr{}_${prefix}.${Juicer_type} # line 105 108 113
+	echo {1..19} | xargs -n1 | parallel rm chr{}_${prefix}.bed # chr{}_${prefix}_${Juicer_type}.matrix chr{}_${prefix}.${Juicer_type} # line 105 108 113
 

@@ -1,0 +1,2000 @@
+vim /usr/local/include/bamtools/api/BamReader.h
+vim configure.ac 
+./configure
+autoconf 
+./configure
+locate memory.h
+sudo cp -Rf /usr/local/include/bamtools /usr/include/
+locate memory.h
+locate BamReader.h
+sudo locate BamReader.h
+cd ../../exec/bamtools/
+ls
+cd build/
+ls
+sudo make
+sudo make install
+cd /usr/local/include/
+ls
+ls -lhta
+cd bamtools/
+
+cd /DATA/software/chia-pet/origami
+make
+make install
+sudo make install
+make
+vim Makefile
+make install
+sudo make install
+vim Makefile
+make install
+cd  /usr/local/bin
+ls
+chmod 777 -Rf ./*
+ls
+origami-alignment 
+cd /DATA/software/hi-c/
+ls
+exit
+cd /DATA/work/lbyybl/rawdata
+ls
+sudo rm -Rf sample1_output/
+sudo rm -Rf sample3_output/
+df -h
+cd /DATA/pipeline/cs-seq
+ls
+sudo rm -Rf test_data/
+ls
+cd /DATA/software/4c/fourfold/
+ls
+make install
+4c-pipeline.sh
+vim ~/.bashrc
+source ~/.bashrc
+/usr/local/bin/bin/4c-comparison.sh 
+cd  /usr/local/bin
+ls
+cd bin/
+ls
+mv ./* ../
+cd ..
+rm bin/
+rm -Rf bin/
+cd ~/
+4c-pipeline.sh 
+exit
+ls
+sudo useradd whjiang -m -s /bin/bash
+sudo passwd whjiang
+sudo vim /etc/sudoers
+sudo usermod -G sudo whjiang
+exit
+cd /DATA/pipeline/chip-seq
+chmod 777 -Rf ../*
+ls
+scp l@162.105.250.14:/DATA/pipeline/cs-seq/sample1026/*.fastq.gz ./
+cd /DATA/pipeline/chip-seq
+ls -lhat
+scp l@162.105.250.14:/DATA/pipeline/cs-seq/sample1026/*.fastq.gz ./
+cd /DATA/pipeline/chip-seq
+ls -lhat
+conda install kallisto
+ping 19.75.217.109
+sudo firefox
+firefox
+firefox 
+su
+R
+df -h
+top
+clear
+pip install hichipper
+exit
+df -h
+top
+clear
+cd /DATA/pipeline/
+ls
+cd /home/l
+rm -Rf ./tmpbcbio-install/
+rm -Rf ./tmpbcbio-install
+top
+su
+top
+df -h
+exit
+df -h
+su
+cd /DATA/pipeline/cs-seq/sample0419
+ls
+scp l@162.105.250.14:cd /DATA/pipeline/cs-seq/sample0419/*.clean.fq.gz ./
+scp l@162.105.250.14:/DATA/pipeline/cs-seq/sample0419/*.clean.fq.gz ./
+df -h
+cd ../sample0704/
+ls
+scp l@162.105.250.14:/DATA/pipeline/cs-seq/sample0704/*.clean.fq.gz ./
+df -h
+top
+df -h
+top
+kill -9 8084
+kill -9 8083
+top
+cd ../sample1226/
+ls
+chmod combine_hic.sh 777
+chmod 777 combine_hic.sh
+ls
+vim nohup.out 
+rm nohup.out 
+vim combine_hic.sh 
+nohup ./combine_hic.sh &
+top
+kill -9 9459
+kill -9 9456
+kill -9 9457
+kill -9 9458
+top
+vim combine_hic.sh 
+nohup ./combine_hic.sh &
+ls
+vim combine_hic.sh 
+cd /DATA/software/hi-c/HiC-Pro_2.9.0
+vim config_csseq_mm10_v3.txt 
+cd /DATA/pipeline/cs-seq/sample1226/
+ls
+cd 6h_merge
+ls
+cd 6h/
+ls
+cd /DATA/software/hi-c/HiC-Pro_2.9.0/
+ls
+cd 0h_merge_mm10/bowtie_results/bwt2_global/0h/
+ls
+ls -lhat
+exit
+cd /DATA/software/hi-c/HiC-Pro_2.9.0
+vim config_csseq_mm10_v3.txt 
+nohup ./bin/HiC-Pro -c config_csseq_mm10_v3.txt -i /DATA/pipeline/cs-seq/sample1226/0h_merge -o 0h_merge_mm10/ &
+nohup ./bin/HiC-Pro -c config_csseq_mm10_v3.txt -i /DATA/pipeline/cs-seq/sample1226/6h_merge -o 6h_merge_mm10/ &
+pip install cutadapt
+pip install --upgrade cutadapt
+sudo pip install --upgrade cutadapt
+pip install --upgrade cutadapt
+cutadapt --version
+pip3 install cutadapt
+pip install --upgrade pip
+sudo pip install --upgrade pip
+pip3 install cutadapt
+locate cutadapt
+df -h
+cd /DATA/pipeline/cs-seq/sample1226
+pip3 install cutadapt
+pip install --upgrade cutadapt
+which cutadapt
+cat s1215Rpb1-0h-1_HCKYCCCXY_L2_1.fq.gz s1215Rpb1-0h-2_HCKYCCCXY_L1_1.fq.gz > s1215Rpb1-0h-HCKYCCCXY_L1.fq.gz
+trimLinker 
+trimLinker -h
+ls
+nohup trimLinker -t 10 -m 1 -k 2 -l 16 -o ./0h_1 -n 0h_1 -A ACGCGATATCTTATC -B AGTCAGATAAGATAT s1215Rpb1-0h-1_HCKYCCCXY_L2_1.fq.gz s1215Rpb1-0h-1_HCKYCCCXY_L2_2.fq.gz &
+ls
+df -h
+nohup trimLinker -t 16 -m 1 -k 2 -l 16 -o ./0h_2 -n 0h_2 -A ACGCGATATCTTATC -B AGTCAGATAAGATAT s1215Rpb1-0h-2_HCKYCCCXY_L1_1.fq.gz s1215Rpb1-0h-2_HCKYCCCXY_L1_2.fq.gz &
+ls
+nohup trimLinker -t 16 -m 1 -k 2 -l 16 -o ./6h_1 -n 6h_1 -A ACGCGATATCTTATC -B AGTCAGATAAGATAT s1215Rpb1-6h-1_HCKYCCCXY_L2_1.fq.gz s1215Rpb1-6h-1_HCKYCCCXY_L2_2.fq.gz &
+nohup trimLinker -t 16 -m 1 -k 2 -l 16 -o ./6h_2 -n 6h_2 -A ACGCGATATCTTATC -B AGTCAGATAAGATAT s1215Rpb1-6h-2_HCKYCCCXY_L1_1.fq.gz s1215Rpb1-6h-2_HCKYCCCXY_L1_2.fq.gz &
+top
+df -h
+cd /DATA/pipeline/cs-seq/sample1226
+cat 0h_1/0h_1_1.valid.fastq 0h_2/0h_2_1.valid.fastq > 0h_merge/0h/0h_R1.fastq
+cat 0h_1/0h_1_2.valid.fastq 0h_2/0h_2_2.valid.fastq > 0h_merge/0h/0h_R2.fastq
+cat 6h_1/6h_1_1.valid.fastq 6h_2/6h_2_1.valid.fastq > 6h_merge/6h/6h_R1.fastq
+cat 6h_1/6h_1_2.valid.fastq 6h_2/6h_2_2.valid.fastq > 6h_merge/6h/6h_R2.fastq
+ls
+cd /DATA/software/hi-c/HiC-Pro_2.9.0
+vim config_csseq_mm10_v3.txt 
+time ./bin/HiC-Pro -c config_csseq_mm10_v3.txt -i /DATA/pipeline/cs-seq/sample1226/0h_merge -o 0h_merge_mm10/
+nohup ./bin/HiC-Pro -c config_csseq_mm10_v3.txt -i /DATA/pipeline/cs-seq/sample1226/0h_merge -o 0h_merge_mm10/ &
+top
+nohup ./bin/HiC-Pro -c config_csseq_mm10_v3.txt -i /DATA/pipeline/cs-seq/sample1226/0h_merge -o 0h_merge_mm10/ &
+vim config_csseq_mm10_v3.txt 
+nohup ./bin/HiC-Pro -c config_csseq_mm10_v3.txt -i /DATA/pipeline/cs-seq/sample1226/0h_merge -o 0h_merge_mm10/ &
+top
+
+df -h
+cd /DATA/pipeline/cs-seq/sample1226
+cat 0h_1/0h_1_1.valid.fastq 0h_2/0h_2_1.valid.fastq > 0h_merge/0h/0h_R1.fastq
+ls
+cat 0h_1/0h_1_1.valid.fastq 0h_2/0h_2_1.valid.fastq > 0h_merge/0h/0h_R1.fastq
+cat 0h_1/0h_1_2.valid.fastq 0h_2/0h_2_2.valid.fastq > 0h_merge/0h/0h_R2.fastq
+cat 6h_1/6h_1_2.valid.fastq 6h_2/6h_2_2.valid.fastq > 6h_merge/6h/6h_R2.fastq
+cat 6h_1/6h_1_1.valid.fastq 6h_2/6h_2_1.valid.fastq > 6h_merge/6h/6h_R1.fastq
+top
+top
+df -h
+cd /DATA/software/hi-c/HiC-Pro_2.9.0/
+top
+df -h
+R
+sudo apt-get install libmariadb-client-lgpl-dev
+sudo apt-get install libmariadbclient-dev
+sudo apt-get install libmariadbclient
+R
+locate bcbio_
+which bcbio_nextgen.py
+cd /DATA/pipeline/rna-seq/sample1231/polII_mm10/work
+bcbio_nextgen.py ../config/poll_mm10.yaml 
+sudo apt-get install sqlite3
+sudo apt-get install sqlite3-dev
+sudo apt-get install sqlite3-devel
+bcbio_nextgen.py ../config/poll_mm10.yaml -n 10
+cd /DATA/pipeline/rna-seq/sample1231/polII_mm10
+R
+df -h
+ls
+R
+chmod 777 -Rf ./*
+R
+exit
+R
+df -h
+cd /dev/sdb2
+cd /DATA/pipeline/rna-seq/sample1231/polII_mm10
+ls
+R
+top
+cd /DATA/software/hi-c/HiC-Pro_2.9.0/6h_merge_mm10/bowtie_results/bwt2/6h
+cd ..
+df -h
+cd 0h_merge_mm10/
+/DATA/software/hi-c/HiC-Pro_2.9.0/bin/utils/hicpro2juicebox.sh -i /DATA/software/hi-c/HiC-Pro_2.9.0/0h_merge_mm10/hic_results/data/0h/0h_allValidPairs -g mm10 -j /DATA/software/hi-c/juicer/juicer_tools_linux_0.8.jar
+cd ../6h_merge_mm10/
+/DATA/software/hi-c/HiC-Pro_2.9.0/bin/utils/hicpro2juicebox.sh -i /DATA/software/hi-c/HiC-Pro_2.9.0/6h_merge_mm10/hic_results/data/6h/6h_allValidPairs -g mm10 -j /DATA/software/hi-c/juicer/juicer_tools_linux_0.8.jar
+df -h
+top
+cd /home/l/
+ls
+bcbio_nextgen.py upgrade -u stable --tools --data
+conda update conda
+conda update anaconda
+bcbio_nextgen.py upgrade -u stable
+bcbio_nextgen.py upgrade -u stable --tools
+conda install ncurses
+conda install ncurses -c conda-forge
+bcbio_nextgen.py upgrade -u stable --tools
+cd /DATA/software/bcbio/anaconda/pkgs/ncurses-5.9-10/lib/terminfo
+ls -lhat
+cd ../
+cd ~
+bcbio_nextgen.py upgrade -u stable --tools
+/DATA/software/bcbio/anaconda/bin/conda install --quiet -y -n samtools0 -c conda-forge -c bioconda ericscript
+/DATA/software/bcbio/anaconda/bin/conda install ncurses
+bcbio_nextgen.py upgrade -u stable --tools
+top
+R
+which R
+ls -lhat
+df -h
+top
+lsof -n | grep deleted
+R
+cd /home/kaili
+su
+df -h
+R
+df -h
+bcbio-rnaseq
+cd /DATA/pipeline/rna-seq/sample1231/
+ls
+cd polII_mm10/
+ls
+pws
+pwd
+R
+locate cut_column
+cd /DATA/software/hi-c/HiC-Pro_2.9.0
+scp l@162.105.250.14:/DATA/pipeline/cs-seq/sample1018/cut_columns.py ./
+ls
+python cut_columns.py -i 0h_merge_mm10/hic_results/data/0h/0h_allValidPairs -c 0,1,2,3,4,5,6 > 0h_merge_mm10/0h.hicsummary
+python cut_columns.py -i 6h_merge_mm10/hic_results/data/6h/6h_allValidPairs -c 0,1,2,3,4,5,6 > 6h_merge_mm10/6h.hicsummary
+scp l@162.105.250.14:/DATA/pipeline/cs-seq/sample1018/CscoreTool1.1 ./
+./CscoreTool1.1 
+locate mouse.mm10.genome
+locate mouse.mm10
+cp /usr/share/bedtools/genomes/mouse.mm10.genome.txt ./
+bedtools makewindows -g mouse.mm10.genome -w 10000 > mm10_10k.bed
+vim mouse.mm10.genome 
+scp l@162.105.250.14:/DATA/pipeline/cs-seq/sample1018/mouse.mm10.genome ./
+bedtools makewindows -g mouse.mm10.genome -w 10000 > mm10_10k.bed
+bedtools makewindows -g mouse.mm10.genome -w 40000 > mm10_40k.bed
+./CscoreTool1.1 mm10_10k.bed 0h_merge_mm10/0h.hicsummary ./0h_merge_mm10/0h_merge_10k 1000000
+./CscoreTool1.1 mm10_10k.bed 0h_merge_mm10/0h.hicsummary ./0h_merge_mm10/0h_merge_10k 12 1000000
+top
+ssh l@162.105.250.14
+cd /DATA/software/hi-c/HiC-Pro_2.9.0
+ls
+nohup ./CscoreTool1.1 mm10_10k.bed 0h_merge_mm10/0h.hicsummary ./0h_merge_mm10/0h_merge_10k 12 1000000 &
+top
+bamToBigWig
+cd /DATA/pipeline/rna-seq/sample1231/polII_mm10/final
+chmod 777 bamToBigWig 
+vim bam2bigwig.mm10.sh 
+fetchChromSizes mm10 > mm10.chrom.sizes
+top
+ls
+ls -lhat
+R
+ls
+ls -lhat
+top
+cd /DATA/software/hi-c/juicer
+java -jar -Xmx4g 
+ls
+chmod 777 ./*
+chmod 777 -Rf ./*
+java -jar juicer_tools.1.7.5_linux_x64_jcuda.0.8.jar 
+java -jar -Xmx4g juicer_tools.1.7.5_linux_x64_jcuda.0.8.jar 
+java -jar -Xmx4g juicer_tools.1.7.5_linux_x64_jcuda.0.8.jar apa 
+top
+R
+locate 10000.matrix
+ssh l@162.105.250.14
+locate 10000.matrix
+cd /DATA/software/hi-c/HiC-Pro_2.9.0/ko_csseq_mm10/HICcompare/
+cp /DATA/software/hi-c/HiC-Pro_2.9.0/0h_merge_mm10/hic_results/matrix/0h/raw/10000/0h_10000.matrix ./
+cp /DATA/software/hi-c/HiC-Pro_2.9.0/6h_merge_mm10/hic_results/matrix/6h/iced/10000/ ./
+df -h
+locate 10000_abs.bed
+cp /DATA/software/hi-c/HiC-Pro_2.9.0/0h_merge_mm10/hic_results/matrix/0h/raw/10000/0h_10000_abs.bed ./
+cp /DATA/software/hi-c/HiC-Pro_2.9.0/6h_merge_mm10/hic_results/matrix/6h/raw/10000/6h_10000_abs.bed ./
+R
+cd /DATA/pipeline/rna-seq/sample1231/polII_mm10/final
+cd /DATA/software/hi-c/HiC-Pro_2.9.0
+nohup ./CscoreTool1.1 mm10_10k.bed 6h_merge_mm10/6h.hicsummary ./6h_merge_mm10/6h_merge_10k 12 1000000 &
+top
+sudo apt-get upgrade
+ls
+bedItemOverlapCount
+fetchChromSizes
+top
+df -h
+cd /DATA/pipeline/rna-seq/sample1231/
+ls
+cd polII_mm10/
+ls
+cd final/
+ls
+0h_rep1
+cd 0h_rep1/
+ls
+pip install pysam
+wigToBigWig
+rsem-bam2wig
+fetchChromSizes mm10 > mm10.chrom.sizes
+ls
+vim mm10.chrom.sizes 
+bamToBed
+bamToBed -h
+vim bam2bigwig.mm10.sh
+chmod 777 bam2bigwig.mm10.sh 
+top
+./bam2bigwig.mm10.sh 0h_rep1-ready.bam
+cd ..
+samtools merge 0h_rep1/0h_rep1-ready.bam 0h_rep2/0h_rep2-ready.bam > 0h_merge.bam
+samtools merge 0h_merge.bam 0h_rep1/0h_rep1-ready.bam 0h_rep2/0h_rep2-ready.bam
+samtools merge 5h_merge.bam 6h_rep1/6h_rep1-ready.bam 6h_rep2/6h_rep2-ready.bam
+ls
+mv 5h_merge.bam 6h_merge.bam
+ls
+./bamToBigWig 
+vim bamToBigWig 
+./bamToBigWig 
+vim bamToBigWig 
+./bamToBigWig 
+./bamToBigWig 0h_merge.bam mm10.chrom.sizes 0h_merge.bw
+vim bam2bigwig.mm10.sh 
+ls
+mv mm10.chrom.sizes mm10.chrom.sizes
+./bam2bigwig.mm10.sh 
+./bam2bigwig.mm10.sh 0h_merge.bam 
+nohup ./bam2bigwig.mm10.sh 0h_merge.bam &
+ls
+ls -lhat
+vim nohup.out 
+top
+ls
+vim bam2bigwig.mm10.sh 
+fetchChromSizes mm10 > mm10.chrom.sizes
+kill -9 30174
+vim bam2bigwig.mm10.sh 
+ls
+fetchChromSizes mm10 > mm10.chrom.sizes
+ls
+vim bam2bigwig.mm10.sh 
+nohup ./bam2bigwig.mm10.sh 0h_merge.bam &
+ls
+ls -lhat
+top
+ls -lhat
+top
+ls -lhat
+df -h
+ls -lhat
+vim nohup.out 
+vim bam2bigwig.mm10.sh 
+ls -lhat
+vim nohup.out 
+top
+vim bam2bigwig.mm10.sh 
+kill -9 30770
+top
+ls
+vim bam2bigwig.mm10.sh 
+cat accepted_hits.bed | sort -k1,1 | bedItemOverlapCount mm10 -chromSize=mm10.chrom.sizes stdin | sort -k1,1 -k2,2n > accepted_hits.bedGraph
+vim bam2bigwig.mm10.sh 
+bedGraphToBigWig accepted_hits.bedGraph mm10.chrom.sizes $1.bw
+bedGraphToBigWig accepted_hits.bedGraph mm10.chrom.sizes 0h_merge.bam.bw 
+top
+ls
+nohup ./bam2bigwig.mm10.sh 6h_merge.bam &
+ls
+ls -lhat
+cd /DATA/software/hi-c/HiC-Pro_2.9.0/ko_csseq_mm10/HICcompare
+ls
+head tt.txt 
+top
+ssh l@162.105.250.14
+top
+cd /DATA/software/hi-c/HiC-Pro_2.9.0/
+ls
+cd 0h_merge_mm10/
+ls
+cd 0h_40kb_TAD/
+ls
+cd BED/
+ls
+ls -lhat
+cd ../
+ls
+cd TXT/
+ls
+cd /DATA/pipeline/chip-seq/
+cd sample0104/
+ls -lhat
+exit
+cd top
+top
+locate sparseToDense.py
+cd /DATA/software/hi-c/HiC-Pro_2.9.0/0h_merge_mm10
+/DATA/software/hi-c/HiC-Pro_2.9.0/bin/utils/sparseToDense.py /DATA/software/hi-c/HiC-Pro_2.9.0/0h_merge_mm10/hic_results/matrix/0h/raw/40000/0h_40000_abs.bed /DATA/software/hi-c/HiC-Pro_2.9.0/0h_merge_mm10/hic_results/matrix/0h/iced/40000/0h_40000_iced.matrix
+/DATA/software/hi-c/HiC-Pro_2.9.0/bin/utils/sparseToDense.py -b /DATA/software/hi-c/HiC-Pro_2.9.0/0h_merge_mm10/hic_results/matrix/0h/raw/40000/0h_40000_abs.bed /DATA/software/hi-c/HiC-Pro_2.9.0/0h_merge_mm10/hic_results/matrix/0h/iced/40000/0h_40000_iced.matrix
+ls
+ls -lhat
+head /DATA/software/hi-c/HiC-Pro_2.9.0/0h_merge_mm10/hic_results/matrix/0h/iced/40000/0h_40000_iced.matrix
+tail /DATA/software/hi-c/HiC-Pro_2.9.0/0h_merge_mm10/hic_results/matrix/0h/iced/40000/0h_40000_iced.matrix
+/DATA/software/hi-c/HiC-Pro_2.9.0/bin/utils/sparseToDense.py -b /DATA/software/hi-c/HiC-Pro_2.9.0/0h_merge_mm10/hic_results/matrix/0h/raw/40000/0h_40000_abs.bed /DATA/software/hi-c/HiC-Pro_2.9.0/0h_merge_mm10/hic_results/matrix/0h/iced/40000/0h_40000_iced.matrix --perchr -o matrix
+head /DATA/software/hi-c/HiC-Pro_2.9.0/0h_merge_mm10/hic_results/matrix/0h/raw/40000/0h_40000_abs.bed 
+wc -l /DATA/software/hi-c/HiC-Pro_2.9.0/0h_merge_mm10/hic_results/matrix/0h/raw/40000/0h_40000_abs.bed 
+ls
+chmod 777 call_tads.py 
+python call_tads.py 
+pip install docopt
+pip install pytadbit
+pip install TADbit
+cd /DATA/software/hi-c/TADbit
+sudo apt-get install python-dev
+sudo apt-get install mcl
+python setup.py install
+sudo python setup.py install
+cd /DATA/software/hi-c/HiC-Pro_2.9.0/0h_merge_mm10
+python call_tads.py 
+python setup.py install
+
+conda install docopt
+python
+python call_tads.py 
+python call_tads.py -h
+./call_tads.py -h
+conda config --add channels salilab
+conda install imp
+./call_tads.py -h
+./call_tads.py -m chr19_matrix 
+./call_tads.py -m chr19_matrix -r 40000
+./call_tads.py -m ./chr19_matrix -r 40000 -c chr19
+./call_tads.py -d chr19_matrix -r 40000 -c chr19
+./call_tads.py -m chr19_matrix -r 40000 -c chr19
+./call_tads.py -m chr19_matrix -r 40000 -c chr19 -o test
+/DATA/software/hi-c/HiC-Pro_2.9.0/bin/utils/sparseToDense.py -b /DATA/software/hi-c/HiC-Pro_2.9.0/0h_merge_mm10/hic_results/matrix/0h/raw/40000/0h_40000_abs.bed /DATA/software/hi-c/HiC-Pro_2.9.0/0h_merge_mm10/hic_results/matrix/0h/iced/40000/0h_40000_iced.matrix --perchr -o 0h_40kb_matrix
+/DATA/software/hi-c/HiC-Pro_2.9.0/bin/utils/sparseToDense.py -b /DATA/software/hi-c/HiC-Pro_2.9.0/0h_merge_mm10/hic_results/matrix/6h/raw/40000/6h_40000_abs.bed /DATA/software/hi-c/HiC-Pro_2.9.0/6h_merge_mm10/hic_results/matrix/6h/iced/40000/6h_40000_iced.matrix --perchr -o 6h_40kb_matrix
+/DATA/software/hi-c/HiC-Pro_2.9.0/bin/utils/sparseToDense.py -b /DATA/software/hi-c/HiC-Pro_2.9.0/6h_merge_mm10/hic_results/matrix/6h/raw/40000/6h_40000_abs.bed /DATA/software/hi-c/HiC-Pro_2.9.0/6h_merge_mm10/hic_results/matrix/6h/iced/40000/6h_40000_iced.matrix --perchr -o 6h_40kb_matrix
+./call_tads.py -d 0h_40kb_matrix/ -r 40000 -c chr19 -o 0h_40kb_TAD
+./call_tads.py -d 0h_40kb_matrix/ -r 40000  -o 0h_40kb_TAD
+./call_tads.py -d 0h_40kb_matrix/ -r 40000  -o 0h_40kb_TAD &
+top
+df -h
+top
+toptop
+top
+q
+df -h
+top
+kill -9 28721
+top
+exit
+top
+kill -9 31376
+ls
+df -h
+cd /DATA/software/chip-seq
+git clone https://github.com/sequencing/NxTrim.git
+cd cd NxTrim
+cd NxTrim
+ls
+chmod 777 -Rf ./*
+make
+./nxtrim
+cp ./nxtrim ~/bin/
+chmod 777 -Rf ~/bin/*
+nxtrim 
+cd /DATA/pipeline/chip-seq/sample0104
+nxtrim 
+nxtrim -1 Ctcf-0h-4_HCM72CCXY_L6_1.fq.gz -2 Ctcf-0h-4_HCM72CCXY_L6_2.fq.gz -o test
+nxtrim -1 Ctcf-0h-4_HCM72CCXY_L6_1.fq.gz -2 Ctcf-0h-4_HCM72CCXY_L6_2.fq.gz -O test
+nxtrim 
+nxtrim -1 Ctcf-0h-4_HCM72CCXY_L6_1.fq.gz -2 Ctcf-0h-4_HCM72CCXY_L6_2.fq.gz --separate --justmp -O test
+nxtrim -1 Ctcf-0h-4_HCM72CCXY_L6_1.fq.gz -2 Ctcf-0h-4_HCM72CCXY_L6_2.fq.gz --separate --stdout-mp -O Ctcf-0h-4_clean
+nxtrim -1 Ctcf-0h-4_HCM72CCXY_L6_1.fq.gz -2 Ctcf-0h-4_HCM72CCXY_L6_2.fq.gz --separate --just-mp -O Ctcf-0h-4_clean
+nxtrim -1 Ctcf-0h-4_HCM72CCXY_L6_1.fq.gz -2 Ctcf-0h-4_HCM72CCXY_L6_2.fq.gz --separate --justmp -O Ctcf-0h-4_clean
+nxtrim -1 Ctcf-0h-4_HCM72CCXY_L6_1.fq.gz -2 Ctcf-0h-4_HCM72CCXY_L6_2.fq.gz --separate --justmp -O ./clean/Ctcf-0h-4_clean
+vim trimNextera.sh
+chmod 777 ./trimNextera.sh 
+mv trimNextera.sh trimnextera.sh 
+nohup ./trimnextera.sh &
+ls
+nxtrim 
+top
+kill -9 14579
+top
+kill -9 14650
+top
+kill -9 14657
+top
+kill -9 14661
+top
+kill -9 14665
+top
+kill -9 14667
+top
+kill -9 14671
+top
+kill -9 14675
+top
+kill -9 14677
+top
+kill -9 14681
+top
+kill -9 14685
+top
+kill -9 14687
+top
+clear
+nxtrim 
+nextclip 
+nextclip -i Ac-0h-3_HCM72CCXY_L5_1.fq.gz -j Ac-0h-3_HCM72CCXY_L5_2.fq.gz -m 18 -y -o test
+nextclip -i Ac-0h-3_HCM72CCXY_L5_1.fq.gz -j Ac-0h-3_HCM72CCXY_L5_2.fq.gz -m 18 -y '32,17' -o test
+Xshell
+pip install cutadapt
+cp /DATA/software/exec/TrimGalore-0.4.5/trim_galore ~/bin/
+chmod 777 ~/bin/*
+trim_galore 
+trim_galore -h
+trim_galore --nextera --quality 20 --phred33 --stringency 3 --length 18 --paired --gzip --output_dir test Ac-0h-3_HCM72CCXY_L5_1.fq.gz Ac-0h-3_HCM72CCXY_L5_2.fq.gz
+trim_galore -h
+trim_galore --nextera --quality 20 --phred33 --stringency 3 --length 18 --paired --gzip  Ac-0h-3_HCM72CCXY_L5_1.fq.gz Ac-0h-3_HCM72CCXY_L5_2.fq.gz -o test
+trim_galore --nextera --quality 20 --phred33 --stringency 3 --length 18 --paired --gzip  Ac-0h-3_HCM72CCXY_L5_1.fq.gz Ac-0h-3_HCM72CCXY_L5_2.fq.gz
+rm trimnextera.sh 
+vim trim_nextera.sh
+chmod 777 trim_nextera.sh 
+nohup ./trim_nextera.sh &
+top
+df -h
+top
+df -h
+top
+df -h
+hdparm -i /dev/sda1
+sudo hdparm -i /dev/sda1
+sudo hdparm -I /dev/sda1
+sudo hdparm -i /dev/sda |grep "Model"
+sudo hdparm -I /dev/sda1 |grep "Model"
+top
+kill -9 21326
+kill -9 21362
+bowtie2
+vim callTAD.sh
+chmod 777 callTAD.sh 
+mv callTAD.sh /DATA/software/hi-c/HiC-Pro_2.9.0/0h_merge_mm10/
+top
+df -h
+ls
+bcbio_nextgen.py
+bcbio_nextgen.py -h
+vim config/chipseq_mm10_0105.yaml 
+cd work/
+bcbio_nextgen.py ../config/chipseq_mm10_0105.yaml -n 12
+bcbio_nextgen.py ../config/chipseq_mm10_0105.yaml -n 10
+top
+cd /DATA/pipeline/chip-seq/sample0104/
+cd work/
+cd /DATA/software/hi-c/HiC-Pro_2.9.0/0h_merge_mm10/
+vim callTAD.sh 
+cd /DATA/pipeline/chip-seq/sample0104/
+cd work/
+nohup bcbio_nextgen.py ../config/chipseq_mm10_0105.yaml -n 10 &
+top
+exit
+R
+top
+kill -9 10327
+top
+cd /DATA/software/hi-c/HiC-Pro_2.9.0/ko_csseq_mm10/HICcompare
+R
+locate 40000_abs.bed
+cp /DATA/software/hi-c/HiC-Pro_2.9.0/0h_merge_mm10/hic_results/matrix/0h/raw/40000/0h_40000_abs.bed ./
+cp /DATA/software/hi-c/HiC-Pro_2.9.0/6h_merge_mm10/hic_results/matrix/6h/raw/40000/6h_40000_abs.be ./
+cp /DATA/software/hi-c/HiC-Pro_2.9.0/6h_merge_mm10/hic_results/matrix/6h/raw/40000/6h_40000_abs.bed ./
+locate _40000.matrix
+cp /DATA/software/hi-c/HiC-Pro_2.9.0/0h_merge_mm10/hic_results/matrix/0h/raw/40000/0h_40000.matrix ./
+cp /DATA/software/hi-c/HiC-Pro_2.9.0/6h_merge_mm10/hic_results/matrix/6h/raw/40000/6h_40000.matrix ./
+R
+df -h
+top
+df -h
+cd /DATA/software/exec/nextclip
+chmod 777 -Rf ./*
+ls
+make
+ls
+./bin/nextclip 
+cp bin/nextclip ~/bin/
+chmod 777 -Rf ~/bin/*
+nextclip 
+cd /DATA/software/hi-c/HiC-Pro_2.9.0/
+chmod 777 -Rf ~/bin/*
+scaq
+scalce
+scalce -h
+cd /DATA/pipeline/chip-seq/sample1028
+scalce KO-H3K27Ac_combined_R1.fastq -r -o KO-H3K27Ac -n KO-H3K27Ac_library
+vim compress.sh
+chmod 777 compress.sh 
+cd /DATA/software/hi-c/HiC-Pro_2.9.0/0h_merge_mm10
+./call_tads.py -h
+./call_tads.py -d 0h_40kb_matrix/ -r 40000 -t 10 -o 0h_TAD
+./call_tads.py -h
+./call_tads.py -m 0h_40kb_matrix/chr1_0h_40kb_matrix -r 40000 -c chr1 -t 10 -o 0h_chr1_TAD
+ls
+vim callTAD.sh 
+nohup ./callTAD.sh &
+ls
+top
+cd /DATA/software/hi-c/HiC-Pro_2.9.0/0h_merge_mm10/
+ls
+cd 6h_chrX_TAD/BED/
+ls
+vim chrX_TADs.bed 
+cd /DATA/pipeline/chip-seq/sample0104/
+ls
+cd work/
+ls
+vim nohup.out 
+exit
+top
+cd /DATA/pipeline/chip-seq/sample0104/work/
+vim nohup.out 
+exit
+top
+cd /DATA/pipeline/chip-seq/sample0104/work/
+tail nohup.out 
+top
+df -h
+cp ~/.bash_history /DATA/pipeline/chip-seq/sample0104/bash_history
+vim callpeaks.sh
+chmod 777 callpeaks.sh 
+vim callpeaks.sh 
+vim convert.sh
+chmod 777 convert.sh 
+cd /DATA/pipeline/chip-seq/sample0104/work/
+ls
+cd align/
+ls -lhat
+exit
+cd /DATA/pipeline/chip-seq/sample0104/final/
+ls
+cd bigwig/
+ls
+rm -Rf *.bdg.sort
+ls
+cd /DATA/pipeline/chip-seq/sample0104/work/
+cd ../final/
+top
+ls
+cd Pol2-6h_peaks/
+ls -lhat
+cd ..
+mv Pol2-6h_treat_pileup.bdg bigwig/
+cd Smc1-6h_peaks/
+ls -lhat
+mv o-lambda_treat_pileup.bdg Smc1-6h_treat_pileup.bdg
+mv Smc1-6h_treat_pileup.bdg ../bigwig/
+cd ../bigwig/
+ls -lhat
+mv ../Ac-wt_peaks/Ac-wt_treat_pileup.bdg ./
+mv ../Pol2-wt_peaks/Pol2-wt_treat_pileup.bdg ./
+ls -lhat
+vim convert.sh 
+nohup ./convert.sh &
+top
+ls -lhat
+vim convert.sh 
+vim nohup.out 
+vim convert2.sh
+chmod 777 convert2.sh 
+ls
+ls -lhat
+bedGraphToBigWig Ctcf-0h_pileup.bdg.sort mouse.mm10.genome Ctcf-0h.bw
+ls -lhat
+top
+pip install md2pdf
+sudo apt-get install libffi-dev
+pip install md2pdf
+top
+pip install deeptools
+sudo pip install deeptools
+bamCoverage --help
+locate callpeaks
+cd /DATA/pipeline/chip-seq/sample0104/final
+ls
+mv /home/l/callpeaks.sh ./
+vim callpeaks.sh 
+ls
+chmod 777 ./*
+./callpeaks.sh 
+nohup ./callpeaks.sh &
+df -h
+vim callpeaks.sh 
+mv /home/l/convert.sh ./
+vim convert.sh 
+locate mouse.mm10.genome
+cp /usr/share/bedtools/genomes/mouse.mm10.genome.txt ./
+mv mouse.mm10.genome.txt mouse.mm10.genome
+cd bigwig/
+vim convert.sh 
+cd ..
+vim callpeaks.sh 
+macs2 callpeak -t ./bam/Pol2-0h-ready.bam -c ./bam/Input-0h-ready.bam -n Pol2-0h -B -q 0.01 -no-lambda -g mm --outdir Pol2-0h_peaks
+multiBamSummary bins
+multiBamSummary bins --bamfiles bam/*.bam -out readCounts.npz --outRawCounts readCounts.tab
+nohup multiBamSummary bins --bamfiles bam/*.bam -out readCounts.npz --outRawCounts readCounts.tab &
+top
+vim nohup.out 
+tail nohup.out 
+vim callpeaks.sh 
+ls
+vim callpeaks.sh 
+macs2 callpeak -t bam/Pol2-wt-ready.bam -n Pol2-wt -B -q 0.01 -g mm --outdir Pol2-wt_peaks
+macs2 callpeak -t bam/Input-0h-ready.bam -n Input-0h -B --broad -q 0.01 -g mm --outdir Input-0h_peaks
+macs2 callpeak -t bam/Input-6h-ready.bam -n Input-6h -B --broad -q 0.01 -g mm --outdir Input-6h_peaks
+exit
+top
+plotCorrelation
+cd /DATA/pipeline/chip-seq/sample0104/final
+plotCorrelation -in readCounts.npz --corMethod pearson --skipZeros  --plotTitle "Pearson Correlation of Read Counts" --whatToPlot heatmap --colorMap RdYlBu --plotNumbers -o heatmap_PearsonCorr_readCounts.pdf --outFileCorMatrix PearsonCorr_readCounts.tab
+cd bigwig/
+vim convert.sh 
+sort -k1,1 -k2,2n Pol2-wt_treat_pileup.bdg > Pol2-wt_treat_pileup.bdg.sort && bedGraphToBigWig Pol2-wt_treat_pileup.bdg.sort mouse.mm10.genome Pol2-wt.bw
+vim convert.sh 
+sort -k1,1 -k2,2n Pol2-0h_treat_pileup.bdg > Pol2-0h_treat_pileup.bdg.sort && bedGraphToBigWig Pol2-0h_treat_pileup.bdg.sort mouse.mm10.genome Pol2-0h.bw
+vim convert.sh 
+sort -k1,1 -k2,2n Input-0h_treat_pileup.bdg > Input-0h_treat_pileup.bdg.sort && bedGraphToBigWig Input-0h_treat_pileup.bdg.sort mouse.mm10.genome Input-0h.bw
+ls
+sort -k1,1 -k2,2n Input-0h_treat_pileup.bdg > Input-0h_treat_pileup.bdg.sort && bedGraphToBigWig Input-0h_treat_pileup.bdg.sort mouse.mm10.genome Input-0h.bw
+sort -k1,1 -k2,2n Input-6h_treat_pileup.bdg > Input-6h_treat_pileup.bdg.sort && bedGraphToBigWig Input-6h_treat_pileup.bdg.sort mouse.mm10.genome Input-6h.bw
+exit
+ceas
+cd /DATA/pipeline/chip-seq/sample0104/final/bam
+ls
+chmod 777 -Rf ./*
+./bam2bigwig.mm10.sh 
+./bam2bigwig.mm10.sh -h
+./bam2bigwig.mm10.sh Pol2-0h-ready.bam
+ls
+cd ..
+cd /DATA/pipeline/chip-seq/sample0104/final/Ac-0h_peaks
+Rscript o-lambda_model.r 
+cd ..
+vim callpeaks.sh 
+macs
+macs2
+macs2 callpeak
+macs2 callpeak -h
+cd /DATA/pipeline/chip-seq/sample0104/final/Pol2-0h_peaks
+Rscript o-lambda_model.r 
+macs2 callpeak -t Pol2-0h-ready.bam -c Input-0h-ready.bam -n Pol2-0h -B -q 0.01 -no-lambda -g mm --outdir Pol2-0h_peaks --nomodel --shift 100 --extsize 200 -q 0.0001
+cd ..
+macs2 callpeak -t Pol2-0h-ready.bam -c Input-0h-ready.bam -n Pol2-0h -B -q 0.01 -no-lambda -g mm --outdir Pol2-0h_peaks --nomodel --shift 100 --extsize 200 -q 0.0001
+vim callpeaks2.sh
+ls
+mv nohup.out nohup.out0108
+chmod 777 callpeaks2.sh 
+nohup ./callpeaks2.sh &
+ls
+cd /DATA/pipeline/chip-seq/sample0104/final/peaks
+top
+annotatePeaks.pl 
+cd /DATA/software/chip-seq/homer
+perl configureHomer.pl 
+perl configureHomer.pl -list
+cd /DATA/pipeline/chip-seq/sample0104/final/peaks
+annotatePeaks.pl -h
+annotatePeaks.pl Pol2-6h_peaks.narrowPeak mm10 > Pol2-6h_peaks.anno
+cd ..
+macs2 callpeak -t Ctcf-0h-ready.bam -c Input-0h-ready.bam -n Ctcf-0h -B -q 0.01 -no-lambda -g mm --outdir Ctcf-0h_peaks --nomodel --shift 100 --extsize 200 -q 0.0001
+cd /DATA/pipeline/chip-seq/sample0104/final/Ctcf-0h_peaks
+Rscript o-lambda_model.r 
+wc -l o-lambda_peaks.narrowPeak 
+wc -l /DATA/pipeline/chip-seq/sample0104/final/peaks/Ctcf-0h_peaks.narrowPeak 
+wc -l /DATA/pipeline/chip-seq/sample0104/final/Pol2-0h_peaks/o-lambda_peaks.narrowPeak 
+cd /DATA/pipeline/chip-seq/sample0104/final
+ls
+top
+ls -lhat
+vim callpeaks2.sh 
+df -h
+locate picard.jar
+cd /DATA/pipeline/chip-seq/sample0104/final/bam
+java -jar picard.jar 
+java -jar picard.jar CollectInsertSizeMetrics 
+java -jar picard.jar CollectInsertSizeMetrics I=Pol2-0h-ready.bam O=Pol2-0h_insert_size_metrics.txt H=Pol2-0h_insert_size_hist.pdf
+java -jar picard.jar CollectInsertSizeMetrics I=Ctcf-0h-ready.bam O=Ctcf-0h_insert_size_metrics.txt H=Ctcf-0h_insert_size_hist.pdf
+ngs.plot.r 
+cd /DATA/software/rna-seq/ngsplot
+ngsplotdb.py install ngsplotdb_mm10_75_3.00.tar.gz 
+ngsplotdb.py install ngsplotdb_mm9_67_3.00.tar.gz 
+cd /DATA/pipeline/chip-seq/sample0104/final/bigwig
+vim convert.sh 
+nohup ./convert.sh &
+R
+computeMatrix
+computeMatrix reference-point 
+computeMatrix reference-point -h
+locate mm10
+ls
+cd /DATA/pipeline/chip-seq/sample0104/final/bigwig
+computeMatrix reference-point -S Pol2-wt.bw Pol2-0h.bw Pol2-6h.bw -R mm10.refGene.TSS.bed --skipZeros --sortUsingSamples 1 --referencePoint center -b 5000 -a 5000 --binSize 20 -out Pol2_mES.tab.gz --outFileSortedRegions Pol2_mES.bed
+slopBed 
+locate mouse.mm10
+slopBed -i mm10.refGene.TSS.bed -g mouse.mm10.genome -b 1
+computeMatrix reference-point -S Pol2-wt.bw Pol2-0h.bw Pol2-6h.bw -R mm10.refGene.TSS.bed --skipZeros --sortUsingSamples 1 --referencePoint center -b 5000 -a 5000 --binSize 20 -out Pol2_mES.tab.gz --outFileSortedRegions Pol2_mES.bed
+plotHeatmap -m Pol2_mES.tab.gz --colorList 'white, green' 'white, blue' 'white,firebrick' 'white,slategrey' 'white,slategrey' --sortUsingSamples 1 -out test.pdf --zMin 0 --zMax 8 --missingDataColor white --heatmapHeight 15 --legendLocation none --yMax 10
+plotHeatmap -m Pol2_mES.tab.gz --colorList 'white, green' 'white, blue' 'white,firebrick' 'white,slategrey' 'white,slategrey' --sortUsingSamples 1 -out test.pdf --zMin 0 --zMax 20 --missingDataColor white --heatmapHeight 20 --legendLocation none --yMax 12
+mergeBed 
+mergeBed -h
+cd /DATA/pipeline/chip-seq/sample0104/final/peaks
+intersectBed -h
+intersectBed -a Pol2-0h_peaks.narrowPeak -b Pol2-6h_peaks.narrowPeak -s -f 0.9
+intersectBed -a Pol2-0h_peaks.narrowPeak -b Pol2-6h_peaks.narrowPeak -s -f 0.1
+intersectBed -a Pol2-0h_peaks.narrowPeak -b Pol2-6h_peaks.narrowPeak -f 0.9
+wc -l Pol2-0h_peaks.narrowPeak 
+wc -l Pol2-6h_peaks.narrowPeak 
+wc -l Pol2-wt_peaks.narrowPeak 
+subtractBed 
+ls -lhat
+cat Pol2-*.narrowPeak > Pol2_merge.peaks
+ls -lhat
+sort -k1,1 -k2,2n Pol2_merge.peaks > Pol2_merge.peaks.sort
+ls -lhat
+bedtools merge 
+bedtools merge -h
+bedtools merge -i Pol2_merge.peaks.sort -bed > Pol2_merge.peaks.bed
+ls
+cd ../bigwig/
+computeMatrix reference-point -S Pol2-wt.bw Pol2-0h.bw Pol2-6h.bw -R Pol2_merge.peaks.bed --skipZeros --sortUsingSamples 1 --referencePoint center -b 5000 -a 5000 --binSize 20 -out Pol2_mES.tab.gz --outFileSortedRegions Pol2_mES.bed
+plotHeatmap -m Pol2_mES.tab.gz --colorList 'white, green' 'white, blue' 'white,firebrick' 'white,slategrey' 'white,slategrey' --sortUsingSamples 1 -out test.pdf --zMin 0 --zMax 20 --missingDataColor white --heatmapHeight 20 --legendLocation none --yMax 12
+plotHeatmap -m Pol2_mES.tab.gz --colorList 'white, green' 'white, blue' 'white,firebrick' 'white,slategrey' 'white,slategrey' --sortUsingSamples 1 -out test.pdf --zMin 0 --zMax 60 --missingDataColor white --heatmapHeight 20 --legendLocation none --yMax 60
+plotHeatmap -h
+plotHeatmap -m Pol2_mES.tab.gz --colorList 'white, green' 'white, blue' 'white,firebrick' 'white,slategrey' 'white,slategrey' --sortUsingSamples 1 -out test.pdf --zMin 0 --zMax 60 --missingDataColor white --heatmapHeight 15 --legendLocation none --yMax 60
+bedtools merge -i Ac_merge.peaks.bed -bed > Ac_merge.peaks.bed
+computeMatrix reference-point -S Ac-wt.bw Ac-0h.bw Ac-6h.bw -R Ac_merge.peaks.bed --skipZeros --sortUsingSamples 1 --referencePoint center -b 5000 -a 5000 --binSize 20 -out Ac_mES.tab.gz --outFileSortedRegions Ac_mES.bed
+plotHeatmap -m Ac_mES.tab.gz --colorList 'white, green' 'white, blue' 'white,firebrick' 'white,slategrey' 'white,slategrey' --sortUsingSamples 1 -out Ac.pdf --zMin 0 --zMax 60 --missingDataColor white --heatmapHeight 15 --legendLocation none --yMax 60
+plotHeatmap -m Ac_mES.tab.gz --colorList 'white, green' 'white, blue' 'white,firebrick' 'white,slategrey' 'white,slategrey' --sortUsingSamples 1 -out Ac.pdf --zMin 0 --zMax 15 --missingDataColor white --heatmapHeight 15 --legendLocation none --yMax 15
+plotHeatmap -m Ac_mES.tab.gz --colorList 'white, green' 'white, blue' 'white,firebrick' 'white,slategrey' 'white,slategrey' --sortUsingSamples 1 -out Ac.pdf --zMin 0 --zMax 18 --missingDataColor white --heatmapHeight 15 --legendLocation none --yMax 20
+plotHeatmap -m Ac_mES.tab.gz --colorList 'white, green' 'white, blue' 'white,firebrick' 'white,slategrey' 'white,slategrey' --sortUsingSamples 1 -out Ac.pdf --zMin 0 --zMax 20 --missingDataColor white --heatmapHeight 15 --legendLocation none --yMax 16
+plotHeatmap -m Ac_mES.tab.gz --colorList 'white, green' 'white, blue' 'white,firebrick' 'white,slategrey' 'white,slategrey' --sortUsingSamples 1 -out Ac.pdf --zMin 0 --zMax 30 --missingDataColor white --heatmapHeight 15 --legendLocation none --yMax 16
+computeMatrix reference-point -S Smc1-0h.bw Smc1-6h.bw -R Smc1_merge.peaks.bed --skipZeros --sortUsingSamples 1 --referencePoint center -b 5000 -a 5000 --binSize 20 -out Smc1_mES.tab.gz --outFileSortedRegions Smc1_mES.bed
+plotHeatmap -m Smc1_mES.tab.gz --colorList 'white, green' 'white, blue' 'white,firebrick' 'white,slategrey' 'white,slategrey' --sortUsingSamples 1 -out Smc1.pdf --zMin 0 --zMax 20 --missingDataColor white --heatmapHeight 15 --legendLocation none --yMax 20
+plotHeatmap -m Ctcf_mES.tab.gz --colorList 'white, green' 'white, blue' 'white,firebrick' 'white,slategrey' 'white,slategrey' --sortUsingSamples 1 -out Ctcf.pdf --zMin 0 --zMax 40 --missingDataColor white --heatmapHeight 15 --legendLocation none --yMax 40
+cd ../bam/
+ls
+vim ../callpeaks2.sh 
+macs2 callpeak -t Pol2-6h-ready.bam -c Input-6h-ready.bam -n Pol2-6h -B -q 0.01 -no-lambda -g mm --outdir Pol2-6h_peaks_noshift_ext200 --nomodel --extsize 200 -q 0.0001
+macs2 callpeak -t Pol2-6h-ready.bam -c Input-6h-ready.bam -n Pol2-6h -B -q 0.01 -no-lambda -g mm --outdir Pol2-6h_peaks_noshift_ext100 --nomodel --extsize 100 -q 0.0001
+macs2 callpeak -t Pol2-6h-ready.bam -c Input-6h-ready.bam -n Pol2-6h -B -q 0.01 -no-lambda -g mm --outdir Pol2-6h_peaks_shift50_ext200 --nomodel --shift50 --extsize 200 -q 0.0001
+macs2 callpeak -t Pol2-6h-ready.bam -c Input-6h-ready.bam -n Pol2-6h -B -q 0.01 -no-lambda -g mm --outdir Pol2-6h_peaks_shift50_ext200 --nomodel --shift 50 --extsize 200 -q 0.0001
+macs2 callpeak -t Pol2-6h-ready.bam -c Input-6h-ready.bam -n Pol2-6h -B -q 0.01 -no-lambda -g mm --outdir Pol2-6h_peaks_shift50_ext100 --nomodel --shift 50 --extsize 100 -q 0.0001
+vim ../bigwig/convert.sh 
+cd test/
+vim convert.sh
+chmod 777 convert.sh 
+nohup ./convert.sh &
+ls
+vim convert.sh 
+locate mouse.genome
+vim convert.sh 
+ls
+mv mm10.chrom.sizes mouse.mm10.genome
+nohup ./convert.sh &
+top
+wget -c https://www.encodeproject.org/files/ENCFF962NMX/@@download/ENCFF962NMX.bam
+wget -c https://www.encodeproject.org/files/ENCFF962NMX/download/ENCFF962NMX.bam
+wget -c https://www.encodeproject.org/files/ENCFF670GFY/download/ENCFF670GFY.bam
+wget -c https://www.encodeproject.org/files/ENCFF848NLJ/@@download/ENCFF848NLJ.bam
+wget -c https://www.encodeproject.org/files/ENCFF848NLJ/download/ENCFF848NLJ.bam
+computeMatrix
+top
+cd /DATA/pipeline/chip-seq/sample0104/final/
+cd peaks/
+cat Ac-*.narrowPeak > Ac_merge.peaks
+ls
+cat Ac*.narrowPeak > Ac_merge.peaks
+cat Ac_*.broadPeak > Ac_merge.peaks
+cat Ac*.broadPeak > Ac_merge.peaks
+sort -k1,1 -k2,2n Ac_merge.peaks > Ac_merge.peaks.sort
+bedtools merge -i Ac_merge.peaks.sort -bed > Ac_merge.peaks.bed
+cat Ctcf*.narrowPeak > Ctcf_merge.peaks
+cat Smc1*.narrowPeak > Smc1_merge.peaks
+sort -k1,1 -k2,2n Ctcf_merge.peaks > Ctcf_merge.peaks.sort
+bedtools merge -i Ctcf_merge.peaks.sort -bed > Ctcf_merge.peaks.bed
+sort -k1,1 -k2,2n Smc1_merge.peaks > Smc1_merge.peaks.sort
+bedtools merge -i Smc1_merge.peaks.sort -bed > Smc1_merge.peaks.bed
+top
+cd /DATA/pipeline/chip-seq/sample0104/final/bigwig
+computeMatrix reference-point -S Ctcf-0h.bw Ctcf-6h.bw -R Ctcf_merge.peaks.bed --skipZeros --sortUsingSamples 1 --referencePoint center -b 5000 -a 5000 --binSize 20 -out Ctcf_mES.tab.gz --outFileSortedRegions Ctcf_mES.bed
+plotHeatmap -m Ctcf_mES.tab.gz --colorList 'white, green' 'white, blue' 'white,firebrick' 'white,slategrey' 'white,slategrey' --sortUsingSamples 1 -out Ctcf.pdf --zMin 0 --zMax 20 --missingDataColor white --heatmapHeight 15 --legendLocation none --yMax 20
+plotHeatmap -m Smc1_mES.tab.gz --colorList 'white, green' 'white, blue' 'white,firebrick' 'white,slategrey' 'white,slategrey' --sortUsingSamples 1 -out Smc1.pdf --zMin 0 --zMax 40 --missingDataColor white --heatmapHeight 15 --legendLocation none --yMax 35
+cd ../bam/
+samtools 
+samtools tview
+
+samtools tview chr10:10,000,000
+bamToBed 
+bamToBed -h 
+bamToBed -i Pol2-0h-ready.bam
+bamToBed -h 
+bamToBed -i Pol2-0h-ready.bam -bedpe
+bamtools
+bamtools stats
+bamtools help stats
+bamtools help -in Pol2-0h-ready.bam -insert
+bamtools stats -in Pol2-0h-ready.bam -insert
+cd test/
+bamtools stats -in ENCFF962NMX.bam -insert
+bamtools stats -in ENCFF670GFY.bam -insert
+bamtools stats -in ENCFF848NLJ.bam  -insert
+bamtools stats -in ENCFF848NLJ.bam -insert
+sudo apt-get upgrade
+cd /DATA/software/hi-c/HiC-Pro_2.9.0/0h_merge_k1_mm10
+/DATA/software/hi-c/HiC-Pro_2.9.0/bin/utils/sparseToDense.py -h
+exit
+cd /DATA/software/hi-c/HiC-Pro_2.9.0
+R
+clear
+top
+bedtools pairtopair
+df -h
+exit
+cd /DATA/software/rna-seq/shaman/mm10
+ls
+tar -zvxf schic_hyb_1CDU_adj_files.tar.gz 
+exit
+cd /DATA/software/hi-c/HiC-Pro_2.9.0/0h_merge_mm10/hic_results/matrix/0h/iced/10000
+ls -lhat
+head -n 0h_10000_iced.matrix
+head -n 100 0h_10000_iced.matrix
+cd /DATA/software/hi-c/HiC-Pro_2.9.0/0h_merge_mm10/hic_results/matrix/0h/iced/100000
+head -n 100 0h_100000_iced.matrix
+clear
+R
+cd /DATA/software/rna-seq/shaman
+R
+ls
+df -h
+top
+kill -9 19394
+kill -9 19391
+top
+kill -9 19393
+kill -9 19402
+cd /DATA/public/R/library/shaman/trackdb
+ls
+cd test/
+ls
+cd tracks/
+ls -lhat
+vim hic_exp.track/chr11-chr11 
+vim hic_score.track/chr2-chr2 
+top
+exit
+cd /DATA/software/rna-seq/shaman
+R
+cd /DATA/software/hi-c/cworld-dekker/
+rect_heatmap <- function(raw_matrix, col = NULL, ... ) {
+}
+add_legend <- function ( raw_matrix, ...) {
+}
+clear
+perl scripts/perl/matrix2insulation.pl -i sample-data/collapseMatrix/NPC_chr14-chr15-chr16__chr14__chr14__cis.matrix.gz --is 480000 --ids 320000 --im iqrMean --nt 0 --ss 160000 --yb 1.5 --nt 0 --bmoe 0
+sudo perl scripts/perl/matrix2insulation.pl -i sample-data/collapseMatrix/NPC_chr14-chr15-chr16__chr14__chr14__cis.matrix.gz --is 480000 --ids 320000 --im iqrMean --nt 0 --ss 160000 --yb 1.5 --nt 0 --bmoe 0
+clear
+top
+exit
+top
+cd /DATA/software/hi-c/cworld-dekker/
+ls
+cd 0h/
+ls -lhat
+cd ../6h/
+ls -lhat
+vim nohup.out 
+cd ../wt/
+ls -lhat
+cd ../6h/
+vim callInsulationTAD.sh 
+ls -lhat
+nohup ./callInsulationTAD.sh &
+cd ../0h/
+ls -lhat
+vim callInsulationTAD.sh 
+cd ../wt/
+vim callInsulationTAD.sh 
+ls -lhat
+head chr1_wt_25kb_matrix.addedHeaders--is500001--nt0.01--ids250001--ss125001--imiqrMean.insulation.boundaries.bed
+head chr1_wt_25kb_matrix.addedHeaders--is500001--nt0.01--ids250001--ss125001--imiqrMean.insulation.boundaries
+head chr1_wt_25kb_matrix.addedHeaders--is500001--nt0.01--ids250001--ss125001--imiqrMean.insulation.boundaries -n 20
+ls -lhat
+vim nohup.out 
+head nohup.out 
+cd ../6h/
+vim nohup.out 
+cd ../0h/
+vim nohup.out 
+ls -lhat
+top
+ls -lhat
+cd ../6h/
+ls -lhat
+head chr9_6h_25kb_matrix.addedHeaders--is500001--nt0.01--ids250001--ss125001--imiqrMean--mbs0--mts0.tads.bed
+head chr9_6h_25kb_matrix.addedHeaders--is500001--nt0.01--ids250001--ss125001--imiqrMean--mbs0--mts0.tads.bedGraph 
+ls -lhat
+top
+cd ../wt/
+ls -lhat
+cat *.tads.bed > ../wt_25kb--is500001--nt0.01--ids250001--ss125001--imiqrMean--mbs0--mts0.tads.bed
+cd ..
+ls
+ls -lhat
+wc -l wt_25kb--is500001--nt0.01--ids250001--ss125001--imiqrMean--mbs0--mts0.tads.bed 
+cd ./6h/
+ls -lhat
+cat *.tads.bed > ../6h_25kb--is500001--nt0.01--ids250001--ss125001--imiqrMean--mbs0--mts0.tads.bed
+cd ../0h/
+ls -lhat
+cat *.tads.bed > ../0h_25kb--is500001--nt0.01--ids250001--ss125001--imiqrMean--mbs0--mts0.tads.bed
+cd ..
+ls -lhat
+cd /home/
+top
+ls -lhat
+sudo useradd tfhuo -m -s /bin/bash
+sudo passwd tfhuo
+exit
+cd /DATA/software/hi-c/cworld-dekker/
+perl Build.PL
+sudo perl Build.PL
+sudo apt-get install libgd
+sudo apt-get install G
+perl -MGD -e 'print $GD::VERSION ."\n";'
+sudo apt-get install libgd-dev
+sudo perl Build.PL
+sudo cpan
+sudo perl Build.PL
+sudo ./Build
+./Build install
+sudo ./Build install
+perl scripts/heatmap.pl
+ls
+perl scripts/perl/heatmap.pl 
+perl scripts/perl/matrix2insulation.pl -i sample-data/collapseMatrix/NPC_chr14-chr15-chr16__chr14__chr14__cis.matrix.gz --is 480000 --ids 320000 --im iqrMean --nt 0 --ss 160000 --yb 1.5 --nt 0 --bmoe 0
+perl scripts/perl/matrix2anchorPlot.pl -i sample-data/addMatrixHeaders/K5.matrix.gz
+perl scripts/perl/matrix2direction.pl -i sample-data/collapseMatrix/NPC_chr14-chr15-chr16__chr14__chr14__cis.matrix.gz --ds 5000000
+perl scripts/perl/matrix2insulation.pl -i sample-data/collapseMatrix/NPC_chr14-chr15-chr16__chr14__chr14__cis.matrix.gz --is 480000 --ids 320000 --im iqrMean --nt 0 --ss 160000 --yb 1.5 --nt 0 --bmoe 0
+perl scripts/perl/matrix2compartment.pl -i sample-data/collapseMatrix/NPC_chr14-chr15-chr16.matrix.gz
+vim /DATA/software/hi-c/cworld-dekker/sample-data/collapseMatrix/readme 
+perl scripts/perl/matrix2compartment.pl -i sample-data/collapseMatrix/chr19_0h_25kb_matrix
+vim scripts/perl/matrix2compartment.pl
+perl scripts/perl/matrix2compartment.pl -i sample-data/collapseMatrix/chr19_0h_25kb_matrix
+vim sample-data/collapseMatrix/chr19_0h_25kb_matrix
+vim sample-data/collapseMatrix/chr19_0h_25kb_matrix.txt
+perl scripts/perl/matrix2compartment.pl -i sample-data/collapseMatrix/chr19_0h_25kb_matrix.txt
+perl scripts/perl/matrix2insulation.pl -i sample-data/collapseMatrix/chr19_0h_25kb_matrix.txt
+perl scripts/perl/matrix2symmetrical.pl -i sample-data/collapseMatrix/chr19_0h_25kb_matrix.txt
+python /DATA/software/hi-c/cworld-dekker/scripts/python/matrix2insulation-lite.py 
+python
+perl scripts/perl/matrix2symmetrical.pl -i sample-data/collapseMatrix/chr19_0h_25kb_matrix.txt
+perl scripts/perl/matrix2insulation.pl -i sample-data/collapseMatrix/chr19_0h_25kb_matrix.txt
+perl scripts/perl/matrix2insulation.pl -i sample-data/collapseMatrix/EHSNP-mNPe__mm9__genome__C-500000-iced.matrix
+perl scripts/perl/matrix2insulation.pl -i sample-data/collapseMatrix/chr19_0h_25kb_matrix.txt
+head sample-data/collapseMatrix/chr19_0h_25kb_matrix
+head sample-data/collapseMatrix/chr19_0h_25kb_matrix.txt 
+head sample-data/collapseMatrix/EHSNP-mNPe__mm9__genome__C-500000-iced.matrix 
+Rscript /DATA/software/hi-c/cworld-dekker/scripts/R/matrix2insulation.R 
+Rscript /DATA/software/hi-c/cworld-dekker/scripts/R/matrix2insulation.R 
+perl scripts/perl/matrix2insulation.pl -i sample-data/collapseMatrix/EHSNP-mNPe__mm9__genome__C-500000-iced.matrix
+perl scripts/perl/symmetrical2seperate.pl -i sample-data/collapseMatrix/EHSNP-mNPe__mm9__genome__C-500000-iced.matrix
+perl scripts/perl/matrix2insulation.pl -i sample-data/collapseMatrix/EHSNP-mNPe__mm9__genome__C-500000-iced.matrix
+cd ../..
+cd exec/
+git clone https://github.com/blajoie/tab2hdf.git
+cd tab2hdf/
+ls
+chmod 777 -Rf ./*
+ls
+python scripts/tab2hdf.py
+python scripts/tab2hdf.py /DATA/software/hi-c/cworld-dekker/sample-data/collapseMatrix/EHSNP-mNPe__mm9__genome__C-500000-iced.matrix 
+python scripts/tab2hdf.py -i /DATA/software/hi-c/cworld-dekker/sample-data/collapseMatrix/EHSNP-mNPe__mm9__genome__C-500000-iced.matrix
+ls
+python scripts/tab2hdf.py -i /DATA/software/hi-c/cworld-dekker/sample-data/collapseMatrix/EHSNP-mNPe__mm9__genome__C-500000-iced.matrix.txt
+python scripts/tab2hdf.py -i /DATA/software/hi-c/cworld-dekker/sample-data/collapseMatrix/chr19_0h_25kb_matrix
+python scripts/tab2hdf.py -i /DATA/software/hi-c/cworld-dekker/sample-data/collapseMatrix/chr19_0h_25kb_matrix.txt
+cd ..
+git clone https://github.com/blajoie/hdf2tab.git
+cd hdf2tab/
+chmod 777 -Rf ./*
+ls
+python scripts/hdf2tab.py
+python scripts/hdf2tab.py ../tab2hdf/EHSNP-mNPe__mm9__genome__C-500000-iced.hdf5 
+python scripts/hdf2tab.py -i ../tab2hdf/EHSNP-mNPe__mm9__genome__C-500000-iced.hdf5 
+ls
+python scripts/hdf2tab.py -i ../tab2hdf/chr19_0h_25kb.txt.hdf5
+cd /DATA/software/hi-c/cworld-dekker/sample-data/collapseMatrix
+cd ..
+perl scripts/perl/matrix2insulation.pl -i sample-data/collapseMatrix/chr19_0h_25kb.txt.matrix.gz
+perl scripts/perl/matrix2insulation.pl -i sample-data/collapseMatrix/K5__30000__10.matrix.gz
+perl scripts/perl/matrix2insulation.pl -i sample-data/collapseMatrix/NPC_chr14-chr15-chr16__chr14__chr14__cis.matrix.gz
+perl scripts/perl/matrix2insulation.pl -i sample-data/collapseMatrix/N2-DpnII__10kb__chrX.matrix.gz
+perl scripts/perl/matrix2insulation.pl -i sample-data/collapseMatrix/chr19_0h_25kb_matrix.txt
+chmod 777 -Rf ./*
+perl scripts/perl/matrix2insulation.pl -i sample-data/collapseMatrix/chr19_0h_25kb_matrix.txt
+perl scripts/perl/matrix2insulation.pl -i sample-data/collapseMatrix/EHSNP-mNPe__mm9__genome__C-500000-iced.matrix
+perl scripts/perl/generateBins.pl 
+perl scripts/perl/generateBins.pl --a mm10 --r chr1:1-195471971 --binsize 25000
+perl scripts/perl/generateBins.pl --a mm10 --r chr1:1-195471971 --bsize 25000
+perl scripts/perl/generateBins.pl --a mm10 --r chr1:1-195471971 --bsize 25000 --bstep 1
+ls
+vim myHeaders.headers.bed
+perl scripts/perl/addMatrixHeaders.pl 
+perl scripts/perl/addMatrixHeaders.pl -i /DATA/software/hi-c/cworld-dekker/sample-data/collapseMatrix/chr19_0h_25kb_matrix
+perl scripts/perl/generateBins.pl --a mm10 --r chr19:1-61431566 --bsize 25000 --bstep 1
+vim myHeaders.headers.bed
+perl scripts/perl/addMatrixHeaders.pl -i /DATA/software/hi-c/cworld-dekker/sample-data/collapseMatrix/chr19_0h_25kb_matrix -xhf myHeaders.headers.bed -yhf myHeaders.headers.bed 
+perl scripts/perl/addMatrixHeaders.pl -i /DATA/software/hi-c/cworld-dekker/sample-data/collapseMatrix/chr19_0h_25kb_matrix --xhf myHeaders.headers.bed --yhf myHeaders.headers.bed 
+perl scripts/perl/generateBins.pl --a mm10 --r chr19:1-61431566 --bsize 25000 --bstep 1
+perl scripts/perl/addMatrixHeaders.pl -i /DATA/software/hi-c/cworld-dekker/sample-data/collapseMatrix/chr19_0h_25kb_matrix --xhf myHeaders.headers.bed --yhf myHeaders.headers.bed 
+perl scripts/perl/matrix2insulation.pl -i sample-data/collapseMatrix/chr19_0h_25kb_matrix.addedHeaders.matrix.txt
+perl scripts/perl/insulation2tads.pl -i ./chr19_0h_25kb_matrix.addedHeaders.matrix--is500001--nt0--ids250001--ss1--immean.insulation --b ./chr19_0h_25kb_matrix.addedHeaders.matrix--is500001--nt0--ids250001--ss1--immean.boundary
+perl scripts/perl/insulation2tads.pl -i ./chr19_0h_25kb_matrix.addedHeaders.matrix--is500001--nt0--ids250001--ss1--immean.insulation
+perl scripts/perl/insulation2tads.pl -i ./chr19_0h_25kb_matrix.addedHeaders.matrix--is500001--nt0--ids250001--ss1--immean.insulation -b chr19_0h_25kb_matrix.addedHeaders.matrix--is500001--nt0--ids250001--ss1--immean.insulation.boundaries
+perl scripts/perl/matrix2compartment.pl 
+perl scripts/perl/matrix2compartment.pl -i sample-data/collapseMatrix/chr19_0h_25kb_matrix.addedHeaders.matrix.txt --ec --ca --ez
+perl scripts/perl/matrix2compartment.pl -i sample-data/collapseMatrix/chr19_0h_25kb_matrix.addedHeaders.matrix.txt --ec --ca 
+perl scripts/perl/matrix2compartment.pl -i sample-data/collapseMatrix/chr19_0h_25kb_matrix.addedHeaders.matrix.txt --ec --ca 0.01
+chmod 777 -Rf ./*
+ls
+ls -lhat
+perl scripts/perl/matrix2compartment.pl -i sample-data/collapseMatrix/chr19_0h_25kb_matrix.addedHeaders.matrix.txt --ec --ca 0.01
+perl scripts/perl/matrix2compartment.pl -i ./chr19_0h_25kb_matrix.addedHeaders.matrix.txt --ec --ca 0.01
+vim scripts/perl/matrix2compartment.pl
+perl scripts/perl/matrix2compartment.pl -i ./chr19_0h_25kb_matrix.addedHeaders.matrix.txt
+perl scripts/perl/generateBins.pl --a mm10 
+perl scripts/perl/generateBins.pl --r chr1:1-2000000 --bsize 30000 --bstep 10 -a hg19 chr1-FGF5
+vim myHeaders.headers.bed 
+perl scripts/perl/addMatrixHeaders.pl -i sample-data/addMatrixHeaders/5C.naked.matrix.gz 
+perl scripts/perl/addMatrixHeaders.pl -i sample-data/addMatrixHeaders/5C.naked.matrix.gz --xdf myHeaders.headers.bed 
+perl scripts/perl/addMatrixHeaders.pl -i sample-data/addMatrixHeaders/5C.naked.matrix.gz -xdf myHeaders.headers.bed 
+perl scripts/perl/addMatrixHeaders.pl -i sample-data/addMatrixHeaders/5C.naked.matrix.gz -xhf myHeaders.headers.bed 
+perl scripts/perl/addMatrixHeaders.pl -i sample-data/addMatrixHeaders/5C.naked.matrix.gz --xhf myHeaders.headers.bed 
+
+perl scripts/perl/addMatrixHeaders.pl -i sample-data/addMatrixHeaders/5C.naked.matrix.gz --xhf myHeaders.headers.bed --yhf myHeaders.headers.bed 
+myHeaders.headers.bed
+perl scripts/perl/generateBins.pl --a mm10 --r chr19:1-61431566 --bsize 25000 --bstep 1 chr9-0h
+perl scripts/perl/addMatrixHeaders.pl -i /DATA/software/hi-c/cworld-dekker/sample-data/collapseMatrix/chr19_0h_25kb_matrix --xhf myHeaders.headers.bed --yhf myHeaders.headers.bed
+head myHeaders.headers.bed 
+perl scripts/perl/addMatrixHeaders.pl -i /DATA/software/hi-c/cworld-dekker/sample-data/collapseMatrix/chr19_0h_25kb_matrix --xhf myHeaders.headers.bed --yhf myHeaders.headers.bed
+perl scripts/perl/addMatrixHeaders.pl -i sample-data/addMatrixHeaders/5C.naked.matrix.gz --xhf myHeaders.headers.bed --yhf myHeaders.headers.bed 
+perl scripts/perl/addMatrixHeaders.pl -i sample-data/addMatrixHeaders/5C.naked.matrix.gz --xhf /DATA/software/hi-c/cworld-dekker/sample-data/addMatrixHeaders/5C.xHeaders.gz --yhf myHeaders.headers.bed 
+perl scripts/perl/generateBins.pl --a mm10 --r chr19:1-61431566 --bsize 25000 --bstep 1 chr9-0h
+perl scripts/perl/addMatrixHeaders.pl -i /DATA/software/hi-c/cworld-dekker/sample-data/collapseMatrix/chr19_0h_25kb_matrix --xhf myHeaders.headers.bed --yhf myHeaders.headers.bed
+perl scripts/perl/addMatrixHeaders.pl -i /DATA/software/hi-c/cworld-dekker/sample-data/collapseMatrix/chr19_0h_25kb_matrix --xhf myHeaders.headers.bed-x --yhf myHeaders.headers.bed
+df -h
+perl scripts/perl/generateBins.pl --a mm10 --r chr1:1-195471971 --bsize 25000 --bstep 1 chr1-0h
+ls
+vim myHeaders.headers.bed 
+locate cut_column
+cp /DATA/software/hi-c/HiC-Pro_2.9.0/cut_columns.py ./
+python cut_columns.py 
+python cut_columns.py -i myHeaders.headers.bed -c 0
+python cut_columns.py -i myHeaders.headers.bed -c 0,
+python cut_columns.py -i myHeaders.headers.bed -c 0,1
+vim myHeaders.headers.bed 
+sed -i '1d' myHeaders.headers.bed 
+python cut_columns.py -i myHeaders.headers.bed -c 0,
+python cut_columns.py -i myHeaders.headers.bed -c 0
+python cut_columns.py -i myHeaders.headers.bed -c 0,1
+python cut_columns.py -i myHeaders.headers.bed -c 4
+python cut_columns.py -i myHeaders.headers.bed -c ,4
+python cut_columns.py -i myHeaders.headers.bed -c 4,4
+python cut_columns.py -i myHeaders.headers.bed -c 3
+python cut_columns.py -i myHeaders.headers.bed -c ,3
+python cut_columns.py -i myHeaders.headers.bed -c 3,3
+python cut_columns.py -i myHeaders.headers.bed
+vim cut_columns.py 
+python cut_columns.py -i myHeaders.headers.bed -c 3,
+python cut_columns.py -i myHeaders.headers.bed -c 3 -d \t
+python cut_columns.py -i myHeaders.headers.bed -c ,3 
+python cut_columns.py -i myHeaders.headers.bed -c 1,3 
+python cut_columns.py -i myHeaders.headers.bed -c 0,3 
+cut -d"\t" -f4 myHeaders.headers.bed 
+cut -d "\t" -f4 myHeaders.headers.bed 
+cut --help
+cut -f4 myHeaders.headers.bed 
+cut -f4 myHeaders.headers.bed > myHeaders.headers.bed-x
+cd 0h/
+ls
+perl ../scripts/perl/generateBins.pl --a mm10 --r chr1:1-195471971 --bsize 25000 --bstep 1 chr1-0h
+ls
+cut -f4 myHeaders.headers.bed > chr1.headers.bed-x
+mv myHeaders.headers.bed chr1.headers.bed-y
+ls
+chmod 777 -Rf ./*
+ls
+perl ../scripts/perl/addMatrixHeaders.pl -i chr1_0h_25kb_matrix --xhf chr1.headers.bed-x --yhf chr1.headers.bed-
+gzip -c chr1_0h_25kb_matrix.addedHeaders.matrix.txt > chr1_0h_25kb_matrix.addedHeaders.matrix.gz
+perl ../scripts/perl/matrix2insulation.pl 
+perl ../scripts/perl/matrix2insulationRange.pl
+perl ../scripts/perl/matrix2insulation.pl -i chr1_0h_25kb_matrix.addedHeaders.matrix.gz --is 500000 --ids 250000 --im iqrMean --ss 100 --yb 1.5 -bmoe 3 -nt 0.1 --ez --bg
+
+perl ../scripts/perl/matrix2insulation.pl -i chr1_0h_25kb_matrix.addedHeaders.matrix.gz --is 500000 --ids 250000 --im iqrMean --ss 100 --yb 1.5 --bmoe 3 --nt 0.1 --ez --bg
+df -h
+perl ../scripts/perl/matrix2insulation.pl -i chr1_0h_25kb_matrix.addedHeaders.matrix.gz --is 500000 --ids 250000 --im mean --ss 10 --bmoe 3 --nt 0.01 --bg
+perl ../scripts/perl/matrix2insulation.pl -i chr1_0h_25kb_matrix.addedHeaders.matrix.gz --is 500000 --ids 250000 --im iqrMean --ss 125000 --yb 1.5 --bmoe 3 --nt 0.01 --ez --bg
+perl ../scripts/perl/matrix2insulation.pl -i chr1_0h_25kb_matrix.addedHeaders.matrix.gz --is 500000 --ids 250000 --im iqrMean --ss 125000 --yb 1.5 --bmoe 0 --nt 0.01 --ez --bg
+vim createMatrix.sh
+chmod 777 createMatrix.sh 
+./createMatrix.sh 
+vim createMatrix.sh
+ls
+vim createMatrix.sh 
+./createMatrix.sh 
+ls -lhat
+perl ../scripts/perl/combineMatrices.pl
+cd ../wt/
+ls
+vim creatMatrix.sh 
+./creatMatrix.sh 
+cd ..
+perl scripts/perl/combineMatrices.pl -i sample-data/addMatrixHeaders/K5.matrix.gz -i sample-data/combineMatrices/GM.matrix.gz --cm max -o K5__GM 
+vim 0h/createMatrix.sh 
+cd 0h/
+perl ../scripts/perl/combineMatrices.pl
+perl ../scripts/perl/combineMatrices.pl -i chrX_0h_25kb_matrix.addedHeaders.matrix.gz chrY_0h_25kb_matrix.addedHeaders.matrix.gz --cm max
+perl ../scripts/perl/combineMatrices.pl -i chrX_0h_25kb_matrix.addedHeaders.matrix.gz chrY_0h_25kb_matrix.addedHeaders.matrix.gz --cm max -0 chrXY
+perl ../scripts/perl/combineMatrices.pl -i chrX_0h_25kb_matrix.addedHeaders.matrix.gz chrY_0h_25kb_matrix.addedHeaders.matrix.gz --cm max -o chrXY
+perl ../scripts/perl/combineMatrices.pl -i chrX_0h_25kb_matrix.addedHeaders.matrix.gz -i chrY_0h_25kb_matrix.addedHeaders.matrix.gz --cm max -o chrXY
+perl ../scripts/perl/matrix2stacked.pl
+perl ../scripts/perl/matrix2direction.pl 
+cd ..
+perl scripts/perl/heatmap.pl -i sample-data/binMatrix/K5__30000__10.matrix.gz -i sample-data/binMatrix/GM__30000__10.matrix.gz -o K5__GM__30000__10__median
+perl scripts/perl/heatmap.pl -i 0h/chr19_0h_25kb_matrix.addedHeaders.matrix.gz -o chr19_0h_median
+perl scripts/perl/heatmap.pl 
+perl scripts/perl/heatmap.pl -i sample-data/elementPileUp/NPC_chrX.matrix.gz --ebf ../sample-data/elementPileUp/Xi-escapees.bed --hc cyan
+perl scripts/perl/heatmap.pl -i 0h/chrX_0h_25kb_matrix.addedHeaders.matrix.gz -o chrC_0h_median
+perl scripts/perl/matrix2anchorPlot.pl -i sample-data/addMatrixHeaders/K5.matrix.gz
+perl scripts/perl/interactionPileUp.pl -i sample-data/interactionPileUp/MeyersHiC-N2-DpnII.ce10.NA.H-10000-wDiag-noSS-iced.normalized.subset4000000__chrX__chrX__cis.matrix.gz --ebf ../sample-data/interactionPileUp/Top25RexPRex.bed --ezs 200000 --am sum --maxED 3
+perl scripts/perl/matrix2direction.pl -i sample-data/collapseMatrix/NPC_chr14-chr15-chr16__chr14__chr14__cis.matrix.gz --ds 5000000
+perl scripts/perl/insulation2tads.pl
+cd 6h/
+perl ../scripts/perl/insulation2tads.pl -i chr1_6h_25kb_matrix.addedHeaders--is500001--nt0.01--ids250001--ss125001--imiqrMean.insulation -b chr1_6h_25kb_matrix.addedHeaders--is500001--nt0.01--ids250001--ss125001--imiqrMean.insulation.boundaries
+perl scripts/perl/matrix2compartment.pl -i ./chr19_0h_25kb_matrix.addedHeaders.matrix.txt --ec --ca 0.01
+ls
+vim callInsulationTAD.sh
+chmod 777 callInsulationTAD.sh 
+./callInsulationTAD.sh 
+vim callInsulationTAD.sh
+nohup ./callInsulationTAD.sh &
+ls
+vim callInsulationTAD.sh 
+vim nohup.out 
+ls -lhat
+top
+cd ../wt/
+cp ../6h/callInsulationTAD.sh 
+cp ../6h/callInsulationTAD.sh ./
+vim callInsulationTAD.sh 
+ls
+cd ../0h/
+cp ../6h/callInsulationTAD.sh ./
+vim callInsulationTAD.sh 
+ls
+vim callInsulationTAD.sh 
+chmod 777 callInsulationTAD.sh 
+cd ../wt/
+vim callInsulationTAD.sh 
+chmod 777 callInsulationTAD.sh 
+ls
+nohup ./callInsulationTAD.sh &
+top
+ls -lhat
+cat *_25kb_matrix.addedHeaders--is500001--nt0.01--ids250001--ss125001--imiqrMean.insulation.boundaries.bed > wt_25kb--is500001--nt0.01--ids250001--ss125001--imiqrMean.insulation.boundaries.bed
+cd ../0h/
+cat *_25kb_matrix.addedHeaders--is500001--nt0.01--ids250001--ss125001--imiqrMean.insulation.boundaries.bed > 0h_25kb--is500001--nt0.01--ids250001--ss125001--imiqrMean.insulation.boundaries.bed
+cd ../6h/
+cat *_25kb_matrix.addedHeaders--is500001--nt0.01--ids250001--ss125001--imiqrMean.insulation.boundaries.bed > 6h_25kb--is500001--nt0.01--ids250001--ss125001--imiqrMean.insulation.boundaries.bed
+ls
+cat *_25kb_matrix.addedHeaders--is500001--nt0.01--ids250001--ss125001--imiqrMean--mbs0--mts0.tads.bedGraph > 6h_25kb--is500001--nt0.01--ids250001--ss125001--imiqrMean.insulation.boundaries.bed
+cat *_25kb_matrix.addedHeaders--is500001--nt0.01--ids250001--ss125001--imiqrMean--mbs0--mts0.tads.bedGraph > ../6h_25kb--is500001--nt0.01--ids250001--ss125001--imiqrMean--mbs0--mts0.tads.bedGraph
+cd ../0h/
+cat *_25kb_matrix.addedHeaders--is500001--nt0.01--ids250001--ss125001--imiqrMean--mbs0--mts0.tads.bedGraph > ../0h_25kb--is500001--nt0.01--ids250001--ss125001--imiqrMean--mbs0--mts0.tads.bedGraph
+cd ../wt/
+cat *_25kb_matrix.addedHeaders--is500001--nt0.01--ids250001--ss125001--imiqrMean--mbs0--mts0.tads.bedGraph > ../wt_25kb--is500001--nt0.01--ids250001--ss125001--imiqrMean--mbs0--mts0.tads.bedGraph
+cat *_25kb_matrix.addedHeaders--is500001--nt0.01--ids250001--ss125001--imiqrMean.insulation.bedGraph > ../wt_25kb--is500001--nt0.01--ids250001--ss125001--imiqrMean.insulation.bedGraph
+cd ../0h/
+cat *_25kb_matrix.addedHeaders--is500001--nt0.01--ids250001--ss125001--imiqrMean.insulation.bedGraph > ../0h_25kb--is500001--nt0.01--ids250001--ss125001--imiqrMean.insulation.bedGraph
+cd ../6h/
+cat *_25kb_matrix.addedHeaders--is500001--nt0.01--ids250001--ss125001--imiqrMean.insulation.bedGraph > ../6h_25kb--is500001--nt0.01--ids250001--ss125001--imiqrMean.insulation.bedGraph
+head chrY_6h_25kb_matrix.addedHeaders--is500001--nt0.01--ids250001--ss125001--imiqrMean.insulation
+head chrY_6h_25kb_matrix.addedHeaders--is500001--nt0.01--ids250001--ss125001--imiqrMean.insulation -n 30
+cat *_25kb_matrix.addedHeaders--is500001--nt0.01--ids250001--ss125001--imiqrMean.insulation > ../6h_25kb--is500001--nt0.01--ids250001--ss125001--imiqrMean.insulation
+cd ../0h/
+cat *_25kb_matrix.addedHeaders--is500001--nt0.01--ids250001--ss125001--imiqrMean.insulation > ../0h_25kb--is500001--nt0.01--ids250001--ss125001--imiqrMean.insulation
+cd ../wt/
+cat *_25kb_matrix.addedHeaders--is500001--nt0.01--ids250001--ss125001--imiqrMean.insulation > ../wt_25kb--is500001--nt0.01--ids250001--ss125001--imiqrMean.insulation
+cd ..
+perl scripts/perl/compareInsulation.pl
+perl scripts/perl/compareInsulation.pl -1 0h_25kb--is500001--nt0.01--ids250001--ss125001--imiqrMean.insulation -2 6h_25kb--is500001--nt0.01--ids250001--ss125001--imiqrMean.insulation
+perl scripts/perl/compareInsulation.pl -1 wt_25kb--is500001--nt0.01--ids250001--ss125001--imiqrMean.insulation -2 6h_25kb--is500001--nt0.01--ids250001--ss125001--imiqrMean.insulation
+vim scripts/perl/compareInsulation.pl
+perl scripts/perl/compareInsulation.pl -1 wt_25kb--is500001--nt0.01--ids250001--ss125001--imiqrMean.insulation -2 6h_25kb--is500001--nt0.01--ids250001--ss125001--imiqrMean.insulation
+vim scripts/perl/compareInsulation.pl
+perl scripts/perl/aggregateBED.pl -i sample-data/aggregrateBED/chrX.bed.gz --a mm9 --wsize 40000 --wstep 1 --wmode sum
+top
+locate mm9To
+locate mm9chain
+locate mm10To
+locate mm10
+cd /DATA/software/hi-c/HiC-Pro_2.9.0/annotation
+liftOver
+liftOver SuperEnhancer_mm9.bed mm9ToMm10.over.chain.gz SuperEnhancer_mm10.bed unmap
+liftOver Polycomb_mm9.bed mm9ToMm10.over.chain.gz Polycomb_mm10.bed unmap
+locate aspera
+chmod 777 -Rf /home/l/.aspera
+chmod 777 -Rf /DATA/pipeline/*
+fastqc 
+fastqc -h
+fastqc 
+which fastqc
+vim ~/.bashrc
+source ~/.bashrc
+fastqc 
+source ~/.bashrc
+vim ~/.bashrc
+source ~/.bashrc
+export DISPLAY
+sudo fastqc
+fastqc -h
+fastqc -q
+fastqc &
+exit
+cp .bash_history bash_history_0120
+head /DATA/software/hi-c/cworld-dekker/sample-data/collapseMatrix/chr19_0h_25kb_matrix
+clear
+df -h
+cd /DATA/software/hi-c/cworld-dekker/0h
+scp l@162.105.250.14:/DATA/software/hi-c/HiC-Pro_2.9.0/0h_merge_k1_mm10/0h_25kb_matrix/* ./
+cd ../6h/
+ls
+scp l@162.105.250.14:/DATA/software/hi-c/HiC-Pro_2.9.0/6h_merge_k1_mm10/6h_25kb_matrix/* ./
+cd ../wt/
+scp l@162.105.250.14:/DATA/software/hi-c/HiC-Pro_2.9.0/WT_merge_k1_mm10/matrix_25kb/*_wt_25kb_matrix ./
+cd ../6h/
+vim creatMatrix.sh
+vim creatMatrix.sh 
+chmod 777 creatMatrix.sh 
+./creatMatrix.sh 
+cd ../wt/
+vim creatMatrix.sh 
+ls
+ls -lhat
+chmod 777 creatMatrix.sh 
+ls
+vim creatMatrix.sh 
+./creatMatrix.sh 
+cd ..
+perl scripts/perl/matrix2webplot.pl -i sample-data/matrix2symmetrical/K5-highlight.symmetrical.matrix.gz
+cd 6h/
+perl ../scripts/perl/addMatrixHeaders.pl -i chrY_6h_25kb_matrix --xhf chrY.headers.bed-x --yhf chrY.headers.bed-x
+vim creatMatrix.sh 
+./creatMatrix.sh 
+ls
+perl ../scripts/perl/matrix2insulation.pl -i chr1_6h_25kb_matrix.addedHeaders.matrix.gz --is 500000 --ids 250000 --im iqrMean --ss 125000 --yb 1.5 --bmoe 1 --nt 0.01 --ez --bg
+perl scripts/perl/matrix2compartment.pl
+perl ../scripts/perl/matrix2compartment.pl
+perl ../scripts/perl/matrix2compartment.pl -i chr1_6h_25kb_matrix.addedHeaders.matrix.gz --ec --ca 0.005 --ez
+cd ../0h/
+perl ../scripts/perl/matrix2compartment.pl -i chr1_0h_25kb_matrix.addedHeaders.matrix.gz --ec --ca 0.005 --ez
+perl ../scripts/perl/matrix2compartment.pl -i chr1_0h_25kb_matrix.addedHeaders.matrix.gz --ec --ca 0.005
+vim ../scripts/perl/matrix2compartment.pl
+ -o chr1_0h_25kb --ec --ca 0.005
+cd ../6h/
+perl ../scripts/perl/matrix2compartment.pl -i chrY_6h_25kb_matrix.addedHeaders.matrix --ec --ca 0.005
+perl ../scripts/perl/matrix2compartment.pl 
+perl ../scripts/perl/matrix2compartment.pl -i chrY_6h_25kb_matrix.addedHeaders.matrix --ec
+perl ../scripts/perl/matrix2compartment.pl -i chrY_6h_25kb_matrix.addedHeaders.matrix -o test--ec
+perl ../scripts/perl/matrix2compartment.pl -i chrY_6h_25kb_matrix.addedHeaders.matrix -o test --ec
+perl ../scripts/perl/matrix2compartment.pl -i chrY_6h_25kb_matrix.addedHeaders.matrix -o test
+perl ../scripts/perl/matrix2compartment.pl 
+perl ../scripts/perl/matrix2compartment.pl -i chr19_6h_25kb_matrix.addedHeaders.matrix.gz --ca 0.005
+vim callInsulationTAD.sh 
+cd ../0h/
+vim callInsulationTAD.sh 
+nohup ./callInsulationTAD.sh &
+top
+ls
+top
+cd /DATA/pipeline/rna-seq/sample1231/polII_mm10/final
+ls
+vim bam2bigwig.mm10.sh 
+vim bamToBigWig_slow 
+cd /DATA/pipeline/rna-seq/sample1231/polII_mm10/final
+ls
+df -h
+cd /DATA/pipeline/rna-seq/sample1231
+ls
+fastqc -j
+fastqc -h
+fastqc -f fastq Rpb1-0h-1_H3TVWDMXX_L1_1.fq.gz -o test
+rm test
+rm -R test
+fastqc -f fastq Rpb1-0h-1_H3TVWDMXX_L1_1.fq.gz -o test
+top
+cd /DATA/software/hi-c/cworld-dekker/6h
+ls
+mv ./raw_matrix/callInsulationTAD.sh ./
+vim callInsulationTAD.sh 
+cd ../wt/
+mv ./raw_matrix/callInsulationTAD.sh ./
+exit
+which java
+JAVA_OPTS=-Djava.awt.headless=true
+echo "Using JAVA_OPTS:  $JAVA_OPTS"
+fastqc -q
+fastqc -h
+locate fastqc
+java -version
+perl scripts/perl/compareInsulation.pl -1 wt_25kb--is500001--nt0.01--ids250001--ss125001--imiqrMean.insulation -2 6h_25kb--is500001--nt0.01--ids250001--ss125001--imiqrMean.insulation
+cd /DATA/software/hi-c/cworld-dekker/
+perl scripts/perl/compareInsulation.pl -1 wt_25kb--is500001--nt0.01--ids250001--ss125001--imiqrMean.insulation -2 6h_25kb--is500001--nt0.01--ids250001--ss125001--imiqrMean.insulation
+wc -l wt_25kb--is500001--nt0.01--ids250001--ss125001--imiqrMean.insulation
+wc -l 0h_25kb--is500001--nt0.01--ids250001--ss125001--imiqrMean.insulation
+wc -l 6h_25kb--is500001--nt0.01--ids250001--ss125001--imiqrMean.insulation
+perl scripts/perl/compareInsulation.pl -1 0h.txt -2 6h.txt 
+perl scripts/perl/compareInsulation.pl 
+perl scripts/perl/compareInsulation.pl -1 0h.txt -2 6h.txt -o test
+vim scripts/perl/compareInsulation.pl 
+R
+vim scripts/perl/compareInsulation.pl 
+perl scripts/perl/compareInsulation.pl -1 0h.txt -2 6h.txt -o diff
+perl scripts/perl/compareInsulation.pl
+perl scripts/perl/compareInsulation.pl -1 6h_25kb--is500001--nt0.01--ids250001--ss125001--imiqrMean.insulation.txt -2 0h_25kb--is500001--nt0.01--ids250001--ss125001--imiqrMean.insulation.txt -o 6h_vs_0h_diff
+perl scripts/perl/compareInsulation.pl -1 6h_25kb--is500001--nt0.01--ids250001--ss125001--imiqrMean.insulation.txt -2 wt_25kb--is500001--nt0.01--ids250001--ss125001--imiqrMean.insulation.txt -o 6h_vs_wt_diff
+perl scripts/perl/compareInsulation.pl -1 6h_25kb--is500001--nt0.01--ids250001--ss125001--imiqrMean.insulation2.txt -2 wt_25kb--is500001--nt0.01--ids250001--ss125001--imiqrMean.insulation.txt -o 6h_vs_wt_diff
+perl scripts/perl/compareMatrices.pl 
+perl scripts/perl/compareMatrices.pl -1 0h/chr1_0h_25kb_matrix.addedHeaders.matrix.gz 6h/chr1_6h_25kb_matrix.addedHeaders.matrix.gz
+perl scripts/perl/compareMatrices.pl -1 0h/chr1_0h_25kb_matrix.addedHeaders.matrix.gz -2 6h/chr1_6h_25kb_matrix.addedHeaders.matrix.gz
+perl scripts/perl/heatmap.pl 
+perl scripts/perl/heatmap.pl 0h/chr19_0h_25kb_matrix.addedHeaders.zScore.matrix.gz --dd
+perl scripts/perl/heatmap.pl -i 0h/chr19_0h_25kb_matrix.addedHeaders.zScore.matrix.gz --dd
+perl scripts/perl/heatmap.pl -i 0h/chr19_0h_25kb_matrix.addedHeaders.matrix.gz --dd
+perl scripts/perl/heatmap.pl -i 6h/chr19_6h_25kb_matrix.addedHeaders.matrix.gz --dd
+perl scripts/perl/heatmap.pl -i 6h/chr19_6h_25kb_matrix.addedHeaders.matrix.gz --dt --dpb --ds --dl
+perl scripts/perl/heatmap.pl -i 6h/chr19_6h_25kb_matrix.addedHeaders.matrix.gz --dt --dpb 
+perl scripts/perl/heatmap.pl -i 6h/chr19_6h_25kb_matrix.addedHeaders.matrix.gz --dt --sfs -o test.pdf
+fastqc 
+cd /DATA/pipeline/rna-seq/sample1231/polII_mm10/final
+ls
+./bamToBigWig_slow 
+vim bamToBigWig_slow 
+ls
+nohup ./bamToBigWig_slow 6h_merge.bam mm10.chrom.sizes 6h_merge.bw &
+top
+tail 6h_merge.bam.cov
+head 6h_merge.bam.cov
+top
+vim bamToBigWig_slow 
+top
+kill -9 15016
+top
+kill -9 17751
+top
+kill -9 17760
+vim bamToBigWig_slow 
+rm bamToBigWig_slow 
+vim bam2bigwig.mm10.sh 
+chmod 777 bamToBigWig.sh 
+./bamToBigWig.sh 
+./bamToBigWig.sh -h
+
+ls
+ls -lhat
+exit
+cd /DATA/pipeline/rna-seq/sample1231/polII_mm10/final
+ls
+ls -lhat
+mv 6h_merge.bam ../../bigwig/
+cd ../../bigwig/
+ls
+ls -lhat
+cd ../polII_mm10/final/
+ls
+ls -lhat
+exit
+sudo apt-get upgrade
+which python
+sudo apt-get -f upgrade
+top
+df -h
+cd /DATA/software/hi-c/
+df -h
+cd /DATA/software/hi-c/cworld-dekker/wt
+who
+more /etc/passwd
+vim /etc/passwd
+vim callInsulationTAD.sh 
+perl ../scripts/perl/matrix2compartment.pl
+pip install cooler
+python
+pip install cooler
+df -h
+cd /DATA/software/hi-c/cworld-dekker/
+perl scripts/perl/matrix2compartment.pl -i sample-data/collapseMatrix/NPC_chr14-chr15-chr16.matrix.gz --ec
+perl scripts/perl/matrix2compartment.pl
+perl scripts/perl/matrix2compartment.pl -i sample-data/collapseMatrix/NPC_chr14-chr15-chr16.matrix.gz --et
+perl scripts/perl/heatmap.pl -i NPC_chr14-chr15-chr16.zScore.collapsed.correlation.matrix.gz
+python
+which python
+python
+ls
+chmod 777 saddles.py 
+python saddles.py 
+python saddles.py -h
+python
+conda install -c conda-forge -c bioconda cooler
+python
+conda install -c conda-forge -c bioconda bioframe
+python
+sudo apt-get upgrade
+pip install hic2cool
+locate .hic
+pip install cytoolz
+cd /DATA/pipeline/hichip/2018-02-08_grid-seq
+ls
+chmod 777 ./*
+ls
+gzip -d GSM2396700_mm9_mESC_merged.ghits.pkbin.net.txt.gz 
+ls -lhta
+head GSM2396700_mm9_mESC_merged.ghits.pkbin.net.txt 
+ls
+tar -zvxf gridseq.mESC.bdg.tar.gz 
+ls
+head gridseq.mESC.ENSMUSG00000027852.bdg
+rm -Rf *.bdg
+ls
+clear
+top
+kill -9 26550
+top
+locate MM9
+locate mm9
+locate mm9Chain
+locate Chain
+cd /DATA/pipeline/hichip
+ls
+liftOver
+cd /DATA/pipeline/hichip/2018-02-08_gro-seq
+liftOver GSM1665566_mES_GRO-seq.plus.bw ../mm9ToMm10.over.chain.gz GSM1665566_mES_GRO-seq_mm10.plus.bw unmap
+CrossMap.py
+CrossMap.py bigwig ../mm9ToMm10.over.chain.gz GSM1665566_mES_GRO-seq.plus.bw GSM1665566_mES_GRO-seq_mm10
+CrossMap.py bigwig ../mm9ToMm10.over.chain.gz GSM1665566_mES_GRO-seq.minus.bw GSM1665566_mES_GRO-seq_mm10
+sudo apt-get install libmysqlclient-dev
+sudo apt-get install libssl1.0.0 libssl-dev
+R
+chmod 777 -Rf ./*
+cd dREG/
+make dreg
+make R_dependencies
+make dreg
+vim ~/.bashrc
+bash run_peakcalling.bsh ../GSM1665566_mES_GRO-seq_plus_mm10.bw ../GSM1665566_mES_GRO-seq_minus_mm10.bw mES_polII asvm.RData
+bash run_peakcalling.bsh ../GSM1665566_mES_GRO-seq_plus_mm10.bw ../GSM1665566_mES_GRO-seq_minus_mm10.bw mES_polII asvm.rdata 
+bash run_peakcalling.bsh ../GSM1665566_mES_GRO-seq_plus_mm10.bw ../GSM1665566_mES_GRO-seq_minus_mm10.bw mES_polII asvm.rdata 12
+nohup bash run_peakcalling.bsh ../GSM1665566_mES_GRO-seq_plus_mm10.bw ../GSM1665566_mES_GRO-seq_minus_mm10.bw mES_polII asvm.rdata &
+top
+cd /DATA/pipeline/hichip/2018-02-08_plac-seq
+ls
+gzip -d GSE86150_mm9.ESF123.placseq.Pol2.fithic.interactions.bed.gz 
+ls
+wl -s GSE86150_mm9.ESF123.placseq.Pol2.fithic.interactions.bed
+ws ls GSE86150_mm9.ESF123.placseq.Pol2.fithic.interactions.bed
+wc -l GSE86150_mm9.ESF123.placseq.Pol2.fithic.interactions.bed
+gzip -d GSM2295906_Pol2.rep1.short.txt.gz
+ls
+head GSM2295906_Pol2.rep1.short.txt 
+head GSE86150_mm9.ESF123.placseq.Pol2.fithic.interactions.bed
+gzip -d GSM2295906_Pol2.rep1.long.txt.gz 
+ls
+gzip -d GSM2295906_Pol2.rep1.long.txt
+head GSM2295906_Pol2.rep1.long.txt
+cd /DATA/pipeline/hichip/2018-02-08_gro-seq/dREG
+df -h
+ls
+vim nohup.out 
+sudo
+sudo apt-get upgrade
+cd Downloads/
+R CMD INSTALL FIND_0.99.tar.gz
+R
+R CMD INSTALL FIND_0.99.tar.gz
+cd /DATA/pipeline/hichip/2018-02-08_atac-seq
+ls
+chmod 777 -Rf ./*
+ls
+gzip -d GSE66581_atac_200_mESC.bedGraph.gz 
+ls
+head GSE66581_atac_200_mESC.bedGraph 
+bedGraphToBigWig 
+gzip -d GSE66581_atac_200_mESC.bedGraph.gz 
+gzip -d GSE66581_atac_1k_mESC.bedGraph.gz 
+locate mouse.mm9
+bedGraphToBigWig GSE66581_atac_1k_mESC.bedGraph /usr/share/bedtools/genomes/mouse.mm9.genome GSE66581_atac_1k_mESC.bw
+sort -k1,1 -k2,2n GSE66581_atac_1k_mESC.bedGraph > tmp
+bedGraphToBigWig tmp /usr/share/bedtools/genomes/mouse.mm9.genome GSE66581_atac_1k_mESC.bw
+sort -k1,1 -k2,2n GSE66581_atac_200_mESC.bedGraph > tmp
+bedGraphToBigWig tmp /usr/share/bedtools/genomes/mouse.mm9.genome GSE66581_atac_200_mESC.bw
+CrossMap.py bigwig
+CrossMap.py bigwig ../mm9ToMm10.over.chain.gz GSE66581_atac_200_mESC.bw GSE66581_atac_200_mESC_mm10
+CrossMap.py bigwig ../mm9ToMm10.over.chain.gz GSE66581_atac_1k_mESC.bw GSE66581_atac_1k_mESC_mm10
+ls
+cd /DATA/pipeline/hichip/2018-02-08_plac-seq
+ls
+head GSE86150_mm9.ESF123.placseq.Pol2.fithic.interactions.bed 
+wc -l  GSE86150_mm9.ESF123.placseq.Pol2.fithic.interactions.bed 
+head GSM2295906_Pol2.rep1.long.txt
+cd /DATA/software/hi-c/cworld-dekker/
+perl scripts/perl/heatmap.pl
+perl scripts/perl/heatmap.pl -h
+perl scripts/perl/heatmap.pl -i sample-data/binMatrix/K5__30000__10.matrix.gz -i sample-data/binMatrix/GM__30000__10.matrix.gz -o K5__GM__30000__10__median
+perl scripts/perl/heatmap.pl -i sample-data/binMatrix/K5__30000__10.matrix.gz -i sample-data/binMatrix/GM__30000__10.matrix.gz -o K5__GM__30000__10__median -o tt.pdf
+cd ../HiCPlotter/
+ls
+python HiCPlotter.py 
+python HiCPlotter.py -h
+ls
+scp data/mm10.RefSeq.sorted.bed l@162.105.250.14:/DATA/software/hi-c/HiCPlotter/data
+cd /DATA/software/hi-c/cworld-dekker/
+cd combine/
+ls
+ls -lhat
+wc -l 0h_25kb--is500001--nt0.01--ids250001--ss125001--imiqrMean--mbs0--mts0.tads.bed
+wc -l 6h_25kb--is500001--nt0.01--ids250001--ss125001--imiqrMean--mbs0--mts0.tads.bed
+wc -l wt_25kb--is500001--nt0.01--ids250001--ss125001--imiqrMean--mbs0--mts0.tads.bed
+head wt_25kb--is500001--nt0.01--ids250001--ss125001--imiqrMean.insulation
+vim /DATA/software/hi-c/cworld-dekker/0h/callInsulationTAD.sh 
+cd /DATA/pipeline/hichip/2018-02-08_plac-seq
+ls
+tail tt 
+exit
+df -h
+fdisk -l
+sudo fdisk  -l
+sudo fdisk /dev/sdc
+sudo mkfs -t ext4 /dev/sdc
+sudo mkdir /DATA2
+sudo mount /dev/sdc /DATA2
+df -h
+mount
+vim /etc/fstab
+df -h
+sudo fdisk  -l
+sudo vim /etc/fstab
+cd /DATA/pipeline/hichip/2018-02-08_plac-seq
+ls
+head GSM2295906_Pol2.rep1.short.txt
+awk '{$1="";print $0}' GSM2295906_Pol2.rep1.short.txt 
+awk '{$1="";print $0}' GSM2295906_Pol2.rep1.short.txt > GSM2295906_Pol2.rep1.short.bed
+head GSM2295906_Pol2.rep1.short.bed
+bedToBigBed 
+bed
+bedtools genomecov 
+bedtools genomecov -i GSM2295906_Pol2.rep1.short.bed -bg > tt
+locate mouse.genome
+locate mouse.
+bedtools genomecov -i GSM2295906_Pol2.rep1.short.bed -bg -g /DATA/software/hi-c/juicer/hiccups_results/mouse.mm9.genome > tt
+awk '{print $2,$3,$4}' GSM2295906_Pol2.rep1.short.txt > GSM2295906_Pol2.rep1.short.bed
+bedtools genomecov -i GSM2295906_Pol2.rep1.short.bed -bg -g /DATA/software/hi-c/juicer/hiccups_results/mouse.mm9.genome > tt
+head GSM2295906_Pol2.rep1.short.bed
+awk '{print $2,"\t",$3,"\t",$4}' GSM2295906_Pol2.rep1.short.txt > GSM2295906_Pol2.rep1.short.bed
+head GSM2295906_Pol2.rep1.short.bed
+awk '{print $2"\t"$3"\t"$4}' GSM2295906_Pol2.rep1.short.txt > GSM2295906_Pol2.rep1.short.bed
+head GSM2295906_Pol2.rep1.short.bed
+bedtools genomecov -i GSM2295906_Pol2.rep1.short.bed -bg -g /DATA/software/hi-c/juicer/hiccups_results/mouse.mm9.genome > tt
+awk '{print $2"\t"$3"\t"$4}' GSM2295906_Pol2.rep1.long.txt > GSM2295906_Pol2.rep1.long.bed
+bedGraphToBigWig 
+bedGraphToBigWig tt /DATA/software/hi-c/juicer/hiccups_results/mouse.mm9.genome GSM2295906_Pol2.rep1.short.bw
+sort -k1,1 -k2,2n tt > tt.sort
+head GSM2295906_Pol2.rep1.long.bed
+awk '{print $2"\t"$3"\t"$3}' GSM2295906_Pol2.rep1.short.txt > GSM2295906_Pol2.rep1.short_R1.bed
+awk '{print $2"\t"$4"\t"$4}' GSM2295906_Pol2.rep1.short.txt > GSM2295906_Pol2.rep1.short_R2.bed
+slopBed 
+slopBed -i GSM2295906_Pol2.rep1.short_R1.bed -g /DATA/software/hi-c/juicer/hiccups_results/mouse.mm9.genome -b 75 > GSM2295906_Pol2.rep1_short_R1.bed
+slopBed -i GSM2295906_Pol2.rep1.short_R2.bed -g /DATA/software/hi-c/juicer/hiccups_results/mouse.mm9.genome -b 75 > GSM2295906_Pol2.rep1_short_R2.bed
+head GSM2295906_Pol2.rep1_short_R1.bed
+head GSM2295906_Pol2.rep1_short_R2.bed
+gzip -d GSM2295907_Pol2.rep2.short.txt.gz 
+gzip -d GSM2295907_Pol2.rep2.long.txt.gz 
+head GSM2295906_Pol2.rep1.short_R1.bed
+awk '{print $2"\t"$4"\t"$4}' GSM2295907_Pol2.rep2.short.txt > GSM2295907_Pol2.rep2.short_R2.bed
+awk '{print $2"\t"$3"\t"$3}' GSM2295907_Pol2.rep2.short.txt > GSM2295907_Pol2.rep2.short_R1.bed
+awk '{print $2"\t"$3"\t"$3}' GSM2295907_Pol2.rep2.long.txt > GSM2295907_Pol2.rep2.long_R1.bed
+awk '{print $2"\t"$4"\t"$4}' GSM2295907_Pol2.rep2.long.txt > GSM2295907_Pol2.rep2.long_R2.bed
+head GSM2295906_Pol2.rep1.long.txt
+head GSM2295906_Pol2.rep1.long.bed 
+awk '{print $2"\t"$4"\t"$4}' GSM2295906_Pol2.rep2.long.txt > GSM2295906_Pol2.rep1.long_R2.bed
+awk '{print $2"\t"$4"\t"$4}' GSM2295906_Pol2.rep1.long.txt > GSM2295906_Pol2.rep1.long_R2.bed
+awk '{print $2"\t"$3"\t"$3}' GSM2295906_Pol2.rep1.long.txt > GSM2295906_Pol2.rep1.long_R1.bed
+head GSM2295906_Pol2.rep1.long_R1.bed
+cat *.long_R*.bed *.short_R*.bed > tt
+slopBed -i tt -g /DATA/software/hi-c/juicer/hiccups_results/mouse.mm9.genome -b 75 > tt.bed
+head tt.bed 
+cat tt.bed GSM2295906_Pol2.rep1_short_R1.bed GSM2295906_Pol2.rep1_short_R2.bed > GSM2295906_07_combine_Pol2.bed
+bedtools genomecov -i GSM2295906_07_combine_Pol2.bed -bg -g /DATA/software/hi-c/juicer/hiccups_results/mouse.mm9.genome > tt
+sort -k1,1 -k2,2n tt > tt.sort
+sort -k1,1 -k2,2n GSM2295906_07_combine_Pol2.bed > tt
+cd /DATA/pipeline/hichip/2018-02-08_grid-seq
+ls
+head GSM2396700_mm9_mESC_merged.ghits.pkbin.net.txt 
+awk '{print $7"\t"$8"\t"$8+1000"\t"$9}' GSM2396700_mm9_mESC_merged.ghits.pkbin.net.txt 
+awk '{print $7"\t"$8"\t"$8+1000"\t"$9}' GSM2396700_mm9_mESC_merged.ghits.pkbin.net.txt > GSM2396700_mm9_mESC_merged.ghits.pkbin.net.bed
+head GSM2396700_mm9_mESC_merged.ghits.pkbin.net.bed
+vim /DATA/software/hi-c/juicer/hiccups_results/mouse.mm9.genome
+bedGraphToBigWig GSM2396700_mm9_mESC_merged.ghits.pkbin.net.bed /DATA/software/hi-c/juicer/hiccups_results/mouse.mm9.genome GSM2396700_mm9_mESC_merged.ghits.pkbin.net.bw
+sort -k1,1 -k2,2n GSM2396700_mm9_mESC_merged.ghits.pkbin.net.bed > tt
+bedGraphToBigWig GSM2396700_mm9_mESC_merged.ghits.pkbin.net.bed /DATA/software/hi-c/juicer/hiccups_results/mouse.mm9.genome GSM2396700_mm9_mESC_merged.ghits.pkbin.net.bw
+cp /DATA/software/hi-c/juicer/hiccups_results/mouse.mm9.genome ./
+vim mouse.mm9.genome 
+bedGraphToBigWig GSM2396700_mm9_mESC_merged.ghits.pkbin.net.bed mouse.mm9.genome GSM2396700_mm9_mESC_merged.ghits.pkbin.net.bw
+vim mouse.mm9.genome 
+bedGraphToBigWig GSM2396700_mm9_mESC_merged.ghits.pkbin.net.bed mouse.mm9.genome GSM2396700_mm9_mESC_merged.ghits.pkbin.net.bw
+vim mouse.mm9.genome 
+bedGraphToBigWig GSM2396700_mm9_mESC_merged.ghits.pkbin.net.bed mouse.mm9.genome GSM2396700_mm9_mESC_merged.ghits.pkbin.net.bw
+vim mouse.mm9.genome 
+bedGraphToBigWig GSM2396700_mm9_mESC_merged.ghits.pkbin.net.bed mouse.mm9.genome GSM2396700_mm9_mESC_merged.ghits.pkbin.net.bw
+vim mouse.mm9.genome 
+bedGraphToBigWig GSM2396700_mm9_mESC_merged.ghits.pkbin.net.bed mouse.mm9.genome GSM2396700_mm9_mESC_merged.ghits.pkbin.net.bw
+vim mouse.mm9.genome 
+bedGraphToBigWig GSM2396700_mm9_mESC_merged.ghits.pkbin.net.bed mouse.mm9.genome GSM2396700_mm9_mESC_merged.ghits.pkbin.net.bw
+vim mouse.mm9.genome 
+bedGraphToBigWig  mouse.mm9.genome GSM2396700_mm9_mESC_merged.ghits.pkbin.net.bw
+vim GSM2396700_mm9_mESC_merged.ghits.pkbin.net.
+vim GSM2396700_mm9_mESC_merged.ghits.pkbin.net.bed 
+wc -l GSM2396700_mm9_mESC_merged.ghits.pkbin.net.bed
+bedtools groupby -i GSM2396700_mm9_mESC_merged.ghits.pkbin.net.bed -g 1,2,3 -c 9
+bedtools groupby -i GSM2396700_mm9_mESC_merged.ghits.pkbin.net.bed -g 1,2,3 -c 4
+bedtools groupby -i GSM2396700_mm9_mESC_merged.ghits.pkbin.net.bed -g 1,2,3 -c 4 -o sum
+head GSM2396700_mm9_mESC_merged.ghits.pkbin.net.bed
+bedtools groupby -i GSM2396700_mm9_mESC_merged.ghits.pkbin.net.bed -g 1-3 -c 4 -o sum
+uniq -h
+uniq --h
+cd /DATA/software/hi-c/cworld-dekker
+perl scripts/perl/heatmap.pl -i /DATA/software/hi-c/cworld-dekker/0h/chrX_0h_25kb_matrix.addedHeaders.zScore.matrix.gz
+perl scripts/perl/matrix2compartment.pl -i sample-data/collapseMatrix/NPC_chr14-chr15-chr16.matrix.gz
+cd 0h/
+ls
+tail nohup.out 
+vim nohup.out 
+vim ../scripts/perl/matrix2compartment.pl 
+locate mm10.refseq.txt
+locate mm10.refseq
+head /DATA/software/chip-seq/BETA/BETA/references/mm10.refseq
+cd ..
+python scripts/python/matrix2EigenVectors.py 
+cd /DATA/pipeline/hichip/2018-02-08_plac-seq/
+ls
+cd ../2018-02-08_grid-seq/
+bedGraphToBigWig GSM2396700_mm9_mESC_merged.ghits.pkbin.net.group.bed mouse.mm9.genome GSM2396700_mm9_mESC_merged.ghits.pkbin.net.bw
+CrossMap.py bigwig ../mm9ToMm10.over.chain.gz GSM2396700_mm9_mESC_merged.ghits.pkbin.net.bw GSM2396700_mm9_mESC_merged.ghits.pkbin.net_mm10
+locate promoter
+locate tss
+head /home/xxzhang/software/hommer/data/genomes/mm10/mm10.tss
+locate tss
+ls
+cd ../2018-02-08_chip-seq/
+cp /DATA/software/chip-seq/homer/data/genomes/mm10/mm10.tss ./
+ls
+head mm10.tss 
+cd /DATA/pipeline/hichip/2018-02-08_chip-seq
+intersectBed 
+intersectBed -a H3K4me3_GSM1082344.bed -b mm10.tss.bed 
+intersectBed -a H3K4me3_GSM1082344.bed -b mm10.tss.bed -f 0.01
+intersectBed -a H3K4me3_GSM1082344.bed -b mm10.tss.bed -f 0.01 > tt
+wc -l tt
+wc -l H3K4me3_GSM1082344.bed 
+intersectBed -a H3K4me3_GSM1082344.bed -b mm10.tss.bed -f 0.01 -u > tt
+wc -l tt
+intersectBed -a H3K4me3_GSM1082344.bed -b mm10.tss.bed -f 0.05 -u > tt
+wc -l tt
+intersectBed -a H3K4me3_GSM1082344.bed -b mm10.tss.bed -f 0.01 -u > tt
+intersectBed -a H3K4me3_GSM1082344.bed -b mm10.tss.bed -f 0.1 -u > tt
+wc -l tt
+intersectBed 
+intersectBed -a H3K27ac_GSM1566091.bed -b H3K4me3_in_TSS.bed -v
+intersectBed -a H3K27ac_GSM1566091.bed -b H3K4me3_in_TSS.bed -v > tt
+intersectBed -a H3K27ac_GSM1566091.bed -b H3K4me3_in_TSS.bed -f 0.1 -v > tt
+wc -l H3K27ac_GSM1566091.bed 
+wc -l tt
+ls
+intersectBed -a 0h_merge_10k_cscore.bedgraph.txt -b 6h_merge_10k_cscore.bedgraph.txt -wao -f 0.99
+intersectBed -a 0h_merge_10k_cscore.bedgraph.txt -b 6h_merge_10k_cscore.bedgraph.txt -wao -f 0.99 > tt
+head tt
+intersectBed -a 0h_merge_10k_cscore.bedgraph.txt -b 6h_merge_10k_cscore.bedgraph.txt -u -f 0.99 > tt
+head tt
+intersectBed -a 0h_merge_10k_cscore.bedgraph.txt -b 6h_merge_10k_cscore.bedgraph.txt -wa -wb -f 0.99 > tt
+multiBigwigSummary
+multiBigwigSummary  --BED tt.txt -b 2018-02-08_chip-seq/GSM1566094_pol2.bw 2018-02-08_gro-seq/GSM1665566_mES_GRO-seq_plus_mm10.bw 2018-02-08_gro-seq/GSM1665566_mES_GRO-seq_plus_mm10.bw 2018-02-08_grid-seq/GSM2396700_mm9_mESC_merged.ghits.pkbin.net_mm10.bw  2018-02-08_atac-seq/GSE66581_atac_1k_mESC_mm10.bw --labels polII-ChIP GRO-seq-m GRO-seq-p GRID-seq-RNA ATAC-seq -out scores_per_bin.npz --outRawCounts scores_per_bin.tab
+multiBigwigSummary BED-file tt.txt -b 2018-02-08_chip-seq/GSM1566094_pol2.bw 2018-02-08_gro-seq/GSM1665566_mES_GRO-seq_plus_mm10.bw 2018-02-08_gro-seq/GSM1665566_mES_GRO-seq_plus_mm10.bw 2018-02-08_grid-seq/GSM2396700_mm9_mESC_merged.ghits.pkbin.net_mm10.bw  2018-02-08_atac-seq/GSE66581_atac_1k_mESC_mm10.bw --labels polII-ChIP GRO-seq-m GRO-seq-p GRID-seq-RNA ATAC-seq -out scores_per_bin.npz --outRawCounts scores_per_bin.tab
+multiBigwigSummary BED-file --BED tt.txt -b 2018-02-08_chip-seq/GSM1566094_pol2.bw 2018-02-08_gro-seq/GSM1665566_mES_GRO-seq_plus_mm10.bw 2018-02-08_gro-seq/GSM1665566_mES_GRO-seq_plus_mm10.bw 2018-02-08_grid-seq/GSM2396700_mm9_mESC_merged.ghits.pkbin.net_mm10.bw  2018-02-08_atac-seq/GSE66581_atac_1k_mESC_mm10.bw --labels polII-ChIP GRO-seq-m GRO-seq-p GRID-seq-RNA ATAC-seq -out scores_per_bin.npz --outRawCounts scores_per_bin.tab
+cd ..
+multiBigwigSummary BED-file --BED tt.txt -b 2018-02-08_chip-seq/GSM1566094_pol2.bw 2018-02-08_gro-seq/GSM1665566_mES_GRO-seq_plus_mm10.bw 2018-02-08_gro-seq/GSM1665566_mES_GRO-seq_plus_mm10.bw 2018-02-08_grid-seq/GSM2396700_mm9_mESC_merged.ghits.pkbin.net_mm10.bw  2018-02-08_atac-seq/GSE66581_atac_1k_mESC_mm10.bw --labels polII-ChIP GRO-seq-m GRO-seq-p GRID-seq-RNA ATAC-seq -out scores_per_bin.npz --outRawCounts scores_per_bin.tab
+multiBigwigSummary BED-file --BED tt.txt -b 2018-02-08_chip-seq/GSM1566094_pol2.bw 2018-02-08_gro-seq/GSM1665566_mES_GRO-seq_plus_mm10.bw 2018-02-08_gro-seq/GSM1665566_mES_GRO-seq_minus_mm10.bw 2018-02-08_grid-seq/GSM2396700_mm9_mESC_merged.ghits.pkbin.net_mm10.bw  2018-02-08_atac-seq/GSE66581_atac_1k_mESC_mm10.bw --labels polII-ChIP GRO-seq-m GRO-seq-p GRID-seq-RNA ATAC-seq -out scores_per_bin.npz --outRawCounts scores_per_bin.tab
+head scores_per_bin.tab 
+multiBigwigSummary BED-file --BED tt.txt -b 2018-02-08_chip-seq/GSM1566094_pol2.bw 2018-02-08_gro-seq/GSM1665566_mES_GRO-seq_plus_mm10.bw 2018-02-08_gro-seq/GSM1665566_mES_GRO-seq_minus_mm10.bw 2018-02-08_grid-seq/GSM2396700_mm9_mESC_merged.ghits.pkbin.net_mm10.bw  2018-02-08_atac-seq/GSE66581_atac_1k_mESC_mm10.bw --labels polII-ChIP GRO-seq-m GRO-seq-p GRID-seq-RNA ATAC-seq -out scores_per_bin.npz --outRawCounts scores_per_bin.tab
+ls
+cd /DATA/pipeline/hichip/2018-02-08_plac-seq
+ls
+head tt
+bedtools genomecov -i tt -bg -g /DATA/software/hi-c/juicer/hiccups_results/mouse.mm9.genome > GSM2295906_07_combine_Pol2.bed 
+head GSM2295906_07_combine_Pol2.bed
+bedGraphToBigWig GSM2295906_07_combine_Pol2.bed /DATA/software/hi-c/juicer/hiccups_results/mouse.mm9.genome GSM2295906_07_combine_Pol2.bw
+CrossMap.py 
+CrossMap.py bigwig
+CrossMap.py bigwig ../mm9ToMm10.over.chain.gz GSM2295906_07_combine_Pol2.bw GSM2295906_07_combine_Pol2_mm10
+ls -laht
+head GSE86150_mm9.ESF123.placseq.Pol2.fithic.interactions.bed 
+ls -lhat
+awk '{print $1"\t"$2"\t"$3"\t"$8"\t"$7}' GSE86150_mm9.ESF123.placseq.Pol2.fithic.interactions.bed 
+awk '{print $1"\t"$2"\t"$3"\t"$7"\t"$8}' GSE86150_mm9.ESF123.placseq.Pol2.fithic.interactions.bed 
+awk '{print $1"\t"$2"\t"$3"\t"$7"\t"$8}' GSE86150_mm9.ESF123.placseq.Pol2.fithic.interactions.bed > GSE86150_mm9.ESF123.placseq.Pol2.fithic.interactions.bed_R1
+awk '{print $4"\t"$5"\t"$6"\t"$7"\t"$8}' GSE86150_mm9.ESF123.placseq.Pol2.fithic.interactions.bed > GSE86150_mm9.ESF123.placseq.Pol2.fithic.interactions.bed_R2
+wc -l GSE86150_mm9.ESF123.placseq.Pol2.fithic.interactions.bed_R1
+wc -l GSE86150_mm9.ESF123.placseq.Pol2.fithic.interactions.bed_R2
+CrossMap.py bed
+CrossMap.py bed ../mm9ToMm10.over.chain.gz GSE86150_mm9.ESF123.placseq.Pol2.fithic.interactions.bed_R1 GSE86150_mm10.ESF123.placseq.Pol2.fithic.interactions.bed_R1
+awk '{print $1"\t"$2"\t"$3"\t"$7"\t"$8}' GSE86150_mm9.ESF123.placseq.Pol2.fithic.interactions.bed > GSE86150_mm9.ESF123.placseq.Pol2.fithic.interactions.bed_R1
+awk '{print $4"\t"$5"\t"$6"\t"$7"\t"$8}' GSE86150_mm9.ESF123.placseq.Pol2.fithic.interactions.bed > GSE86150_mm9.ESF123.placseq.Pol2.fithic.interactions.bed_R2
+CrossMap.py bed ../mm9ToMm10.over.chain.gz GSE86150_mm9.ESF123.placseq.Pol2.fithic.interactions.bed_R1 GSE86150_mm10.ESF123.placseq.Pol2.fithic.interactions.bed_R1
+awk '{print $1"\t"$2"\t"$3"\t"$7"\t"$8}' GSE86150_mm9.ESF123.placseq.Pol2.fithic.interactions.bed > GSE86150_mm9.ESF123.placseq.Pol2.fithic.interactions.bed_R1
+awk '{print $4"\t"$5"\t"$6"\t"$7"\t"$8}' GSE86150_mm9.ESF123.placseq.Pol2.fithic.interactions.bed > GSE86150_mm9.ESF123.placseq.Pol2.fithic.interactions.bed_R2
+CrossMap.py bed ../mm9ToMm10.over.chain.gz GSE86150_mm9.ESF123.placseq.Pol2.fithic.interactions.bed_R1 GSE86150_mm10.ESF123.placseq.Pol2.fithic.interactions.bed_R1
+CrossMap.py bed ../mm9ToMm10.over.chain.gz GSE86150_mm9.ESF123.placseq.Pol2.fithic.interactions.bed_R2 GSE86150_mm10.ESF123.placseq.Pol2.fithic.interactions.bed_R2
+wc -l GSE86150_mm10.ESF123.placseq.Pol2.fithic.interactions.bed_R1
+wc -l GSE86150_mm10.ESF123.placseq.Pol2.fithic.interactions.bed_R2
+head GSE86150_mm10.ESF123.placseq.Pol2.fithic.interactions.bed_R1
+join -1 4 -2 4 GSE86150_mm10.ESF123.placseq.Pol2.fithic.interactions.bed_R1 GSE86150_mm10.ESF123.placseq.Pol2.fithic.interactions.bed_R2
+join -1 4 -2 4 GSE86150_mm10.ESF123.placseq.Pol2.fithic.interactions.bed_R1 GSE86150_mm10.ESF123.placseq.Pol2.fithic.interactions.bed_R2 > tt
+head tt
+head GSE86150_mm10.ESF123.placseq.Pol2.fithic.interactions.bed
+tail GSE86150_mm10.ESF123.placseq.Pol2.fithic.interactions.bed
+sudo apt-get install bedtools
+sudo apt-get update bedtools
+sudo apt-get upgrade bedtools
+pairtobed
+bedtools pairtobed
+bedtools pairtobed -a GSE86150_mm10.ESF123.placseq.Pol2.fithic.interactions.bed -b ../2018-02-08_chip-seq/H3K4me3_in_TSS.bed 
+head GSE86150_mm10.ESF123.placseq.Pol2.fithic.interactions.bed
+bedtools pairtobed -a GSE86150_mm10.ESF123.placseq.Pol2.fithic.interactions.bed -b ../2018-02-08_chip-seq/H3K4me3_in_TSS.bed 
+bedtools pairtobed -a GSE86150_mm10.ESF123.placseq.Pol2.fithic.interactions.bed -b ../2018-02-08_chip-seq/H3K4me3_in_TSS.bed -u | wc -l
+bedtools pairtobed -a GSE86150_mm10.ESF123.placseq.Pol2.fithic.interactions.bed -b ../2018-02-08_chip-seq/H3K4me3_in_TSS.bed -u 
+bedtools pairtobed -a GSE86150_mm10.ESF123.placseq.Pol2.fithic.interactions.bed -b ../2018-02-08_chip-seq/H3K4me3_in_TSS.bed -type both
+bedtools pairtobed -a GSE86150_mm10.ESF123.placseq.Pol2.fithic.interactions.bed -b ../2018-02-08_chip-seq/H3K4me3_in_TSS.bed -type both | wc -l
+bedtools pairtobed -a GSE86150_mm10.ESF123.placseq.Pol2.fithic.interactions.bed -b ../2018-02-08_chip-seq/H3K4me3_in_TSS.bed -type both | uniq | wc -l
+bedtools pairtobed -a GSE86150_mm10.ESF123.placseq.Pol2.fithic.interactions.bed -b ../2018-02-08_chip-seq/H3K4me3_in_TSS.bed -type xor
+bedtools pairtobed -a GSE86150_mm10.ESF123.placseq.Pol2.fithic.interactions.bed -b ../2018-02-08_chip-seq/H3K27ac_not_in_H3K4me3.bed -type 
+bedtools pairtobed -a GSE86150_mm10.ESF123.placseq.Pol2.fithic.interactions.bed -b ../2018-02-08_chip-seq/H3K4me3_in_TSS.bed -type xor > P
+head P
+bedtools pairtobed -a P -b ../2018-02-08_chip-seq/H3K27ac_not_in_H3K4me3.bed -type xor > P-E
+cd /DATA/software/hi-c/cworld-dekker
+ls
+cd 0h/
+vim nohup.out 
+head /DATA/software/hi-c/cworld-dekker/scripts/util/geneDensity
+head /DATA/software/hi-c/cworld-dekker/scripts/util/geneDensity/mm9.refseq.txt 
+vim callInsulationTAD.sh 
+cd ..
+python scripts/python/matrix2EigenVectors.py -i 0h/chrX_0h_25kb_matrix.addedHeaders.zScore.matrix.gz -r /DATA/software/hi-c/cworld-dekker/scripts/util/geneDensity/mm10.refseq.txt
+cd 0h/
+chmod 777 callInsulationTAD2.sh 
+./callInsulationTAD2.sh 
+nohup ./callInsulationTAD2.sh &&
+top
+nohup ./callInsulationTAD2.sh &
+top
+locate
+locate HiCPlotter.py
+python /DATA/software/hi-c/HiCPlotter/HiCPlotter.py
+python /DATA/software/hi-c/HiCPlotter/HiCPlotter.py -h
+cd /DATA/software/hi-c/cworld-dekker/6h
+cp ../0h/callInsulationTAD2.sh ./
+vim callInsulationTAD.sh 
+vim callInsulationTAD2.sh 
+nohup ./callInsulationTAD2.sh &
+ls
+cd /DATA2/
+ls -lhat
+sudo chmod 777 -Rf /DATA2
+ls -lhat
+ls
+mkdir pipeline
+cd pipeline/
+mkdir hi-c
+mkdir hichip
+mkdir rna-seq
+mkdir chip-seq
+mkdir gro-seq
+mkdir atac-seq
+cd hi-c/
+ls
+mkdir pol2
+cd pol2/
+scp l@162.105.250.14:/DATA/software/hi-c/HiC-Pro_2.9.0/0h_merge_k1_mm10/hic_results/matrix/0h/iced/* 0h/
+scp -Rf l@162.105.250.14:/DATA/software/hi-c/HiC-Pro_2.9.0/0h_merge_k1_mm10/hic_results/matrix/0h/iced/* ./0h/
+scp -r l@162.105.250.14:/DATA/software/hi-c/HiC-Pro_2.9.0/0h_merge_k1_mm10/hic_results/matrix/0h/iced/* ./0h/
+scp -r l@162.105.250.14:/DATA/software/hi-c/HiC-Pro_2.9.0/0h_merge_k1_mm10/hic_results/matrix/6h/iced/* ./6h/
+scp -r l@162.105.250.14:/DATA/software/hi-c/HiC-Pro_2.9.0/6h_merge_k1_mm10/hic_results/matrix/6h/iced/* ./6h/
+scp -r l@162.105.250.14:/DATA/software/hi-c/HiC-Pro_2.9.0/HiCcompare/*.matrix ./
+scp -r l@162.105.250.14:/DATA/software/hi-c/HiC-Pro_2.9.0/HiCcompare/*_abs.bed ./
+cd
+cd /DATA/software/hi-c/HiCPlotter/
+ls
+cd data/
+ls
+cd /DATA2/pipeline/hi-c/pol2/
+mkdir cworld-tads
+rm -R cworld-tads/
+ln -s /DATA/software/hi-c/cworld-dekker/combine cworld-tabs
+ls
+cd cworld-tabs
+cd ..
+rm -R cworld-tabs
+ln -s /DATA/software/hi-c/cworld-dekker/combine cworld-tads
+cd cworld-tads
+ls
+pwd

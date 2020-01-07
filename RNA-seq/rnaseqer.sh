@@ -84,7 +84,7 @@ if [[ $CUP_num = "" ]]; then
 	exit 1
 fi
 
-index_dir=$(readlink -e ${Index%%/*})
+index_dir=$(readlink -e ${Index%/*})
 index=${index_dir}/${Index##*/}
 gff_file=$(readlink -e $GFF_file)
 outdir=$(readlink -e $Output_dir)

@@ -87,7 +87,7 @@ remove_sparse_line <- function(data){
 library(tidyverse)
 setwd(args$Path)
 #-- read the ob/ex file
-chrname=c(1:19,"X","Y")
+chrname=c(1:19)
 for (i in chrname){
   file_name <- paste0("chr",i,".oe.resort")
   assign(paste0("chr",i,"_oe"),read_csv(file_name, col_names = T))
@@ -149,7 +149,7 @@ for (i in chrname){
   data <- get(paste0("chr",i,"_cR_oe"))
   data_oe$interaction <- data_oe$interaction + data$interaction
 }
-data_oe$interaction <- data_oe$interaction/21
+data_oe$interaction <- data_oe$interaction/19
 
 pdf(args$Output)
 drawheatmap(data_oe)

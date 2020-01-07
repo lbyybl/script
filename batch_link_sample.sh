@@ -58,4 +58,4 @@ elif [[ ! -d $Output ]]; then
 	mkdir -p $Output
 fi
 Abs_output=$(readlink -e $Output)
-readlink -e $Input/* | parallel ln {} $Abs_output
+readlink -e $Input/* | parallel ln -s {} $Abs_output

@@ -1,0 +1,1 @@
+/home/boyuanli/bashscript/bin/geneinteraction/geneinteraction_format.sh
